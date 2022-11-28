@@ -1,2 +1,4 @@
+.gitignore
 *.code-workspace
 createRascalProject.sh
+*.pdf
