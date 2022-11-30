@@ -32,9 +32,10 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // int threshold = 3;
     // subTreeClones = findCloneSequences(sequences, subtreeClones, threshold);
     
-    Declaration testAST = createAstFromFile(|project://Series2/testCode.java|, true);
-    writeFile(|project://Series2/testCodeAST.txt|, testAST);
+    // Declaration testAST = createAstFromFile(|project://Series2/testCode.java|, true);
+    // writeFile(|project://Series2/testCodeAST.txt|, testAST);
     return;
+}
 
 list[list[Declaration]] findSubtrees(Declaration root) {
     list[list[Declaration]] childSubtrees = [];
@@ -55,6 +56,9 @@ list[list[Declaration]] findSubtrees(Declaration root) {
 map[str, list[Declaration]] hashTrees(list[Declaration] ASTs, int nBuckets) {
     map[str hash, list[Declaration subtree]] hashMap = ();
 
+    // TODO
+
+    return;
 }
 
 list[node] getSubtrees(Declaration AST, int massThreshold) {
@@ -108,7 +112,7 @@ list[node] getSubtrees(Declaration AST, int massThreshold) {
 
 //     // TODO
 
-//     return ASTs;
+//     return [ASTs];
 // }
 
 // map[str hash, list[tuple[Declaration, Declaration]]] findCloneSequences(list[list[Declaration]] sequences, map[str hash, list[tuple[Declaration, Declaration]]] clones, int threshold) {
