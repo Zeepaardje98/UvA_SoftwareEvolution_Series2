@@ -2,10 +2,12 @@ module Helper
 
 import lang::java::m3::Core;
 import lang::java::m3::AST;
+import util::Math;
 
 import IO;
 import Node;
 import List;
+import Set;
 import String;
 
 // Get the ASTs of a project.
@@ -92,43 +94,47 @@ bool isLeaf(node n) {
 }
 
 
-bool isSimilar(list[node] subtree1, list[node] subtree2, real similarityTreshold) {
-    list[node] sharedNodes = [];
+bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
     list[node] uniqueNodes1 = [];
     list[node] uniqueNodes2 = [];
+    list[node] sharedNodes = [];
 
-    for (n <- subtree1) {
-        if (n in subtree2) {
-            sharedNodes += n;
-        }
-        else {
-            uniqueNodes1 += n;
+    // First put all nodes of subtree 1 in uniqueNodes1
+    visit (subtree1) {
+        case node n: uniqueNodes1 += n;
+    }
+
+    // Go through nodes of subtree 2 and fill the three node lists appropriately
+    visit (subtree2) {
+        case node n: {
+            if (n in uniqueNodes1) {
+                uniqueNodes1 -= n;
+                sharedNodes += n;
+            }
+            else {
+                uniqueNodes2 += n;            }
+
         }
     }
 
-    for (n <- subtree2) {
-        if (!(n in subtree1)) {
-            uniqueNodes2 += n;
-        }
-    }
+    real S = toReal(size(sharedNodes));
+    real L = toReal(size(uniqueNodes1));
+    real R = toReal(size(uniqueNodes2));
 
-    real similarity = 2 * size(sharedNodes) / (2 * size(sharedNodes) +
-                          size(uniqueNodes1) + size(uniqueNodes2));
+    real similarity = 2.0 * S / ((2.0 * S + L + R));
 
-    println(similarity);
+    println(similarity); // TODO: remove print statement eventually
 
     return (similarity > similarityTreshold);
 }
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
-    list[Declaration] testAST = [createAstFromFile(|project://Series2_Gitrepo/Series2/testCode.java|, true)];
+    list[Declaration] testAST = [createAstFromFile(|project://Series2/testCode.java|, true)];
     // list[Declaration] asts = getASTs(projectLocation);
     
     list[map[int hash, node root]] hashedTrees = getSubtrees(testAST, 5, 200);
     for (k <- hashedTrees[0]) {
         println("hash: <k>, node: <hashedTrees[0][k]>");
     }
-
-    // println(isSimilar(subtrees[0], subtrees[1], 0.8));
     return;
 }
