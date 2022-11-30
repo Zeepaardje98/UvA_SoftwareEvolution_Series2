@@ -23,6 +23,22 @@ void main(loc projectLocation) {
     subTreeClones = findCloneSequences(sequences, subtreeClones, threshold);
 }
 
+list[list[Declaration]] findSubtrees(Declaration root) {
+    list[list[Declaration]] childSubtrees = [];
+    list[list[Declaration]] allSubtrees = [];
+    
+    for (child <- root.getChildren) {
+        if (notLeaf(child)) {
+            subtrees = findSubtrees(child);
+            root.addChild(subtrees[0]);
+            allSubtrees += subtrees;
+
+        }
+    }
+
+    return [root.setChildren(childSubtrees)] + allSubtrees;
+}
+
 map[str, list[Declaration]] hashTrees(list[Declaration] ASTs, int nBuckets) {
     map[str hash, list[Declaration subtree]] hashMap = ();
 
