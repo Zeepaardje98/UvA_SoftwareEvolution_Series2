@@ -26,57 +26,56 @@ int mass(node root) {
     return mass;
 }
 
-int hashNode(node n, int modulo) {
-    int hash = 0;
-    str string = "<n>";
-
-    for (int i <- [0 .. size(string)-1]) {
-        hash += charAt(string, i);
+bool isLeaf2(node root) {
+    visit(root) {
+        case node n: if (n != root) {return false;}
     }
-    hash = hash % modulo;
-    return hash;
+    return true;
 }
 
-list[map[int hash, node root]] getSubtrees(list[Declaration] ASTs, int massThreshold, int nBuckets) {
-    map[node subtree, int hash] hashes = ();
-    map[node subtree, int hash] hashesNoLeaves = ();
-    
-    map[int hash, node root] hashedTrees = ();
-    map[int hash, node root] hashedTreesNoLeaves = ();
+// int toInt(str s) {
+//     int i = 0;
+//     for (int i <- [0 .. size(s)-1]) {
+//         i += charAt(string, i);
+//     }
+//     return hash;
+// }
+
+map[str hash, node root] getSubtrees(list[Declaration] ASTs, int massThreshold, int nBuckets) {
+    map[node subtree, str hash] hashes = ();
+    map[str hash, node root] hashedTrees = ();
+    list[node] visitedNodes = [];
 
     bottom-up visit (ASTs) {
         case node n: {
-            // Hash the current root/subtree with a method that does count
-            // leaves(type 1 clones), and a method that does not count leaves
-            // (type 2 clones).
-            hash = 0;
-            hashNoLeaf = 0;
-            for (child <- getChildren(n)) {
-                child = "<child>"();
+            visitedNodes += n;
 
-                // TODO: '? 0' should be able to be deleted. Since we do a bottom-up traversal, 
-                //       so children should all have a hash. But this is not the case.
-                hash += hashes[child] ? 0;
-                hashNoLeaf += hashesNoLeaves[child] ? 0;
-            }
+            if (! isLeaf2(n)) {
+                str hash = "";
 
-            hash += hashNode(n, nBuckets);
-            hashes[n] = hash;
+                bool hasChildren = false;
+                for (child <- getChildren(n)) {
+                    if (child in hashes) {
+                        hash += hashes[child];
+                        hasChildren = true;
+                    }
+                }
+                if (hasChildren) {
+                    hash = md5Hash(hash);
+                }
+                else {
+                    hash = md5Hash(n);
+                }
 
-            if (isLeaf(n) == false) {
-                hashNoLeaf += hashNode(n, nBuckets);
-            }
-            hashesNoLeaves[n] = hashNoLeaf;
+                hashes[n] = hash;
 
-            // If the current root/subtree has a big enough mass, add it to the
-            // subtrees with its hash. To be compared for clonepairs later.
-            if (mass(n) > massThreshold) {
-                hashedTrees[hash] = n;
-                hashedTreesNoLeaves[hashNoLeaf] = n;
+                if (mass(n) >= massThreshold) {
+                    hashedTrees[hash] = n;
+                }
             }
         }
     }
-    return [hashedTrees, hashedTreesNoLeaves];
+    return hashedTrees;
 }
 
 bool isLeaf(node n) {
@@ -129,12 +128,12 @@ bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
 }
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
-    list[Declaration] testAST = [createAstFromFile(|project://Series2/testCode.java|, true)];
+    list[Declaration] testAST = [createAstFromFile(|project://Series2_Gitrepo/Series2/testCode.java|, true)];
     // list[Declaration] asts = getASTs(projectLocation);
     
-    list[map[int hash, node root]] hashedTrees = getSubtrees(testAST, 5, 200);
-    for (k <- hashedTrees[0]) {
-        println("hash: <k>, node: <hashedTrees[0][k]>");
-    }
+    map[str, node] hashedTrees = getSubtrees(testAST, 5, 200);
+    // for (k <- hashedTrees[0]) {
+    //     println("hash: <k>, node: <hashedTrees[0][k]>");
+    // }
     return;
 }
