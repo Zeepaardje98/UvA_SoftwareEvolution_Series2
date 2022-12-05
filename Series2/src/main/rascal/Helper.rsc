@@ -52,19 +52,21 @@ map[str hash, node root] getSubtrees(list[Declaration] ASTs, int massThreshold, 
 
             if (! isLeaf2(n)) {
                 str hash = "";
-
                 bool hasChildren = false;
+
+                // Add all childNode hashes to the new to be computed hash
                 for (child <- getChildren(n)) {
                     if (child in hashes) {
                         hash += hashes[child];
                         hasChildren = true;
                     }
                 }
+
                 if (hasChildren) {
-                    hash = md5Hash(hash);
+                    hash = md5Hash(hash + getName(n));
                 }
                 else {
-                    hash = md5Hash(n);
+                    hash = md5Hash(getName(n));
                 }
 
                 hashes[n] = hash;
@@ -132,6 +134,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // list[Declaration] asts = getASTs(projectLocation);
     
     map[str, node] hashedTrees = getSubtrees(testAST, 5, 200);
+    println(hashedTrees);
     // for (k <- hashedTrees[0]) {
     //     println("hash: <k>, node: <hashedTrees[0][k]>");
     // }
