@@ -33,7 +33,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
 map[node, node] findClones(map[str, list[node]] subtrees, real similarityThreshold, int massThreshold) {
     // println("Num hashes: <size(subtrees)>");
     map[node, node] clones = ();
-    map[value, value] cloneSources = ();
+    map[value, value] cloneSources = (); // for testing purposes, remove eventually
     for (hash <- subtrees) {
         list[node] nodes = subtrees[hash];
         for (i <- nodes) {
