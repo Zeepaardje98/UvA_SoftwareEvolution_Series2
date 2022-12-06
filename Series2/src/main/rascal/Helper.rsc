@@ -41,9 +41,9 @@ bool isLeaf2(node root) {
 //     return hash;
 // }
 
-map[str hash, node root] getSubtrees(list[Declaration] ASTs, int massThreshold, int nBuckets) {
+map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThreshold) {
     map[node subtree, str hash] hashes = ();
-    map[str hash, node root] hashedTrees = ();
+    map[str hash, list[node] root] hashedTrees = ();
     list[node] visitedNodes = [];
 
     bottom-up visit (ASTs) {
@@ -58,21 +58,13 @@ map[str hash, node root] getSubtrees(list[Declaration] ASTs, int massThreshold, 
                 for (child <- getChildren(n)) {
                     if (child in hashes) {
                         hash += hashes[child];
-                        hasChildren = true;
                     }
                 }
 
-                if (hasChildren) {
-                    hash = md5Hash(hash + getName(n));
-                }
-                else {
-                    hash = md5Hash(getName(n));
-                }
-
-                hashes[n] = hash;
+                hashes[n] = md5Hash(unsetRec(n));
 
                 if (mass(n) >= massThreshold) {
-                    hashedTrees[hash] = n;
+                    hashedTrees[hash]?[] += [n];
                 }
             }
         }
@@ -94,7 +86,7 @@ bool isLeaf(node n) {
     }
 }
 
-
+// TODO: return clone type (similarityscore == 1 -> type 1 clone)
 bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
     list[node] uniqueNodes1 = [];
     list[node] uniqueNodes2 = [];
@@ -113,8 +105,8 @@ bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
                 sharedNodes += n;
             }
             else {
-                uniqueNodes2 += n;            }
-
+                uniqueNodes2 += n;            
+            }
         }
     }
 
@@ -122,21 +114,31 @@ bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
     real L = toReal(size(uniqueNodes1));
     real R = toReal(size(uniqueNodes2));
 
-    real similarity = 2.0 * S / ((2.0 * S + L + R));
-
-    println(similarity); // TODO: remove print statement eventually
+    real similarity = 2.0 * S / (2.0 * S + L + R);
 
     return (similarity > similarityTreshold);
 }
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     list[Declaration] testAST = [createAstFromFile(|project://Series2_Gitrepo/Series2/testCode.java|, true)];
-    // list[Declaration] asts = getASTs(projectLocation);
+    // list[Declaration] testAST = getASTs(projectLocation);
     
-    map[str, node] hashedTrees = getSubtrees(testAST, 5, 200);
-    println(hashedTrees);
-    // for (k <- hashedTrees[0]) {
-    //     println("hash: <k>, node: <hashedTrees[0][k]>");
-    // }
+    map[str, list[node]] subtrees = getSubtrees(testAST, 2);
+
+    real similarityThreshold = 0.9;
+    for (hash <- subtrees) {
+        list[node] nodes = subtrees[hash];
+        println("Num nodes: <size(nodes)>");
+        for (i <- nodes) {
+            for (j <- nodes) {
+                if (i != j && isSimilar(i, j, similarityThreshold)) {
+                    println("node1: <i.src> \n node2: <j.src>");
+                }
+            }
+        }
+    }
+
+    // isSimilar(subtrees[0], subtrees[1], 0.8);
+
     return;
 }
