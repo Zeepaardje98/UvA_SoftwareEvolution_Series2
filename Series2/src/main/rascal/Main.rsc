@@ -1,10 +1,13 @@
 module Main
 
 import IO;
-import Helper;
 import List;
 import Node;
 import Map;
+
+import Helper;
+import TreeParser;
+import ClonePairs;
 
 import util::FileSystem;
 
@@ -12,13 +15,14 @@ import lang::java::m3::Core;
 import lang::java::m3::AST;
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
-    projectLocation = |project://Series2/testFiles|;
+    projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
     int massThreshold = 15;
     // Get hashed subtrees of the AST
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold);
     real similarityThreshold = 0.8;
-    map[node, node] clones = findClones(subtrees, similarityThreshold, massThreshold);
+    findClones2(subtrees, similarityThreshold, massThreshold);
+    printClones();
 
     // // Find all sequences in the AST
     // list[list[Declaration]] sequences = findSequences(ASTs);
@@ -30,44 +34,59 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     return;
 }
 
-map[node, node] findClones(map[str, list[node]] subtrees, real similarityThreshold, int massThreshold) {
-    // println("Num hashes: <size(subtrees)>");
-    map[node, node] clones = ();
-    map[value, value] cloneSources = (); // for testing purposes, remove eventually
+// map[node, node] findClones(map[str, list[node]] subtrees, real similarityThreshold, int massThreshold) {
+//     // println("Num hashes: <size(subtrees)>");
+//     map[node, node] clones = ();
+//     map[value, value] cloneSources = (); // for testing purposes, remove eventually
+//     for (hash <- subtrees) {
+//         list[node] nodes = subtrees[hash];
+//         for (i <- nodes) {
+//             for (j <- nodes) {
+//                 if (i != j && isSimilar(i, j, similarityThreshold)) {
+//                     bool isSubset = false;
+//                     visit (i) {
+//                         case node n: {
+//                             if (n == j) {
+//                                 isSubset = true;
+//                             }
+//                             if (n in domain(clones)) {
+//                                 delete(clones, n);
+//                             }
+//                         }
+//                     }
+//                     visit (j) {
+//                         case node n: {
+//                             if (n == i) {
+//                                 isSubset = true;
+//                             }
+//                             if (n in domain(clones)) {
+//                                 delete(clones, n);
+//                             }
+//                         }
+//                     }
+//                     if (!(j in domain(clones) && clones[j] == i) && !isSubset) {
+//                         clones[i] = j;
+//                         cloneSources[i.src] = j.src;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     // println(cloneSources);
+//     return clones;
+// }
+
+void findClones2(map[str, list[node]] subtrees, real similarityThreshold, int massThreshold) {
     for (hash <- subtrees) {
         list[node] nodes = subtrees[hash];
         for (i <- nodes) {
             for (j <- nodes) {
                 if (i != j && isSimilar(i, j, similarityThreshold)) {
-                    bool isSubset = false;
-                    visit (i) {
-                        case node n: {
-                            if (n == j) {
-                                isSubset = true;
-                            }
-                            if (n in domain(clones)) {
-                                delete(clones, n);
-                            }
-                        }
-                    }
-                    visit (j) {
-                        case node n: {
-                            if (n == i) {
-                                isSubset = true;
-                            }
-                            if (n in domain(clones)) {
-                                delete(clones, n);
-                            }
-                        }
-                    }
-                    if (!(j in domain(clones) && clones[j] == i) && !isSubset) {
-                        clones[i] = j;
-                        cloneSources[i.src] = j.src;
-                    }
+                    // println("Hash: <hash>");
+                    addClone(<i, j>);
                 }
             }
         }
     }
-    // println(cloneSources);
-    return clones;
+    return;
 }

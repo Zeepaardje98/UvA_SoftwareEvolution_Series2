@@ -26,42 +26,11 @@ int mass(node root) {
     return mass;
 }
 
-bool isLeaf2(node root) {
+bool isLeaf(node root) {
     visit(root) {
         case node n: if (n != root) {return false;}
     }
     return true;
-}
-
-map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThreshold) {
-    map[node subtree, str hash] hashes = ();
-    map[str hash, list[node] root] hashedTrees = ();
-    list[node] visitedNodes = [];
-
-    visit (ASTs) {
-        case node n: {
-            visitedNodes += n;
-
-            if (! isLeaf2(n)) {
-                str hash = "";
-                bool hasChildren = false;
-
-                // Add all childNode hashes to the new to be computed hash
-                for (child <- getChildren(n)) {
-                    if (child in hashes) {
-                        hash += hashes[child];
-                    }
-                }
-
-                hashes[n] = md5Hash(unsetRec(n));
-
-                if (mass(n) >= massThreshold) {
-                    hashedTrees[hash]?[] += [n];
-                }
-            }
-        }
-    }
-    return hashedTrees;
 }
 
 // TODO: return clone type (similarityscore == 1 -> type 1 clone)
@@ -78,13 +47,12 @@ bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
     // Go through nodes of subtree 2 and fill the three node lists appropriately
     visit (subtree2) {
         case node n: {
-            n_clean = unsetRec(n);
-            if (n_clean in uniqueNodes1) {
-                uniqueNodes1 -= n_clean;
-                sharedNodes += n_clean;
+            if (unsetRec(n) in uniqueNodes1) {
+                uniqueNodes1 -= unsetRec(n);
+                sharedNodes += unsetRec(n);
             }
             else {
-                uniqueNodes2 += n_clean;
+                uniqueNodes2 += unsetRec(n);            
             }
         }
     }
@@ -95,28 +63,5 @@ bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
 
     real similarity = 2.0 * S / (2.0 * S + L + R);
 
-    // println("S: <S> - L: <L> - R: <R> - Similarity: <similarity>");
     return (similarity > similarityTreshold);
-}
-
-void main(loc projectLocation = |project://smallsql0.21_src|) {
-    // list[Declaration] testAST = getASTs(projectLocation);
-
-    // map[str, list[node]] subtrees = getSubtrees(testAST, 2);
-
-    // real similarityThreshold = 0.9;
-    // for (hash <- subtrees) {
-    //     list[node] nodes = subtrees[hash];
-    //     println("Num nodes: <size(nodes)>");
-    //     for (i <- nodes) {
-    //         for (j <- nodes) {
-    //             if (i != j && isSimilar(i, j, similarityThreshold)) {
-    //                 println("node1: <i.src> \n node2: <j.src>");
-    //             }
-    //         }
-    //     }
-    // }
-
-
-    return;
 }
