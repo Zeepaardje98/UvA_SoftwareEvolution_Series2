@@ -12,15 +12,13 @@ import lang::java::m3::Core;
 import lang::java::m3::AST;
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
+    projectLocation = |project://Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
-    // int nNodes = size(ASTs);
-    int massThreshold = 8; // paper doesn't specify
-    
+    int massThreshold = 15;
     // Get hashed subtrees of the AST
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold);
-
     real similarityThreshold = 0.8;
-    findClones(subtrees, similarityThreshold);
+    map[node, node] clones = findClones(subtrees, similarityThreshold, massThreshold);
 
     // // Find all sequences in the AST
     // list[list[Declaration]] sequences = findSequences(ASTs);
@@ -28,24 +26,48 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // // Step 2: Find clone sequences
     // int threshold = 3;
     // subTreeClones = findCloneSequences(sequences, subtreeClones, threshold);
-    
-    // Declaration testAST = createAstFromFile(|project://Series2/testCode.java|, true);
-    // writeFile(|project://Series2/testCodeAST.txt|, testAST);
+
     return;
 }
 
-void findClones(map[str, list[node]] subtrees, real similarityThreshold) {
-    println("Num hashes: <size(subtrees)>");
+map[node, node] findClones(map[str, list[node]] subtrees, real similarityThreshold, int massThreshold) {
+    // println("Num hashes: <size(subtrees)>");
+    map[node, node] clones = ();
+    map[value, value] cloneSources = (); // for testing purposes, remove eventually
     for (hash <- subtrees) {
         list[node] nodes = subtrees[hash];
-        println("Num nodes: <size(nodes)>");
         for (i <- nodes) {
             for (j <- nodes) {
                 if (i != j && isSimilar(i, j, similarityThreshold)) {
-                    println("node1: <i.src> \n node2: <j.src>");
+                    bool isSubset = false;
+                    visit (i) {
+                        case node n: {
+                            if (n == j) {
+                                isSubset = true;
+                            }
+                            if (n in domain(clones)) {
+                                delete(clones, n);
+                            }
+                        }
+                    }
+                    visit (j) {
+                        case node n: {
+                            if (n == i) {
+                                isSubset = true;
+                            }
+                            if (n in domain(clones)) {
+                                delete(clones, n);
+                            }
+                        }
+                    }
+                    if (!(j in domain(clones) && clones[j] == i) && !isSubset) {
+                        clones[i] = j;
+                        cloneSources[i.src] = j.src;
+                    }
                 }
             }
         }
     }
-    return;
+    // println(cloneSources);
+    return clones;
 }
