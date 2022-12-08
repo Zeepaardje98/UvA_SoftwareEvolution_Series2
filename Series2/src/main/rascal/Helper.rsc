@@ -33,6 +33,13 @@ bool isLeaf(node root) {
     return true;
 }
 
+bool isSubset(node root, node subtree) {
+    visit(root) {
+        case node n: if (n == subtree) {return true;}
+    }
+    return false;
+}
+
 // TODO: return clone type (similarityscore == 1 -> type 1 clone)
 bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
     list[node] uniqueNodes1 = [];
