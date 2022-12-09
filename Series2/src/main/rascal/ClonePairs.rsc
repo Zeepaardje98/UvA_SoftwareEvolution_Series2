@@ -7,8 +7,9 @@ import IO;
 import Helper;
 
 private list[tuple[node, node]] _clonePairs = [];
+private list[tuple[list[node], list[node]]] _sequenceClones = [];
 
-void addClone(tuple[node, node] newPair, bool print=false) {
+public void addClone(tuple[node, node] newPair, bool print=false) {
     // Ignore the pair if one node is a subtree of another node
     if (isSubset(newPair[0], newPair[1]) || isSubset(newPair[1], newPair[0])) {
         return;
@@ -48,10 +49,34 @@ void addClone(tuple[node, node] newPair, bool print=false) {
     return;
 }
 
-void printClones() {
+public void addSequenceClone(tuple[list[node], list[node]] newSequencePair) {
+    println("NEW SEQUENCE CLONE FOUND");
+    println("Sequence1: ");
+    for (node n <- newSequencePair[0]) {
+        println(n);
+    }
+
+    println("Sequence2: ");
+    for (node n <- newSequencePair[1]) {
+        println(n);
+    }
+    return;
+}
+
+
+public void printClones() {
     println("--- PRINTING CLONEPAIRS ---");
     for (clonePair <- _clonePairs) {
        println(" clone1: <md5Hash(clonePair[0])> <clonePair[0].src> \n clone2: <md5Hash(clonePair[1])> <clonePair[1].src>");
     }
     return;
+}
+
+public void printSequenceClones() {
+    println("TODO: Print sequence clones");
+    return;
+}
+
+public list[tuple[node, node]] getClones() {
+    return _clonePairs;
 }

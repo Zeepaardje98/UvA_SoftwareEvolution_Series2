@@ -17,19 +17,21 @@ import lang::java::m3::AST;
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
-    int massThreshold = 15;
+    
     // Get hashed subtrees of the AST
+    int massThreshold = 10;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold);
+    
     real similarityThreshold = 0.8;
-    findClones2(subtrees, similarityThreshold, massThreshold);
+    findClones(subtrees, similarityThreshold);
     printClones();
+    
+    int sequenceThreshold = 2;
+    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold);
 
-    // // Find all sequences in the AST
-    // list[list[Declaration]] sequences = findSequences(ASTs);
+    findSequenceClones(sequences, similarityThreshold);
+    printSequenceClones();
 
-    // // Step 2: Find clone sequences
-    // int threshold = 3;
-    // subTreeClones = findCloneSequences(sequences, subtreeClones, threshold);
 
     return;
 }
@@ -76,17 +78,33 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
 //     return clones;
 // }
 
-void findClones2(map[str, list[node]] subtrees, real similarityThreshold, int massThreshold) {
+void findClones(map[str, list[node]] subtrees, real similarityThreshold) {
     for (hash <- subtrees) {
         list[node] nodes = subtrees[hash];
         for (i <- nodes) {
             for (j <- nodes) {
-                if (i != j && isSimilar(i, j, similarityThreshold)) {
-                    // println("Hash: <hash>");
+                similarityScore = similarity(i, j);
+                if (i != j && similarityScore > similarityThreshold) {
                     addClone(<i, j>);
                 }
             }
         }
     }
     return;
+}
+
+void findSequenceClones(map[str, list[list[node]]] sequences, real similarityThreshold) {
+    for (hash <- sequences) {
+        list[list[node]] subsequences = sequences[hash];
+        for (i <- subsequences) {
+            for (j <- subsequences) {
+                if (size(i) == size(j)) {
+                    similarityScore = similarity(i, j);
+                    if (i != j && similarityScore > similarityThreshold) {
+                        addSequenceClone(<i, j>);
+                    }
+                }
+            }
+        }
+    }
 }
