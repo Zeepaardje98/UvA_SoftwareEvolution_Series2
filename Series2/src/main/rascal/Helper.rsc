@@ -40,8 +40,12 @@ bool isSubset(node root, node subtree) {
     return false;
 }
 
-// TODO: return clone type (similarityscore == 1 -> type 1 clone)
-bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
+list[node] directChildren(node root) {
+    return [n | node n <- getChildren(root)];
+}
+
+
+tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
     list[node] uniqueNodes1 = [];
     list[node] uniqueNodes2 = [];
     list[node] sharedNodes = [];
@@ -68,7 +72,25 @@ bool isSimilar(node subtree1, node subtree2, real similarityTreshold) {
     real L = toReal(size(uniqueNodes1));
     real R = toReal(size(uniqueNodes2));
 
-    real similarity = 2.0 * S / (2.0 * S + L + R);
+    return <S, L, R>;
+}
 
-    return (similarity > similarityTreshold);
+real similarity(node subtree1, node subtree2) {
+    tuple[real S, real L, real R] SLR = sharedUniqueNodes(subtree1, subtree2);
+    
+    real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
+    return similarity;
+}
+
+real similarity(list[node] subtrees1, list[node] subtrees2) {
+    list[real] SLR = [0.0, 0.0, 0.0];
+    for (i <- [0..size(subtrees1)]) {
+        tuple[real S, real L, real R] currentSLR = sharedUniqueNodes(subtrees1[i], subtrees2[i]);
+        SLR[0] += currentSLR[0];
+        SLR[1] += currentSLR[1];
+        SLR[2] += currentSLR[2];
+    }
+    
+    real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
+    return similarity;
 }
