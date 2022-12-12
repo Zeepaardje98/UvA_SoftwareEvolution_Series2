@@ -64,9 +64,10 @@ map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] AST
         }
     }
 
-    map[node subtree, str hash] hashes = ();
-    map[str hash, list[list[node]] sequenceRoots] subsequences = ();
+    map[node, str] hashes = ();
+    map[str, list[list[node]]] subsequences = ();
     for (list[node] sequence <- sequences) {
+        
         for (i <- [0..(size(sequence) + 1)]) {
             for (j <- [0..(size(sequence) + 1)]) {
 
