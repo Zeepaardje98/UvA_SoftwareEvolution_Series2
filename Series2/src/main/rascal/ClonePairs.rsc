@@ -50,6 +50,8 @@ public void addClone(tuple[node, node] newPair, bool print=false) {
 }
 
 public void addSequenceClone(tuple[list[node], list[node]] newSequencePair, bool print=false) {
+    // TODO: Check of current sequencepair is subset of already existing pair
+    
     if (print) {
         println("ADDING SEQUENCE CLONE");
         println("Sequence1: ");
