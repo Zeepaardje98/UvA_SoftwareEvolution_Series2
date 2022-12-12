@@ -55,10 +55,11 @@ map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThre
 map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] ASTs, int sequenceThreshold) {
     list[list[node]] sequences = [];
     visit(ASTs) {
-        case node n: {
-            list[node] sequence = directChildren(n);
+        case \block(statements): {
+            list[node] sequence = statements;
+
             if (size(sequence) >= sequenceThreshold) {
-                sequences += [directChildren(n)];
+                sequences += [sequence];
             }
         }
     }
