@@ -41,7 +41,8 @@ bool isSubset(node root, node subtree) {
 }
 
 list[node] directChildren(node root) {
-    return [n | node n <- getChildren(root)];
+    list[node] children = [n | node n <- getChildren(root), n.src?];
+    return children;
 }
 
 

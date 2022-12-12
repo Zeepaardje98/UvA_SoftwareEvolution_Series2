@@ -49,17 +49,23 @@ public void addClone(tuple[node, node] newPair, bool print=false) {
     return;
 }
 
-public void addSequenceClone(tuple[list[node], list[node]] newSequencePair) {
-    println("NEW SEQUENCE CLONE FOUND");
-    println("Sequence1: ");
-    for (node n <- newSequencePair[0]) {
-        println(n);
+public void addSequenceClone(tuple[list[node], list[node]] newSequencePair, bool print=false) {
+    if (print) {
+        println("ADDING SEQUENCE CLONE");
+        println("Sequence1: ");
+        for (node n <- newSequencePair[0]) {
+            println(n.src);
+        }
+    }
+    if (print) {
+        println("Sequence2: ");
+        for (node n <- newSequencePair[1]) {
+            println(n.src);
+        }
     }
 
-    println("Sequence2: ");
-    for (node n <- newSequencePair[1]) {
-        println(n);
-    }
+    // TODO: Remove child sequence clones and child atomic clones
+
     return;
 }
 
@@ -74,6 +80,9 @@ public void printClones() {
 
 public void printSequenceClones() {
     println("TODO: Print sequence clones");
+
+    // TODO: Print the sequence clones
+
     return;
 }
 
