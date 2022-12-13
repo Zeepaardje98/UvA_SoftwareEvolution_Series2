@@ -25,10 +25,15 @@ void printNodes(list[node] nodes) {
     return;
 }
 
-int mass(node root) {
+int mass(node root, int threshold=0) {
     int mass = 0;
     visit(root) {
-        case node n: mass += 1;
+        case node n: {
+            mass += 1;
+            if (threshold != 0 && mass >= threshold) {
+                return mass;
+            }
+        }
     }
     return mass;
 }

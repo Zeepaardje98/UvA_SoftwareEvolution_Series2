@@ -10,8 +10,15 @@ private list[tuple[node, node]] _clonePairs = [];
 private list[tuple[list[node], list[node]]] _sequenceClones = [];
 
 public void addClone(tuple[node, node] newPair, bool print=false) {
+    if (print) {
+        println("\n AddClone: <newPair[0].src> <newPair[1].src>");
+    }
+
     // Ignore the pair if one node is a subtree of another node
     if (isSubset(newPair[0], newPair[1]) || isSubset(newPair[1], newPair[0])) {
+        if (print) {
+            println("one node is subset of other node");
+        }
         return;
     }
 
@@ -20,12 +27,18 @@ public void addClone(tuple[node, node] newPair, bool print=false) {
 
     for (oldPair <- _clonePairs) {
         // Check if the pair already exists in flipped form
-        if (oldPair == <newPair[1], newPair[0]>) {
+        if (oldPair == <newPair[1], newPair[0]> || oldPair == newPair) {
+            if (print) {
+                println("clonepair already exists");
+            }
             return;
         }
 
         // Ignore the pair if it is a subset of an already existing pair
         if ((isSubset(oldPair[0], newPair[0]) && isSubset(oldPair[1], newPair[1])) || (isSubset(oldPair[0], newPair[1]) && isSubset(oldPair[1], newPair[0]))) {
+            if (print) {
+                println("clonepair is subset of already existing pair: <oldPair[0].src> <oldPair[1].src>");
+            }
             return;
         }
 
