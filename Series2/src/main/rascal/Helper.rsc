@@ -80,7 +80,6 @@ bool isSubset(list[node] rootSequence, list[node] subSequence) {
             }
         }
     }
-    // println("FALSE");
     return false;
 }
 
