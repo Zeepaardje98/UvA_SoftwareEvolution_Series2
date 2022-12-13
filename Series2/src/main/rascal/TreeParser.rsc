@@ -11,23 +11,38 @@ import Helper;
 
 private map[node subtree, str hash] hashes = ();
 
-str hashNode(node n) {
+str hashSequence(list[node] sequence, bool ignoreLeaves=false) {
+    hash = "";
+    for (n <- sequence) {
+        hash += hashNode(n, ignoreLeaves=ignoreLeaves);
+    }
+    hash = md5Hash(hash);
+    subsequences[hash]?[] += [sequence];
+    
+    return hash;
+}
+
+str hashNode(node n, bool ignoreLeaves=false) {
     if (n in hashes) {
         return hashes[n];
     }
-    
-    // Add all childNode hashes to the new to be computed hash
-    str hash = "";
-    for (child <- directChildren(n)) {
-        if (! isLeaf(child)) {
-            if (!(child in hashes)) {
-                hashNode(child);
+    // Hash method 1. Hashes the entire subtree.
+    // Hash method 2. Ignores the leaves of the subtree
+    if (! ignoreLeaves) {
+        hashes[n] = md5Hash(unsetRec(n));
+    } else {
+        str hash = "";
+        for (child <- directChildren(n)) {
+            if (true) {
+            // if (! isLeaf(child)) {
+                if (!(child in hashes)) {
+                    hashNode(child);
+                }
+                hash += hashes[child];
             }
-            hash += hashes[child];
         }
+        hashes[n] = md5Hash(getName(n) + hash);
     }
-
-    hashes[n] = md5Hash(getName(n) + hash);
 
     return hashes[n];
 }
@@ -39,10 +54,10 @@ map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThre
     bottom-up visit (ASTs) {
         case node n: {
             visitedNodes += n;
-
-            if (! isLeaf(n)) {
-                hashNode(n);
-
+            
+            hashNode(n);
+            if (n.src?) {
+            // if (! isLeaf(n) && n.src?) {
                 if (mass(n, threshold=massThreshold) >= massThreshold) {
                     hashedTrees[hashes[n]]?[] += [n];
                 }

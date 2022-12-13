@@ -26,7 +26,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // Find the clones in the subtrees of the AST
     println("Finding atomic clones");
     real similarityThreshold = 0.8;
-    findClones(subtrees, similarityThreshold);
+    findClones(subtrees, similarityThreshold, print=true);
     printClones();
     
     // Get all sequence nodes of the AST
@@ -44,17 +44,21 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     return;
 }
 
-void findClones(map[str, list[node]] subtrees, real similarityThreshold) {
+void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool print=false) {
     for (hash <- subtrees) {
-        println("Hash: <hash>, subtrees: <size(subtrees[hash])>");
+        int counter = 0;
+
+        if (print) {
+            println("Hash: <hash>, subtrees: <size(subtrees[hash])>");
+        }
         list[node] nodes = subtrees[hash];
         
         for (i <- nodes) {
             for (j <- nodes) {
-                similarityScore = similarity(i, j);
-                // println(similarityScore);
-                if (i != j && similarityScore > similarityThreshold) {
-                    addClone(<i, j>, print=true);
+                // similarityScore = similarity(i, j);
+                if (i.src != j.src) {
+                // if (i != j && similarityScore > similarityThreshold) {
+                    addClone(<i, j>, print=print);
                 }
             }
         }
@@ -69,9 +73,10 @@ void findSequenceClones(map[str, list[list[node]]] sequences, real similarityThr
         for (i <- subsequences) {
             for (j <- subsequences) {
                 if (size(i) == size(j)) {
-                    similarityScore = similarity(i, j);
-                    if (i != j && similarityScore > similarityThreshold) {
-                        addSequenceClone(<i, j>);
+                    // similarityScore = similarity(i, j);
+                    if (i != j) {
+                    // if (i != j && similarityScore > similarityThreshold) {
+                        addSequenceClone(<i, j>, print=true);
                     }
                 }
             }
