@@ -18,10 +18,22 @@ list[Declaration] getASTs(loc projectLocation) {
     return asts;
 }
 
-int mass(node root) {
+void printNodes(list[node] nodes) {
+    for (n <- nodes) {
+        println(n.src);
+    }
+    return;
+}
+
+int mass(node root, int threshold=0) {
     int mass = 0;
     visit(root) {
-        case node n: mass += 1;
+        case node n: {
+            mass += 1;
+            if (threshold != 0 && mass >= threshold) {
+                return mass;
+            }
+        }
     }
     return mass;
 }
@@ -36,6 +48,37 @@ bool isLeaf(node root) {
 bool isSubset(node root, node subtree) {
     visit(root) {
         case node n: if (n == subtree) {return true;}
+    }
+    return false;
+}
+
+bool isSubsequence(list[value] List, list[value] subList) {
+    for (i <- [0..size(List)]) {
+        int j = i + size(subList);
+        if (List[i..j] == subList) {
+            return true;
+        }
+    }
+    return false;
+}
+
+bool isSubset(list[node] rootSequence, list[node] subSequence) {
+    // If the root sequence entails the sub-sequence, it is a subset.
+    if (isSubsequence(rootSequence, subSequence)) {
+        return true;
+    }
+
+    // For every sequence node in the root, visit the subtree. If this subtree
+    // has a sequence which entails our subsequence, it is a subset.
+    for (node n <- rootSequence) {
+        visit(n) {
+            case \block(statements): {
+                list[node] sequence = statements;
+                if (isSubsequence(statements, subSequence)) {
+                    return true;
+                }
+            }
+        }
     }
     return false;
 }
