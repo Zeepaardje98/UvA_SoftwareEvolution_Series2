@@ -43,7 +43,7 @@ map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThre
             if (! isLeaf(n)) {
                 hashNode(n);
 
-                if (mass(n) >= massThreshold) {
+                if (mass(n, threshold=massThreshold) >= massThreshold) {
                     hashedTrees[hashes[n]]?[] += [n];
                 }
             }

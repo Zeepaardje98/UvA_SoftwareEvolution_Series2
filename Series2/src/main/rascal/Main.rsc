@@ -20,7 +20,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     
     // Get hashed subtrees of the AST
     println("Getting subtrees");
-    int massThreshold = 10;
+    int massThreshold = 30;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold);
     
     // Find the clones in the subtrees of the AST
@@ -46,13 +46,15 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
 
 void findClones(map[str, list[node]] subtrees, real similarityThreshold) {
     for (hash <- subtrees) {
+        println("Hash: <hash>, subtrees: <size(subtrees[hash])>");
         list[node] nodes = subtrees[hash];
         
         for (i <- nodes) {
             for (j <- nodes) {
                 similarityScore = similarity(i, j);
+                // println(similarityScore);
                 if (i != j && similarityScore > similarityThreshold) {
-                    addClone(<i, j>);
+                    addClone(<i, j>, print=true);
                 }
             }
         }
