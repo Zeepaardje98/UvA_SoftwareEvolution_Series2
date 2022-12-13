@@ -23,12 +23,12 @@ import lang::json::IO;
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
 
-    projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
+    projectLocation = |project://Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST
     println("Getting subtrees");
-    int massThreshold = 30;
+    int massThreshold = 15;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
 
     // Find the clones in the subtrees of the AST
@@ -47,8 +47,8 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     similarityThreshold = 0.0;
     findSequenceClones(sequences, similarityThreshold, type2=type2);
     printSequenceClones();
-    
 
+    writeJSON(|project://Series2/testoutput.json|, getCloneClasses(), indent=1);
 
     return;
 }
