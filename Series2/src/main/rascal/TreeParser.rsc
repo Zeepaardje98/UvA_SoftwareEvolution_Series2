@@ -17,8 +17,7 @@ str hashSequence(list[node] sequence, bool ignoreLeaves=false) {
         hash += hashNode(n, ignoreLeaves=ignoreLeaves);
     }
     hash = md5Hash(hash);
-    subsequences[hash]?[] += [sequence];
-    
+
     return hash;
 }
 
@@ -27,16 +26,15 @@ str hashNode(node n, bool ignoreLeaves=false) {
         return hashes[n];
     }
     // Hash method 1. Hashes the entire subtree.
-    // Hash method 2. Ignores the leaves of the subtree
+    // Hash method 2. Ignores the leaves of the subtree, hashes using a merkle tree.
     if (! ignoreLeaves) {
         hashes[n] = md5Hash(unsetRec(n));
     } else {
         str hash = "";
         for (child <- directChildren(n)) {
-            if (true) {
-            // if (! isLeaf(child)) {
+            if (! isLeaf(child)) {
                 if (!(child in hashes)) {
-                    hashNode(child);
+                    hashNode(child, ignoreLeaves=true);
                 }
                 hash += hashes[child];
             }
@@ -47,17 +45,14 @@ str hashNode(node n, bool ignoreLeaves=false) {
     return hashes[n];
 }
 
-map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThreshold) {
+map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThreshold, bool ignoreLeaves=false) {
     map[str hash, list[node] root] hashedTrees = ();
     list[node] visitedNodes = [];
 
     bottom-up visit (ASTs) {
         case node n: {
-            visitedNodes += n;
-            
             hashNode(n);
-            if (n.src?) {
-            // if (! isLeaf(n) && n.src?) {
+            if ((!ignoreLeaves && n.src?) || (ignoreLeaves && ! isLeaf(n) && n.src?)) {
                 if (mass(n, threshold=massThreshold) >= massThreshold) {
                     hashedTrees[hashes[n]]?[] += [n];
                 }
@@ -67,7 +62,7 @@ map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThre
     return hashedTrees;
 }
 
-map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] ASTs, int sequenceThreshold) {
+map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] ASTs, int sequenceThreshold, bool ignoreLeaves=false) {
     list[list[node]] sequences = [];
     visit(ASTs) {
         case \block(statements): {
@@ -89,11 +84,7 @@ map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] AST
                 if ((j >= i + sequenceThreshold)) {
                     list[node] subsequence = sequence[i..j];
                     
-                    hash = "";
-                    for (n <- subsequence) {
-                        hash += hashNode(n);
-                    }
-                    hash = md5Hash(hash);
+                    hash = hashSequence(subsequence, ignoreLeaves=ignoreLeaves);
 
                     subsequences[hash]?[] += [subsequence];
                 }
