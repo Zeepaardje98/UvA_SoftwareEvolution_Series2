@@ -1,0 +1,12 @@
+{
+ "7ecaf09c5e7d2a08047fbee6f84ab888": [
+  "|java+compilationUnit:///testFiles/helloWorld2.java|(0,224,<1,0>,<8,2>)",
+  "|java+compilationUnit:///testFiles/helloWorld1.java|(0,316,<1,0>,<15,1>)"
+ ],
+ "821eb1aa4db326c3ba651cf64197aaf0": [
+  "|java+compilationUnit:///testFiles/helloWorld2.java|(31,190,<2,4>,<7,5>)",
+  "|java+compilationUnit:///testFiles/helloWorld1.java|(47,267,<4,4>,<14,5>)",
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(309,193,<14,4>,<19,5>)",
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(36,267,<2,4>,<12,5>)"
+ ]
+}

@@ -3,14 +3,18 @@ module ClonePairs
 import List;
 import Node;
 import IO;
+import Type;
 
 import Helper;
+import TreeParser;
 
 private list[tuple[node, node]] _clonePairs = [];
 private list[tuple[list[node], list[node]]] _sequenceClones = [];
+private map[str, set[loc]] _cloneClasses = ();
+
 
 public void addClone(tuple[node, node] newPair, bool print=false) {
-    // Ignore the pair if one node is a subtree of another node
+    // Ignore the pair if one node is a subtree of the other node
     if (isSubset(newPair[0], newPair[1]) || isSubset(newPair[1], newPair[0])) {
         return;
     }
@@ -51,7 +55,7 @@ public void addClone(tuple[node, node] newPair, bool print=false) {
 
 public void addSequenceClone(tuple[list[node], list[node]] newSequencePair, bool print=false) {
     // TODO: Check of current sequencepair is subset of already existing pair
-    
+
     if (print) {
         println("ADDING SEQUENCE CLONE");
         println("Sequence1: ");
@@ -69,6 +73,21 @@ public void addSequenceClone(tuple[list[node], list[node]] newSequencePair, bool
     // TODO: Remove child sequence clones and child atomic clones
 
     return;
+}
+
+public map[str, set[loc]] getCloneClasses() {
+    for (clonePair <- _clonePairs) {
+        if (hashNode(clonePair[0]) in _cloneClasses) {
+            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[0].src);
+            // hashnode(clonepair[0]) should be the same as hashnode(clonepair[1])
+            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[1].src);
+        }
+        else {
+            _cloneClasses[hashNode(clonePair[0])] = {typeCast(#loc, clonePair[0].src)};
+            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[1].src);
+        }
+    }
+    return _cloneClasses;
 }
 
 

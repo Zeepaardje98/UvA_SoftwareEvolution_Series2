@@ -1,3 +1,8 @@
+/*
+ * This file contains the 'main' functions for our type 1 & 2 clone detection
+ * method, based on the paper by Ira D. Baxter.
+*/
+
 module Main
 
 import IO;
@@ -13,28 +18,31 @@ import util::FileSystem;
 
 import lang::java::m3::Core;
 import lang::java::m3::AST;
+import lang::json::IO;
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
-    projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
+    projectLocation = |project://Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
-    
+
     // Get hashed subtrees of the AST
-    int massThreshold = 10;
+    int massThreshold = 30;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold);
-    
+
     // Find the clones in the subtrees of the AST
     real similarityThreshold = 0.8;
     findClones(subtrees, similarityThreshold);
-    printClones();
-    
+    // printClones();
+
     // Get all sequence nodes of the AST
-    int sequenceThreshold = 4;
-    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold);
-    
+    // int sequenceThreshold = 4;
+    // map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold);
+
     // Find the clones in the sequences of the AST
-    similarityThreshold = 0.0;
-    findSequenceClones(sequences, similarityThreshold);
-    printSequenceClones();
+    // similarityThreshold = 0.0;
+    // findSequenceClones(sequences, similarityThreshold);
+    // printSequenceClones();
+
+    writeJSON(|project://Series2/testoutput.json|, getCloneClasses(), indent=1);
 
 
     return;
