@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import Grid from '../Grid'
 import './../../App.css';
-import Stats from  '../../stats.json';
+import Stats from  '../../cloneStats.json';
 
 
 const styles = makeStyles({
@@ -43,11 +43,6 @@ export default function Statistics() {
               )
             })
           }
-          {/* <Grid title="Number of clones" stat={ CloneData.stats.numCloneClasses} btnRoute="/clones" btnTitle="Show all clones" /> */}
-
-          {/* <Grid title="Number of clones" stat="10" btnRoute="/clones" btnTitle="Show all clones" />
-          <Grid title="Number of clone classes" stat="10" btnRoute="/classes" btnTitle="Show all clone classes" />
-          <Grid title="Biggest clone" stat="30 lines" btnRoute="/" btnTitle="Show biggest clone" /> */}
         </div>
     </div>
   );

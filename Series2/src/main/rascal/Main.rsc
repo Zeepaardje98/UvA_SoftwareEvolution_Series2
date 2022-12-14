@@ -7,19 +7,16 @@ module Main
 
 import IO;
 import List;
-import Node;
-import Map;
-import Set;
 
 import Helper;
 import TreeParser;
 import ClonePairs;
+import Visualization;
 
 import util::FileSystem;
 
 import lang::java::m3::Core;
 import lang::java::m3::AST;
-import lang::json::IO;
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
@@ -49,9 +46,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     findSequenceClones(sequences, similarityThreshold, type2=type2);
     // printSequenceClones();
 
-    node cloneData = getCloneData();
-
-    writeJSON(|project://Series2/cloneData.json|, cloneData, indent=1);
+    exportCloneData();
 
     return;
 }
@@ -94,19 +89,4 @@ void findSequenceClones(map[str, list[list[node]]] sequences, real similarityThr
             }
         }
     }
-}
-
-node getCloneData() {
-    map[str, set[loc]] cloneClasses = getCloneClasses();
-    int numCloneClasses = size(cloneClasses);
-    int numClones = size(union(range((cloneClasses))));
-
-    // writeJSON(|project://Series2/cloneClasses.json|, cloneClasses, indent=1);
-
-    node cloneData = makeNode("cloneData", ("cloneClasses": cloneClasses,
-                                            "numCloneClasses": numCloneClasses,
-                                            "numClones": numClones
-                                            ));
-
-    return cloneData;
 }
