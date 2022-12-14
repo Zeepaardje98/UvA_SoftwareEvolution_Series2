@@ -1,14 +1,8 @@
-import {makeStyles } from '@material-ui/core/styles';
-import {Typography} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import { Typography } from '@material-ui/core';
 import Grid from '../Grid'
 import './../../App.css';
-//changes to imports
-import SecurityIcon from '@material-ui/icons/Security';
-import EventNoteIcon from '@material-ui/icons/EventNote';
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import ImportExportIcon from '@material-ui/icons/ImportExport';
-import ComputerIcon from '@material-ui/icons/Computer';
-import HttpIcon from '@material-ui/icons/Http';
+import Stats from  '../../stats.json';
 
 
 const styles = makeStyles({
@@ -42,14 +36,18 @@ export default function Statistics() {
           </Typography>
         </div>
         <div className={`${classes.grid} ${classes.bigSpace}`}>
-          <Grid icon={<SecurityIcon style={{fill: "#4360A6", height:"125", width:"125"}}/>}  title="Secure" btnTitle="Show me More" />
-          <Grid icon={<EventNoteIcon style={{fill: "#449A76", height:"125", width:"125"}}/>} title="Reliable" btnTitle="Show me More"/>
-          <Grid icon={<TrendingUpIcon style={{fill: "#D05B2D", height:"125", width:"125"}}/>}  title="Performant" btnTitle="Show me More"/>
-        </div>
-        <div className={`${classes.grid} ${classes.littleSpace}`}>
-          <Grid icon={<ImportExportIcon style={{fill: "#5EA780", height:"125", width:"125"}}/>}  title="Modular" btnTitle="Show me More"/>
-          <Grid icon={<ComputerIcon style={{fill: "#E69426", height:"125", width:"125"}}/>}  title="Multi-Platform" btnTitle="Show me More"/>
-          <Grid icon={<HttpIcon style={{fill: "#2EA09D", height:"125", width:"125"}}/>} title="Connected" btnTitle="Show me More"/>
+          {
+            Stats.map(s => {
+              return(
+                <Grid title={s.title} stat={ s.value } btnRoute={ s.btnRoute } btnTitle={ s.btnText } />
+              )
+            })
+          }
+          {/* <Grid title="Number of clones" stat={ CloneData.stats.numCloneClasses} btnRoute="/clones" btnTitle="Show all clones" /> */}
+
+          {/* <Grid title="Number of clones" stat="10" btnRoute="/clones" btnTitle="Show all clones" />
+          <Grid title="Number of clone classes" stat="10" btnRoute="/classes" btnTitle="Show all clone classes" />
+          <Grid title="Biggest clone" stat="30 lines" btnRoute="/" btnTitle="Show biggest clone" /> */}
         </div>
     </div>
   );

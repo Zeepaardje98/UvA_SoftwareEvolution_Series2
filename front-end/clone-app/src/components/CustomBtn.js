@@ -1,6 +1,7 @@
 import React from 'react'
-import {Button} from '@material-ui/core'
-import {withStyles} from '@material-ui/core/styles'
+import { Button } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
 
 const StyledButton = withStyles({
     root: {
@@ -27,7 +28,9 @@ const StyledButton = withStyles({
 
 export default function CustomBtn(props) {
     return (
+      <Link to={props.route} style={{ textDecoration: 'none' }}>
         <StyledButton variant="contained">{props.txt}</StyledButton>
+      </Link>
     )
 }
 

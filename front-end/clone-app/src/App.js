@@ -1,5 +1,5 @@
-import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
-import {Routes, Route} from 'react-router-dom';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import Statistics from './components/pages/Statistics';
 import Classes from './components/pages/Classes';
@@ -25,10 +25,10 @@ const theme = createMuiTheme({
       fontSize: 28,
       lineHeight: '2rem',
       },
-    // h5: {
-    //   fontWeight: 100,
-    //   lineHeight: '2rem',
-    // },
+    h5: {
+      fontWeight: 100,
+      lineHeight: '2rem',
+    },
   },
 });
 
