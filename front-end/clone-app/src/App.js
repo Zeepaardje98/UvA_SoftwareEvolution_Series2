@@ -2,9 +2,9 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import Statistics from './components/pages/Statistics';
-import Classes from './components/pages/Classes';
-import Clones from './components/pages/Clones';
-
+import ClassOverview from './components/pages/ClassOverview';
+import Class from './components/pages/Class';
+import File from './components/pages/File';
 import './App.css';
 
 const theme = createMuiTheme({
@@ -40,8 +40,9 @@ export default function App() {
         <Routes>
           <Route path='/' element={<Statistics/>} />
           <Route path='statistics' element={<Statistics/>} />
-          <Route path='classes' element={<Classes/>} />
-          <Route path='clones' element={<Clones/>} />
+          <Route path='classes' element={<ClassOverview/>} />
+          <Route path='classes/1' element={<Class/>} />
+          <Route path='file' element={<File/>} />
         </Routes>
       </ThemeProvider>
     </div>

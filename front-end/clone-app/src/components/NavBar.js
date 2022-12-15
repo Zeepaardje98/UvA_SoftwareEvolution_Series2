@@ -38,7 +38,7 @@ export default function NavBar() {
                 <Link to="/classes" className={classes.link}>Clone Classes</Link>
                 </Typography>
                 <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/clones" className={classes.link}>Clones</Link>
+                <Link to="/file" className={classes.link}>Files</Link>
                 </Typography>
             </Toolbar>
     )

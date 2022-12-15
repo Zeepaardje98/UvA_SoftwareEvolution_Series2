@@ -8,13 +8,13 @@
  {
   "btnText": "show all clones",
   "btnRoute": "/clones",
-  "value": 13,
+  "value": 17,
   "title": "total clones"
  },
  {
   "btnText": "show biggest clone class",
   "btnRoute": "/classes",
-  "value": "4 clones",
+  "value": "5 clones",
   "title": "biggest clone class"
  },
  {
