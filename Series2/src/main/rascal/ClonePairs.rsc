@@ -138,7 +138,7 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
             _clonePairs -= oldPair;
 
             if (print) {
-                println("Removed clonepair");
+                println("Removed atomic pair");
                 println(" clone1: <oldPair[0].src> \n clone2: <oldPair[1].src>");
             }
         }
