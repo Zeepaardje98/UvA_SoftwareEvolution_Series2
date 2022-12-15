@@ -16,12 +16,12 @@ const styles = makeStyles({
 })
 
 export default function Grid(props) {
-    const {title, stat, btnRoute, btnTitle} = props;
+    const {title, value, btnRoute, btnTitle} = props;
     const classes = styles();
     return (
         <div className={classes.wrapper}>
             <Typography className={classes.item} variant="h4" styles={{textTransform: "capitalize"}}>{title}</Typography>
-            <Typography className={classes.item} variant="h3" color="primary">{stat}</Typography>
+            <Typography className={classes.item} variant="h3" color="primary">{value}</Typography>
             <div className={classes.item}>
                 <CustomBtn route={btnRoute} txt={btnTitle}/>
             </div>

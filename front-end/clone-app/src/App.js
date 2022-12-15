@@ -41,7 +41,7 @@ export default function App() {
           <Route path='/' element={<Statistics/>} />
           <Route path='statistics' element={<Statistics/>} />
           <Route path='classes' element={<ClassOverview/>} />
-          <Route path='classes/1' element={<Class/>} />
+          <Route path='class' element={<Class/>} />
           <Route path='file' element={<File/>} />
         </Routes>
       </ThemeProvider>

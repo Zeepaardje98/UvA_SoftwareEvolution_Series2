@@ -1,0 +1,77 @@
+[
+ {
+  "clones": [
+   {
+    "fileName": "/testFiles/helloWorld3.java",
+    "startLineNumber": 14,
+    "lines": "public static void main(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 2,
+    "lines": "public static void main(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+   }
+  ],
+  "id": 0
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/testFiles/helloWorld3.java",
+    "startLineNumber": 2,
+    "lines": "public static void notMain(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 9,
+    "lines": "public static void notMain(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+   }
+  ],
+  "id": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/testFiles/helloWorld3.java",
+    "startLineNumber": 2,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 9,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 38,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorld1.java",
+    "startLineNumber": 4,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+   }
+  ],
+  "id": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/testFiles/helloWorld3.java",
+    "startLineNumber": 14,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 2,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 31,
+    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+   }
+  ],
+  "id": 3
+ }
+]

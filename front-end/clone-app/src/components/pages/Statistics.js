@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Typography } from '@material-ui/core';
 import Grid from '../Grid'
 import './../../App.css';
-import Stats from  '../../stats.json';
+import Stats from  '../../data/cloneStats.json';
 
 
 const styles = makeStyles({
@@ -37,9 +37,9 @@ export default function Statistics() {
         </div>
         <div className={`${classes.grid} ${classes.bigSpace}`}>
           {
-            Stats.map((s) => {
+            Stats.map((stat, index) => {
               return(
-                <Grid title={ s.title } stat={ s.value } btnRoute={ s.btnRoute } btnTitle={ s.btnText } />
+                <Grid key={index} title={stat.title} value={stat.value} btnRoute={stat.btnRoute} btnTitle={stat.btnText} />
               )
             })
           }

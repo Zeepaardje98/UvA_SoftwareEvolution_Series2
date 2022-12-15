@@ -1,27 +1,21 @@
 {
  "b26bbecec4fe4303032b430e8f802019": [
-  "|java+compilationUnit:///testFiles/helloWorld2.java|(31,190,<2,4>,<7,5>)",
-  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(36,190,<2,4>,<7,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld3.java|(31,190,<2,4>,<7,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld3.java|(307,190,<14,4>,<19,5>)"
+  "|java+compilationUnit:///testFiles/helloWorld3.java|(307,190,<14,4>,<19,5>)",
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(36,190,<2,4>,<7,5>)"
  ],
  "7c476cb36dd0f48d3ef40ac1f6116643": [
   "|java+compilationUnit:///testFiles/helloWorld3.java|(31,270,<2,4>,<12,5>)",
-  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(232,270,<9,4>,<19,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld3.java|(227,270,<9,4>,<19,5>)"
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(232,270,<9,4>,<19,5>)"
  ],
  "ea9792ca0334eee9e7055d5e136c0ff5": [
   "|java+compilationUnit:///testFiles/helloWorld3.java|(73,228,<2,46>,<12,5>)",
   "|java+compilationUnit:///testFiles/helloWorldDouble.java|(274,228,<9,46>,<19,5>)",
   "|java+compilationUnit:///testFiles/helloWorldDouble.java|(939,228,<38,45>,<48,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld1.java|(86,228,<4,43>,<14,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld3.java|(269,228,<9,46>,<19,5>)"
+  "|java+compilationUnit:///testFiles/helloWorld1.java|(86,228,<4,43>,<14,5>)"
  ],
  "4435a6bb9dc17151466032a58786b8a6": [
-  "|java+compilationUnit:///testFiles/helloWorld2.java|(70,151,<2,43>,<7,5>)",
+  "|java+compilationUnit:///testFiles/helloWorld3.java|(346,151,<14,43>,<19,5>)",
   "|java+compilationUnit:///testFiles/helloWorldDouble.java|(75,151,<2,43>,<7,5>)",
-  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(741,151,<31,43>,<36,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld3.java|(70,151,<2,43>,<7,5>)",
-  "|java+compilationUnit:///testFiles/helloWorld3.java|(346,151,<14,43>,<19,5>)"
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(741,151,<31,43>,<36,5>)"
  ]
 }

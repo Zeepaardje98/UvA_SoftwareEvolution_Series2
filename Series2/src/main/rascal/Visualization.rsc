@@ -20,33 +20,39 @@ void exportCloneData() {
     exportStatistics(cloneClasses);
     exportCloneClasses(cloneClasses);
     writeJSON(|project://Series2/cloneClasses.json|, cloneClasses, indent=1);
-
 }
 
 void exportCloneClasses(map[str, set[loc]] cloneClasses) {
-    list[map[str, value]] cloneClassData = [];
-    for (class <- cloneClasses) {
-        for (loc clone <- toList(cloneClasses[class])) {
+    int counter = 0;
+    list[map[str, value]] classes = [];
+    for (hash <- cloneClasses) {
+        list[map[str, value]] clones = [];
+        for (loc clone <- toList(cloneClasses[hash])) {
             str fileName = clone.path;
             str cloneString = getContent(clone);
             int startLineNumber = clone.begin.line;
-            cloneClassData +=
+            clones +=
             (
                 "fileName": fileName,
                 "lines": cloneString,
                 "startLineNumber": startLineNumber
             );
         }
-        writeJSON(|file:///home/michelle/Documents/master-se/software-evolution/UvA_SoftwareEvolution_Series2/front-end/clone-app/src/cloneData2.json|, cloneClassData, indent=1);
-        return;
+        classes +=
+        (
+            "id": counter,
+            "clones": clones
+        );
+        counter += 1;
     }
+    writeJSON(|project://front-end/clone-app/src/data/cloneClasses.json|, classes, indent=1);
 }
 
 void exportStatistics(map[str, set[loc]] cloneClasses) {
     int numCloneClasses = size(cloneClasses);
     int numClones = size(union(range((cloneClasses))));
-    int biggestClass = getBiggestCloneClass(cloneClasses);
-    int biggestClone = getBiggestClone(cloneClasses);
+    tuple[int, int] biggestCloneClass = getClassWithBiggestClone(cloneClasses);
+    tuple[int, int] mostClonesClass = getClassWithMostClones(cloneClasses);
 
     list[map[str, value]] cloneStats =
     [
@@ -54,57 +60,67 @@ void exportStatistics(map[str, set[loc]] cloneClasses) {
             "title": "total clone classes",
             "value": numCloneClasses,
             "btnRoute": "/classes",
-            "btnText": "show all classes"
+            "btnText": "show all clone classes"
         ),
         (
             "title": "total clones",
             "value": numClones,
-            "btnRoute": "/clones",
-            "btnText": "show all clones"
-        ),
-        (
-            "title": "biggest clone class",
-            "value": "<biggestClass> clones",
             "btnRoute": "/classes",
-            "btnText": "show biggest clone class"
+            "btnText": "show all clone classes"
         ),
         (
             "title": "biggest clone",
-            "value": "<biggestClone> lines",
-            "btnRoute": "/clones",
-            "btnText": "show biggest clone"
+            "value": "<biggestCloneClass[1]> lines",
+            "btnRoute": "/class?id=<biggestCloneClass[0]>",
+            "btnText": "show clone class"
+        ),
+        (
+            "title": "most clones in one class",
+            "value": "<mostClonesClass[1]> clones",
+            "btnRoute": "/class?id=<mostClonesClass[0]>",
+            "btnText": "show clone class"
         )
     ];
 
-    writeJSON(|file:///home/michelle/Documents/master-se/software-evolution/UvA_SoftwareEvolution_Series2/front-end/clone-app/src/cloneStats.json|, cloneStats, indent=1);
+    writeJSON(|project://front-end/clone-app/src/data/cloneStats.json|, cloneStats, indent=1);
 }
 
-// Returns the highest amount of clones in one clone class
-int getBiggestCloneClass(map[str, set[loc]] cloneClasses) {
-    int biggestClass = 0;
 
-    for (class <- cloneClasses) {
-        if (size(cloneClasses[class]) > biggestClass) {
-            biggestClass = size(cloneClasses[class]);
-        }
-    }
 
-    return biggestClass;
-}
-
-// Returns the highest amount of lines in one clone
-// Can probably be done easier by extracting line numbers
-int getBiggestClone(map[str, set[loc]] cloneClasses) {
-    int biggestClone = 0;
+// Returns the index of the class with the biggest clones, and the amount of lines
+// the clones have
+tuple[int, int] getClassWithBiggestClone(map[str, set[loc]] cloneClasses) {
+    int counter = 0;
+    int index = 0;
+    int numLines = 0;
 
     for (class <- cloneClasses) {
         str cloneString = getContent(toList(cloneClasses[class])[0]);
         list[str] cloneLines = split("\n", cloneString);
 
-        if (size(cloneLines) > biggestClone) {
-            biggestClone = size(cloneLines);
+        if (size(cloneLines) > numLines) {
+            numLines = size(cloneLines);
+            index = counter;
         }
+        counter += 1;
     }
 
-    return biggestClone;
+    return <index, numLines>;
+}
+
+// Returns the index of the class with the highest amount of clones, and the amount
+tuple[int, int] getClassWithMostClones(map[str, set[loc]] cloneClasses) {
+    int counter = 0;
+    int index = 0;
+    int numClones = 0;
+
+    for (class <- cloneClasses) {
+        if (size(cloneClasses[class]) > numClones) {
+            numClones = size(cloneClasses[class]);
+            index = counter;
+        }
+        counter += 1;
+    }
+
+    return <index, numClones>;
 }
