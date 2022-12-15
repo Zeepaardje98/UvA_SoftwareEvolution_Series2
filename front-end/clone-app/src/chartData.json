@@ -1,0 +1,17 @@
+[
+    {
+        "fileName": "test.java",
+        "startLine": 20,
+        "endLine": 26
+    },
+    {
+        "fileName": "test2.java",
+        "startLine": 50,
+        "endLine": 56
+    },
+    {
+        "fileName": "test3.java",
+        "startLine": 70,
+        "endLine": 76
+    }
+]

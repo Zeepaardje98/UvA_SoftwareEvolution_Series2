@@ -17,6 +17,32 @@ import lang::json::IO;
 
 void exportCloneData() {
     map[str, set[loc]] cloneClasses = getCloneClasses();
+    exportStatistics(cloneClasses);
+    exportCloneClasses(cloneClasses);
+    writeJSON(|project://Series2/cloneClasses.json|, cloneClasses, indent=1);
+
+}
+
+void exportCloneClasses(map[str, set[loc]] cloneClasses) {
+    list[map[str, value]] cloneClassData = [];
+    for (class <- cloneClasses) {
+        for (loc clone <- toList(cloneClasses[class])) {
+            str fileName = clone.path;
+            str cloneString = getContent(clone);
+            int startLineNumber = clone.begin.line;
+            cloneClassData +=
+            (
+                "fileName": fileName,
+                "lines": cloneString,
+                "startLineNumber": startLineNumber
+            );
+        }
+        writeJSON(|file:///home/michelle/Documents/master-se/software-evolution/UvA_SoftwareEvolution_Series2/front-end/clone-app/src/cloneData2.json|, cloneClassData, indent=1);
+        return;
+    }
+}
+
+void exportStatistics(map[str, set[loc]] cloneClasses) {
     int numCloneClasses = size(cloneClasses);
     int numClones = size(union(range((cloneClasses))));
     int biggestClass = getBiggestCloneClass(cloneClasses);
@@ -67,6 +93,7 @@ int getBiggestCloneClass(map[str, set[loc]] cloneClasses) {
 }
 
 // Returns the highest amount of lines in one clone
+// Can probably be done easier by extracting line numbers
 int getBiggestClone(map[str, set[loc]] cloneClasses) {
     int biggestClone = 0;
 

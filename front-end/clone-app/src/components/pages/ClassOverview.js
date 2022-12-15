@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Classes() {
+export default function ClassOverview() {
   return (
     <div>Classes</div>
   )
