@@ -4,7 +4,12 @@ class HelloWorld1 {
     public static void main(String[] args) {
         Str testString = "Hello, World!";
         Int testInt = 1;
-        System.out.println(testString);
-        System.out.println(testInt);
+
+        if (testString == "a") {
+            System.out.println(testString);
+        }
+        else {
+            System.out.println(testInt);
+        }
     }
 }

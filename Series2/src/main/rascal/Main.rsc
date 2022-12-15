@@ -1,13 +1,17 @@
+/*
+ * This file contains the 'main' functions for our type 1 & 2 clone detection
+ * method, based on the paper by Ira D. Baxter.
+*/
+
 module Main
 
 import IO;
 import List;
-import Node;
-import Map;
 
 import Helper;
 import TreeParser;
 import ClonePairs;
+import Visualization;
 
 import util::FileSystem;
 
@@ -17,31 +21,32 @@ import lang::java::m3::AST;
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
 
-    projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
+    projectLocation = |project://Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
-    
+
     // Get hashed subtrees of the AST
-    println("Getting subtrees");
-    int massThreshold = 30;
+    // println("Getting subtrees");
+    int massThreshold = 40;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
-    
+
     // Find the clones in the subtrees of the AST
-    println("Finding atomic clones");
+    // println("Finding atomic clones");
     real similarityThreshold = 0.8;
     findClones(subtrees, similarityThreshold, type2=type2);
-    printClones();
-    
+    // printClones();
+
     // Get all sequence nodes of the AST
-    println("Getting sequences");
+    // println("Getting sequences");
     int sequenceThreshold = 7;
     map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
-    
+
     // Find the clones in the sequences of the AST
-    println("Finding sequence clones");
+    // println("Finding sequence clones");
     similarityThreshold = 0.0;
     findSequenceClones(sequences, similarityThreshold, type2=type2);
-    printSequenceClones();
+    // printSequenceClones();
 
+    exportCloneData();
 
     return;
 }
@@ -54,12 +59,12 @@ void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool pr
             println("Hash: <hash>, subtrees: <size(subtrees[hash])>");
         }
         list[node] nodes = subtrees[hash];
-        
+
         for (i <- nodes) {
             for (j <- nodes) {
-                if (! type2) {
+                if (!type2) {
                     addClone(<i, j>, print=print);
-                } 
+                }
                 else if (similarity(i, j) >= similarityThreshold) {
                     addClone(<i, j>, print=print);
                 }
@@ -72,7 +77,7 @@ void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool pr
 void findSequenceClones(map[str, list[list[node]]] sequences, real similarityThreshold, bool print=false, bool type2=false) {
     for (hash <- sequences) {
         list[list[node]] subsequences = sequences[hash];
-        
+
         for (i <- subsequences) {
             for (j <- subsequences) {
                 if (! type2) {

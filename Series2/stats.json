@@ -1,0 +1,26 @@
+[
+    {
+        "title": "total clone classes",
+        "value": 4,
+        "btnRoute": "/classes",
+        "btnText": "show all clone classes"
+    },
+    {
+        "title": "total clones",
+        "value": 10,
+        "btnRoute": "/clones",
+        "btnText": "show all clones"
+    },
+    {
+        "title": "biggest clone class",
+        "value": "?",
+        "btnRoute": "/classes",
+        "btnText": "show clone class"
+    },
+    {
+        "title": "biggest clone",
+        "value": "?",
+        "btnRoute": "/clones",
+        "btnText": "show clone"
+    }
+]

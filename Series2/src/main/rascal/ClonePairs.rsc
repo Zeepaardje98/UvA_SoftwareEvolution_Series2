@@ -3,11 +3,15 @@ module ClonePairs
 import List;
 import Node;
 import IO;
+import Type;
 
 import Helper;
+import TreeParser;
 
 private list[tuple[node, node]] _clonePairs = [];
 private list[tuple[list[node], list[node]]] _sequenceClones = [];
+private map[str, set[loc]] _cloneClasses = ();
+
 
 public void addClone(tuple[node, node] newPair, bool print=false) {
     if (print) {
@@ -78,7 +82,7 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
         }
         return;
     }
-    
+
     // Check the sequence pairs
     for (oldPair <- _sequenceClones) {
         // Check if the pair already exists in flipped form
@@ -141,7 +145,7 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
     }
 
     _sequenceClones += newPair;
-    
+
     if (print) {
         println("ADDED SEQUENCE CLONE");
         println("Sequence1: ");
@@ -155,6 +159,21 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
     }
 
     return;
+}
+
+public map[str, set[loc]] getCloneClasses() {
+    for (clonePair <- _clonePairs) {
+        if (hashNode(clonePair[0]) in _cloneClasses) {
+            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[0].src);
+            // hashnode(clonepair[0]) should be the same as hashnode(clonepair[1])
+            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[1].src);
+        }
+        else {
+            _cloneClasses[hashNode(clonePair[0])] = {typeCast(#loc, clonePair[0].src)};
+            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[1].src);
+        }
+    }
+    return _cloneClasses;
 }
 
 
