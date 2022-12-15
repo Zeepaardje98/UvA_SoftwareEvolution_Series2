@@ -4,5 +4,10 @@ public class helloWorld2 {
         Int testInt = 1;
         System.out.println(testString);
         System.out.println(testInt);
+
+        Str testString = "Hello, World!";
+        Int testInt = 1;
+        System.out.println(testString);
+        System.out.println(testInt);
     }
 }

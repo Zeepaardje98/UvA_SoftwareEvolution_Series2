@@ -72,9 +72,16 @@ bool isSubset(list[node] rootSequence, list[node] subSequence) {
     // has a sequence which entails our subsequence, it is a subset.
     for (node n <- rootSequence) {
         visit(n) {
+            // subsequence is contained in sequence of the current node.
             case \block(statements): {
                 list[node] sequence = statements;
                 if (isSubsequence(statements, subSequence)) {
+                    return true;
+                }
+            }
+            // subsequence is contained in the current node
+            case node n: {
+                if (size(subSequence) == 1 && subSequence[0] == n) {
                     return true;
                 }
             }
@@ -88,7 +95,7 @@ list[node] directChildren(node root) {
     return children;
 }
 
-
+// Find the number of shared and unique nodes for 2 trees.
 tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
     list[node] uniqueNodes1 = [];
     list[node] uniqueNodes2 = [];
@@ -119,6 +126,8 @@ tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
     return <S, L, R>;
 }
 
+
+// Calculate similarity score for 2 trees
 real similarity(node subtree1, node subtree2) {
     tuple[real S, real L, real R] SLR = sharedUniqueNodes(subtree1, subtree2);
     
@@ -126,6 +135,7 @@ real similarity(node subtree1, node subtree2) {
     return similarity;
 }
 
+// Calculate similarity score for 2 lists of trees
 real similarity(list[node] subtrees1, list[node] subtrees2) {
     list[real] SLR = [0.0, 0.0, 0.0];
     for (i <- [0..size(subtrees1)]) {
