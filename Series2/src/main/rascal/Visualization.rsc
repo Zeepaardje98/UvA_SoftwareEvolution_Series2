@@ -14,11 +14,10 @@ import DataFunctions;
 
 import lang::json::IO;
 
-void exportCloneData() {
+void exportCloneData(loc projectLocation) {
     map[str, set[loc]] cloneClasses = getCloneClasses();
-    exportStatistics(cloneClasses);
     exportCloneClasses(cloneClasses);
-    writeJSON(|project://Series2/cloneClasses.json|, cloneClasses, indent=1);
+    exportStatistics(cloneClasses, projectLocation);
 }
 
 void exportCloneClasses(map[str, set[loc]] cloneClasses) {
@@ -65,12 +64,13 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
     writeJSON(|cwd:///../../../../front-end/clone-app/src/data/cloneClasses.json|, classes, indent=1);
 }
 
-void exportStatistics(map[str, set[loc]] cloneClasses) {
+void exportStatistics(map[str, set[loc]] cloneClasses, loc projectLocation) {
     int numCloneClasses = size(cloneClasses);
     int numClones = size(union(range((cloneClasses))));
     tuple[int, int] biggestCloneClass = getClassWithBiggestClone(cloneClasses);
     tuple[int, int] mostClonesClass = getClassWithMostClones(cloneClasses);
     int totalCloneLines = getTotalCloneLines(cloneClasses);
+    int cloneLinePercentage = getCloneLinePercentage(totalCloneLines, projectLocation);
 
     list[map[str, value]] cloneStats =
     [
@@ -94,7 +94,7 @@ void exportStatistics(map[str, set[loc]] cloneClasses) {
         ),
         (
             "title": "clone line percentage",
-            "value": "?%",
+            "value": "<cloneLinePercentage>%",
             "btnRoute": "/classes",
             "btnText": "show all clone classes"
         ),

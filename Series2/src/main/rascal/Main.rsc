@@ -43,7 +43,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     similarityThreshold = 0.0;
     findSequenceClones(sequences, similarityThreshold, type2=type2);
 
-    exportCloneData();
+    exportCloneData(projectLocation);
 
     return;
 }
