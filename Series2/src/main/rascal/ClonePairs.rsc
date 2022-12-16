@@ -182,6 +182,7 @@ public void printClones() {
     for (clonePair <- _clonePairs) {
        println(" clone1: <md5Hash(clonePair[0])> <clonePair[0].src> \n clone2: <md5Hash(clonePair[1])> <clonePair[1].src>");
     }
+    println("Size: <size(_clonePairs)>");
     return;
 }
 
@@ -193,9 +194,22 @@ public void printSequenceClones() {
         println("clone2: ");
         printNodes(seqClone[1]);
     }
+    println("Size: <size(_sequenceClones)>");
     return;
 }
 
 public list[tuple[node, node]] getClones() {
     return _clonePairs;
+}
+
+public list[tuple[list[node], list[node]]] getSequences() {
+    return _sequenceClones;
+}
+
+public void resetClones() {
+    _clonePairs = [];
+}
+
+public void resetSequences() {
+    _sequenceClones = [];
 }

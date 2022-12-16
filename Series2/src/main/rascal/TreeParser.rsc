@@ -26,12 +26,12 @@ str hashNode(node n, bool ignoreLeaves=false) {
         return hashes[n];
     }
     // Hash method 1. Hashes the entire subtree.
-    // Hash method 2. Ignores the leaves of the subtree, hashes using a merkle tree.
+    // Hash method 2. Ignores the leaves of the subtree, hashes roughly based on merkle tree.
     if (! ignoreLeaves) {
         hashes[n] = md5Hash(unsetRec(n));
     } else {
         str hash = "";
-        for (child <- directChildren(n)) {
+        for (child <- directChildren2(n)) {
             if (! isLeaf(child)) {
                 if (!(child in hashes)) {
                     hashNode(child, ignoreLeaves=true);
@@ -39,7 +39,16 @@ str hashNode(node n, bool ignoreLeaves=false) {
                 hash += hashes[child];
             }
         }
-        hashes[n] = md5Hash(getName(n) + hash);
+
+        // All the information exclusive to the root node(filtered out child nodes)
+        list[value] hashable = unsetRec(getChildren(n) - directChildren2(n)) + getName(n);
+        
+        if (hash != "") {
+            hashes[n] = md5Hash(hashable + hash);
+        }
+        else {
+            hashes[n] = md5Hash(hashable);
+        }
     }
 
     return hashes[n];
@@ -51,7 +60,7 @@ map[str hash, list[node] roots] getSubtrees(list[Declaration] ASTs, int massThre
 
     bottom-up visit (ASTs) {
         case node n: {
-            hashNode(n);
+            hashNode(n, ignoreLeaves=ignoreLeaves);
             if ((!ignoreLeaves && n.src?) || (ignoreLeaves && ! isLeaf(n) && n.src?)) {
                 if (mass(n, threshold=massThreshold) >= massThreshold) {
                     hashedTrees[hashes[n]]?[] += [n];
@@ -74,7 +83,7 @@ map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] AST
         }
     }
 
-    map[node, str] hashes = ();
+    // map[node, str] hashes = ();
     map[str, list[list[node]]] subsequences = ();
     for (list[node] sequence <- sequences) {
         
@@ -93,4 +102,12 @@ map[str hash, list[list[node]] sequenceRoots] getSequences(list[Declaration] AST
     }
 
     return subsequences;
+}
+
+map[node, str] getHashes() {
+    return hashes;
+}
+
+void resetHashes() {
+    hashes = ();
 }
