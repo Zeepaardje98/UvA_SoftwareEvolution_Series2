@@ -5,20 +5,22 @@
 
 module DataFunctions
 
-import List;
-import Map;
 import Set;
 import Location;
 
 // Returns the amount of lines there are in the clones that we found
+// Note that in case clones from different classes overlap, this function can
+// count the same duplicate lines multiple times.
 int getTotalCloneLines(map[str, set[loc]] cloneClasses) {
     int totalLines = 0;
 
     for (class <- cloneClasses) {
-        loc cloneLoc = toList(cloneClasses[class])[0];
-        // +1 because line numbers start at 1 and not zero
-        int numLines = cloneLoc.end.line - cloneLoc.begin.line + 1;
-        totalLines += numLines;
+        for (clone <- cloneClasses[class]) {
+            // +1 because line numbers start at 1 and not zero
+            int numLines = clone.end.line - clone.begin.line + 1;
+            totalLines += numLines;
+        }
+
     }
 
     return totalLines;

@@ -75,38 +75,38 @@ void exportStatistics(map[str, set[loc]] cloneClasses) {
     list[map[str, value]] cloneStats =
     [
         (
-            "title": "total clones",
+            "title": "clones",
             "value": numClones,
             "btnRoute": "/classes",
             "btnText": "show all clone classes"
         ),
         (
-            "title": "total clone classes",
+            "title": "clone classes",
             "value": numCloneClasses,
             "btnRoute": "/classes",
             "btnText": "show all clone classes"
         ),
         (
-            "title": "total clone lines",
+            "title": "clone lines",
             "value": totalCloneLines,
             "btnRoute": "/classes",
             "btnText": "show all clone classes"
         ),
         (
-            "title": "total files with clones",
-            "value": "?",
+            "title": "clone line percentage",
+            "value": "?%",
             "btnRoute": "/classes",
             "btnText": "show all clone classes"
         ),
         (
-            "title": "biggest clone",
-            "value": "<biggestCloneClass[1]> lines",
+            "title": "biggest clone (lines)",
+            "value": biggestCloneClass[1],
             "btnRoute": "/class?id=<biggestCloneClass[0]>",
             "btnText": "show clone class"
         ),
         (
-            "title": "most clones in one class",
-            "value": "<mostClonesClass[1]> clones",
+            "title": "biggest class (members)",
+            "value": <mostClonesClass[1]>,
             "btnRoute": "/class?id=<mostClonesClass[0]>",
             "btnText": "show clone class"
         )
