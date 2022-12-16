@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function ClassCard(props) {
   const numClonesText = "Number of clones: " + props.numClones;
-  const cloneSizeText = "Clone size: " + props.cloneSize;
+  const cloneSizeText = "Clone size: " + props.cloneSize + " lines";
   return (
     <Box padding='20px'>
         <Card sx={{bgcolor: 'white'}}>
@@ -18,7 +18,7 @@ export default function ClassCard(props) {
                 </Typography>
                 <Link to={'../class?id=' + props.id} style={{ textDecoration: 'none' }}>
                     <Button variant='contained'>
-                        {'show class'}
+                        {'show clones'}
                     </Button>
                 </Link>
             </CardContent>
