@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Grid, Typography, Card, CardContent} from '@mui/material';
+import { Box, Button, Grid, Typography, Card, CardContent} from '@mui/material';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -10,11 +10,13 @@ export default function GridStat(props) {
         <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <Card sx={{bgcolor: 'white'}}>
                 <CardContent>
-                    <Typography variant="h4" styles={{textTransform: "capitalize"}}>{title}</Typography>
-                    <Typography variant="h3" color="primary">{value}</Typography>
-                    <Link to={btnRoute} style={{ textDecoration: 'none' }}>
-                        <Button variant="outlined">{btnTitle}</Button>
-                    </Link>
+                    <Typography variant="h4" my={3} styles={{textTransform: "capitalize"}}>{title}</Typography>
+                    <Typography variant="h3" my={3} color="primary">{value}</Typography>
+                    <Box component ='div' my={3}>
+                        <Link to={btnRoute} my={3} style={{ textDecoration: 'none' }}>
+                            <Button variant="outlined">{btnTitle}</Button>
+                        </Link>
+                    </Box>
                 </CardContent>
             </Card>
         </Grid>

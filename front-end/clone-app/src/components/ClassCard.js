@@ -7,20 +7,28 @@ export default function ClassCard(props) {
   const cloneSizeText = "Clone size: " + props.cloneSize + " lines";
   return (
     <Box padding='20px'>
-        <Card sx={{bgcolor: 'white'}}>
+        <Card sx={{bgcolor: 'secondary.main'}}>
             <CardContent>
                 <Typography variant='subtitle1' component='div' sx={{fontFamily: '"Fira code", "Fira Mono", monospace'}}>
                     {props.title}
                 </Typography>
-                <Typography variant='body2' component='div'>
-                    <ListItemText primary={numClonesText} />
-                    <ListItemText primary={cloneSizeText} />
-                </Typography>
-                <Link to={'../class?id=' + props.id} style={{ textDecoration: 'none' }}>
-                    <Button variant='contained'>
-                        {'show clones'}
-                    </Button>
-                </Link>
+            </CardContent>
+        </Card>
+        <Card sx={{bgcolor: 'white'}}>
+            <CardContent>
+                <Box component ='div' my={2}>
+                    <Typography variant='body1' component='div'>
+                        <ListItemText primary={numClonesText} my={1}/>
+                        <ListItemText primary={cloneSizeText} my={1}/>
+                    </Typography>
+                </Box>
+                <Box component ='div' my={1}>
+                    <Link to={'../class?id=' + props.id} style={{ textDecoration: 'none' }}>
+                        <Button variant='contained'>
+                            {'show clones'}
+                        </Button>
+                    </Link>
+                </Box>
             </CardContent>
         </Card>
     </Box>

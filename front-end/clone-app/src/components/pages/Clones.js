@@ -19,12 +19,10 @@ export default function Class() {
           Clones
         </Typography>
       </div>
-      <div>
-      </div>
-      <Box padding='20px'>
+      <Box component='div' padding='20px'>
         <Card sx={{bgcolor: 'secondary.light'}}>
             <CardContent>
-              <Typography variant='body2' component='div'>
+              <Typography variant='body1' component='div'>
                     <ListItemText primary={numClonesText} />
                     <ListItemText primary={cloneSizeText} />
               </Typography>

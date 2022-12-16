@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
     return (
-        <AppBar position='static' sx={{mb: 10}}>
+        <AppBar position='static'>
             <Toolbar>
                 <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
                     <ContentCopyIcon/>
