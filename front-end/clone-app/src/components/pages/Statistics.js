@@ -11,7 +11,7 @@ export default function Statistics() {
           Clone Statistics
         </Typography>
       </div>
-      <Grid container my={4} spacing={4}>
+      <Grid container my={4} spacing={6}>
         {
           Stats.map((stat, index) => {
             return(
