@@ -1,4 +1,4 @@
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, colors, ThemeProvider } from '@mui/material';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar'
 import Statistics from './components/pages/Statistics';
@@ -7,34 +7,18 @@ import Class from './components/pages/Class';
 import File from './components/pages/File';
 import './App.css';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
-    primary: {
-      main:"#2e1667",
-    },
+    primary: colors.deepPurple,
     secondary: {
-      main:"#c7d8ed",
+      main: '#d1c4e9',
     },
-  },
-  typography: {
-    fontFamily: [
-      'Roboto'
-    ],
-    h4: {
-      fontWeight: 600,
-      fontSize: 28,
-      lineHeight: '2rem',
-      },
-    h5: {
-      fontWeight: 100,
-      lineHeight: '2rem',
-    },
-  },
+  }
 });
 
 export default function App() {
   return (
-    <div className="App">
+    <div>
       <ThemeProvider theme={theme}>
         <NavBar/>
         <Routes>

@@ -1,6 +1,7 @@
 import React from 'react'
 import CloneClasses from '../../data/cloneClasses.json';
-import CustomBtn from '../CustomBtn';
+import { Button, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function ClassOverview() {
   return (
@@ -9,12 +10,10 @@ export default function ClassOverview() {
       CloneClasses.map((cloneClass, index) => {
         return(
           <div key={index}>
-            <div>
-              <h3>Class {cloneClass.id}</h3>
-            </div>
-            <div>
-                <CustomBtn route={'../class?id=' + cloneClass.id} txt={'show class'}/>
-            </div>
+            <Typography variant="h4">Class {cloneClass.id}</Typography>
+            <Link to={'../class?id=' + cloneClass.id} style={{ textDecoration: 'none' }}>
+                    <Button variant="contained">{'show class'}</Button>
+            </Link>
           </div>
         )
       })

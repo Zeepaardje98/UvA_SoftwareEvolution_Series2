@@ -2,6 +2,7 @@ import React from 'react';
 import CodeBlock from '../CodeBlock';
 import CloneClasses from '../../data/cloneClasses.json';
 import { useSearchParams } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 export default function Class() {
   const [searchParams] = useSearchParams();
@@ -14,7 +15,7 @@ export default function Class() {
         return(
           <div key={index}>
             <div>
-              <h3>{clone.fileName}</h3>
+            <Typography variant="h5">{clone.fileName}</Typography>
             </div>
             <div>
               <CodeBlock startLineNumber={clone.startLineNumber} code={clone.lines}/>
