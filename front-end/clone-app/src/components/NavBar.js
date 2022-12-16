@@ -16,21 +16,21 @@ export default function NavBar() {
                 <Stack direction='row' spacing={2}>
                     <Link to={'/statistics'} style={{ textDecoration: 'none' }}>
                         <Button color='inherit'>
-                            <Typography variant='h6' color='secondary.light'>
+                            <Typography variant='h6' color='white'>
                                 Statistics
                             </Typography>
                         </Button>
                     </Link>
                     <Link to={'/classes'} style={{ textDecoration: 'none' }}>
                         <Button color='inherit'>
-                            <Typography variant='h6' color='secondary.light'>
+                            <Typography variant='h6' color='white'>
                                 Clone Classes
                             </Typography>
                         </Button>
                     </Link>
                     <Link to={'/file'} style={{ textDecoration: 'none' }}>
                         <Button color='inherit'>
-                            <Typography variant='h6' color='secondary.light'>
+                            <Typography variant='h6' color='white'>
                                 Files
                             </Typography>
                         </Button>

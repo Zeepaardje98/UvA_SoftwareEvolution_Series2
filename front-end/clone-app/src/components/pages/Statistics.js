@@ -7,13 +7,13 @@ import './../../App.css';
 
 export default function Statistics() {
   return (
-    <div className="content">
-      <div>
-        <Typography variant="h4" color="primary">
+    <div className="statistics">
+      <div className="page-title">
+        <Typography variant="h3" color="primary">
           Code Duplication Statistics
         </Typography>
       </div>
-      <Grid container my={4} spacing={2}>
+      <Grid container my={2} spacing={2}>
         {
           ScoreStats.map((scoreStat, index) => {
             return(
@@ -22,7 +22,7 @@ export default function Statistics() {
           })
         }
       </Grid>
-      <Grid container my={4} spacing={2}>
+      <Grid container spacing={2}>
         {
           Stats.map((stat, index) => {
             return(

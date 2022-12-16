@@ -26,22 +26,39 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
     int counter = 0;
     list[map[str, value]] classes = [];
     for (hash <- cloneClasses) {
+        int cloneCounter = 0;
+        str classTitle = "";
+        int cloneSize = 0;
         list[map[str, value]] clones = [];
         for (loc clone <- toList(cloneClasses[hash])) {
             str fileName = clone.path;
             str cloneString = getContent(clone);
             int startLineNumber = clone.begin.line;
+            cloneSize = clone.end.line - clone.begin.line;
             clones +=
             (
                 "fileName": fileName,
                 "lines": cloneString,
                 "startLineNumber": startLineNumber
             );
+            if (cloneCounter == 0) {
+                classTitle += fileName;
+            }
+            if (cloneCounter == 1) {
+                classTitle += ", <fileName>";
+            }
+            if (cloneCounter == 2) {
+                classTitle += ", ...";
+            }
+            cloneCounter += 1;
         }
         classes +=
         (
             "id": counter,
-            "clones": clones
+            "clones": clones,
+            "title": classTitle,
+            "numClones": cloneCounter,
+            "cloneSize": cloneSize
         );
         counter += 1;
     }

@@ -1,4 +1,17 @@
-.content {
+.app {
+  background-color: #e7e6f0;
+  height: 100%;
+}
+
+.statistics {
   text-align: center;
   padding: 50px;
+}
+
+.overview {
+  padding: 50px;
+}
+
+.page-title {
+  text-align: center;
 }

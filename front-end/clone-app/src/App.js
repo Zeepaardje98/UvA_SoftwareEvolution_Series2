@@ -11,14 +11,14 @@ const theme = createTheme({
   palette: {
     primary: colors.deepPurple,
     secondary: {
-      main: '#d1c4e9',
+      main: '#c2b0e2',
     },
   }
 });
 
 export default function App() {
   return (
-    <div>
+    <div className="app">
       <ThemeProvider theme={theme}>
         <NavBar/>
         <Routes>
