@@ -3,7 +3,7 @@ import { Box, Button, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
-export default function GridItem(props) {
+export default function GridStat(props) {
     const {title, value, btnRoute, btnTitle} = props;
     return (
         <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>

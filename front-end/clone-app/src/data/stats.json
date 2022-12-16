@@ -7,7 +7,7 @@
  },
  {
   "btnText": "show all clone classes",
-  "btnRoute": "/clones",
+  "btnRoute": "/classes",
   "value": 11,
   "title": "total clones"
  },

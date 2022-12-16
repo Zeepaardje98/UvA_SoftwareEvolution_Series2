@@ -45,7 +45,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
         );
         counter += 1;
     }
-    writeJSON(|project://front-end/clone-app/src/data/cloneClasses.json|, classes, indent=1);
+    writeJSON(|cwd:///../../../../front-end/clone-app/src/data/cloneClasses.json|, classes, indent=1);
 }
 
 void exportStatistics(map[str, set[loc]] cloneClasses) {
@@ -53,6 +53,19 @@ void exportStatistics(map[str, set[loc]] cloneClasses) {
     int numClones = size(union(range((cloneClasses))));
     tuple[int, int] biggestCloneClass = getClassWithBiggestClone(cloneClasses);
     tuple[int, int] mostClonesClass = getClassWithMostClones(cloneClasses);
+    int numDuplicateLines = getNumDuplicateLines(cloneClasses);
+
+    list[map[str, value]] scoreStats =
+    [
+        (
+            "title": "duplicate lines",
+            "value": numDuplicateLines
+        ),
+        (
+            "title": "duplication score",
+            "value": "?"
+        )
+    ];
 
     list[map[str, value]] cloneStats =
     [
@@ -82,30 +95,41 @@ void exportStatistics(map[str, set[loc]] cloneClasses) {
         )
     ];
 
-    writeJSON(|project://front-end/clone-app/src/data/cloneStats.json|, cloneStats, indent=1);
+    writeJSON(|cwd:///../../../../front-end/clone-app/src/data/scoreStats.json|, scoreStats, indent=1);
+    writeJSON(|cwd:///../../../../front-end/clone-app/src/data/stats.json|, cloneStats, indent=1);
 }
 
+int getNumDuplicateLines(map[str, set[loc]] cloneClasses) {
+    int totalLines = 0;
 
+    for (class <- cloneClasses) {
+        loc cloneLoc = toList(cloneClasses[class])[0];
+        int numLines = cloneLoc.end.line - cloneLoc.begin.line + 1;
+        totalLines += numLines;
+    }
 
-// Returns the index of the class with the biggest clones, and the amount of lines
-// the clones have
+    return totalLines;
+}
+
+// Returns the index of the class with the biggest clone, and the amount of lines
+// the clone has
 tuple[int, int] getClassWithBiggestClone(map[str, set[loc]] cloneClasses) {
     int counter = 0;
     int index = 0;
-    int numLines = 0;
+    int mostLines = 0;
 
     for (class <- cloneClasses) {
-        str cloneString = getContent(toList(cloneClasses[class])[0]);
-        list[str] cloneLines = split("\n", cloneString);
+        loc cloneLoc = toList(cloneClasses[class])[0];
+        int numLines = cloneLoc.end.line - cloneLoc.begin.line + 1;
 
-        if (size(cloneLines) > numLines) {
-            numLines = size(cloneLines);
+        if (numLines > mostLines) {
+            mostLines = numLines;
             index = counter;
         }
         counter += 1;
     }
 
-    return <index, numLines>;
+    return <index, mostLines>;
 }
 
 // Returns the index of the class with the highest amount of clones, and the amount
