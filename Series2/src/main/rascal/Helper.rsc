@@ -9,6 +9,7 @@ import Node;
 import List;
 import Set;
 import String;
+import Location;
 
 // Get the ASTs of a project.
 list[Declaration] getASTs(loc projectLocation) {
@@ -23,6 +24,20 @@ void printNodes(list[node] nodes) {
         println(n.src);
     }
     return;
+}
+
+// Function that combines the locations from consecutive nodes in a clone sequence
+// into one location for the whole code block.
+loc combineLocations(list[node] nodes) {
+    list [loc] nodeSrc = [];
+
+    for (n <- nodes) {
+        nodeSrc += n.src;
+    }
+
+    loc cloneSrc = cover(nodeSrc);
+
+    return cloneSrc;
 }
 
 int mass(node root, int threshold=0) {
@@ -145,7 +160,7 @@ real similarity(list[node] subtrees1, list[node] subtrees2) {
         SLR[1] += toReal(currentSLR[1]);
         SLR[2] += toReal(currentSLR[2]);
     }
-    
+
     real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
     return similarity;
 }

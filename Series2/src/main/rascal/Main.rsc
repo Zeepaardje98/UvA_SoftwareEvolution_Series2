@@ -26,7 +26,8 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST
-    int massThreshold = 40;
+    // println("Getting subtrees");
+    int massThreshold = 20;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
 
     // Find the clones in the subtrees of the AST
@@ -34,6 +35,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     findClones(subtrees, similarityThreshold, type2=type2);
 
     // Get all sequence nodes of the AST
+    // println("Getting sequences");
     int sequenceThreshold = 7;
     map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
 

@@ -41,6 +41,33 @@
 //     return clones;
 // }
 
+// list[map[str, value]] scoreStats =
+// [
+//     (
+//         "title": "duplicate lines",
+//         "value": numDuplicateLines
+//     ),
+//     (
+//         "title": "duplication score",
+//         "value": "?"
+//     )
+// ];
+
+
+
+// public bool uniqueCloneClass(list[loc] clones, loc cloneSrc0, loc cloneSrc1) {
+//     bool clone0Unique = true;
+//     bool clone1Unique = true;
+//     for (clone <- clones) {
+//         if (isContainedIn(cloneSrc0, clone)) {
+//             clone0Unique = false;
+//         }
+//         if (isContainedIn(clone, cloneSrc1)) {
+//             clone1Unique = false;
+//         }
+//     }
+//     return (clone0Unique || clone1Unique);
+
 // // Find the number of shared and unique nodes for 2 trees.
 // tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
 //     list[node] uniqueNodes1 = [];

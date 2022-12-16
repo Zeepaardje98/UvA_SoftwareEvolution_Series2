@@ -4,6 +4,8 @@ import List;
 import Node;
 import IO;
 import Type;
+import Location;
+import Map;
 
 import Helper;
 import TreeParser;
@@ -162,20 +164,36 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
 }
 
 public map[str, set[loc]] getCloneClasses() {
+    list[loc] clones = [];
     for (clonePair <- _clonePairs) {
-        if (hashNode(clonePair[0]) in _cloneClasses) {
-            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[0].src);
-            // hashnode(clonepair[0]) should be the same as hashnode(clonepair[1])
-            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[1].src);
-        }
-        else {
-            _cloneClasses[hashNode(clonePair[0])] = {typeCast(#loc, clonePair[0].src)};
-            _cloneClasses[hashNode(clonePair[0])] += typeCast(#loc, clonePair[1].src);
-        }
+        loc cloneSrc0 = typeCast(#loc, clonePair[0].src);
+        loc cloneSrc1 = typeCast(#loc, clonePair[1].src);
+        str hash = hashNode(clonePair[0]);
+        addToCloneClass(hash, cloneSrc0, cloneSrc1);
+        clones += cloneSrc0;
+        clones += cloneSrc1;
     }
+
+    for (seqClone <- _sequenceClones) {
+        loc cloneSrc0 = combineLocations(seqClone[0]);
+        loc cloneSrc1 = combineLocations(seqClone[1]);
+        str hash = hashNode(seqClone[0][0]);
+        addToCloneClass(hash, cloneSrc0, cloneSrc1);
+    }
+
     return _cloneClasses;
 }
 
+public void addToCloneClass(str hash, loc cloneSrc0, loc cloneSrc1) {
+    if (hash in _cloneClasses) {
+        _cloneClasses[hash] += cloneSrc0;
+        _cloneClasses[hash] += cloneSrc1;
+    }
+    else {
+        _cloneClasses[hash] = {cloneSrc0};
+        _cloneClasses[hash] += cloneSrc1;
+    }
+}
 
 public void printClones() {
     println("--- PRINTING CLONEPAIRS ---");

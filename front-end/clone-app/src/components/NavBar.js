@@ -1,45 +1,35 @@
 import React from 'react'
-import { Toolbar, Typography } from '@material-ui/core'
-import { makeStyles } from "@material-ui/core/styles";
+import { Button, AppBar, Toolbar, IconButton, Typography, Stack } from '@mui/material';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Link } from "react-router-dom";
 
-const styles = makeStyles({
-    bar:{
-        paddingTop: "1.15rem",
-        backgroundColor: "#fff",
-    },
-    logo: {
-        width: "15%",
-    },
-    logoMobile:{
-        width: "100%",
-        display: "none",
-    },
-    menuItem: {
-        cursor: "pointer",
-        flexGrow: 1,
-        "&:hover": {
-            color:  "#4f25c8"
-        },
-    },
-    link: {
-        textDecoration: "none",
-    }
-})
-
 export default function NavBar() {
-    const classes = styles()
     return (
-            <Toolbar position="sticky" color="rgba(0, 0, 0, 0.87)" className={classes.bar}>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/" className={classes.link}>Statistics</Link>
+        <AppBar position='static'>
+            <Toolbar>
+                <IconButton size='large' edge='start' color='inherit' aria-label='logo'>
+                    <ContentCopyIcon/>
+                </IconButton>
+                <Typography variant='h6' component='div' sx={{mr: 10}}>
+                    Clone Visualizer
                 </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/classes" className={classes.link}>Clone Classes</Link>
-                </Typography>
-                <Typography variant="h6" className={classes.menuItem}>
-                <Link to="/clones" className={classes.link}>Clones</Link>
-                </Typography>
+                <Stack direction='row' spacing={2}>
+                    <Link to={'/statistics'} style={{ textDecoration: 'none' }}>
+                        <Button color='inherit'>
+                            <Typography variant='h6' color='white'>
+                                Statistics
+                            </Typography>
+                        </Button>
+                    </Link>
+                    <Link to={'/classes'} style={{ textDecoration: 'none' }}>
+                        <Button color='inherit'>
+                            <Typography variant='h6' color='white'>
+                                Clone Classes
+                            </Typography>
+                        </Button>
+                    </Link>
+                </Stack>
             </Toolbar>
+        </AppBar>
     )
 }
