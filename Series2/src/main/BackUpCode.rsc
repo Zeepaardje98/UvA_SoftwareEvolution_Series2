@@ -67,4 +67,34 @@
 //         }
 //     }
 //     return (clone0Unique || clone1Unique);
+
+// // Find the number of shared and unique nodes for 2 trees.
+// tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
+//     list[node] uniqueNodes1 = [];
+//     list[node] uniqueNodes2 = [];
+//     list[node] sharedNodes = [];
+
+//     // First put all nodes of subtree 1 in uniqueNodes1
+//     visit (subtree1) {
+//         case node n: uniqueNodes1 += unsetRec(n);
+//     }
+
+//     // Go through nodes of subtree 2 and fill the three node lists appropriately
+//     visit (subtree2) {
+//         case node n: {
+//             if (unsetRec(n) in uniqueNodes1) {
+//                 uniqueNodes1 -= unsetRec(n);
+//                 sharedNodes += unsetRec(n);
+//             }
+//             else {
+//                 uniqueNodes2 += unsetRec(n);            
+//             }
+//         }
+//     }
+
+//     real S = toReal(size(sharedNodes));
+//     real L = toReal(size(uniqueNodes1));
+//     real R = toReal(size(uniqueNodes2));
+
+//     return <S, L, R>;
 // }

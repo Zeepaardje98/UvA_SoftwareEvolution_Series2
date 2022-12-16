@@ -110,43 +110,44 @@ list[node] directChildren(node root) {
     return children;
 }
 
-// Find the number of shared and unique nodes for 2 trees.
-tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
-    list[node] uniqueNodes1 = [];
-    list[node] uniqueNodes2 = [];
-    list[node] sharedNodes = [];
+list[node] directChildren2(node root) {
+    list[node] children = [n | node n <- getChildren(root)];
+    return children;
+}
 
-    // First put all nodes of subtree 1 in uniqueNodes1
-    visit (subtree1) {
-        case node n: uniqueNodes1 += unsetRec(n);
+// NOTE: Does not really return similar, uniqueleft, uniqueright nodes. Instead
+//       it returns the amount of similar and unique nodes. A tuple of size 3
+//       is returned so this function can easily replace the sharedUniqueNodes
+//       function that was created before, as it is used in the similarity 
+//       function.
+tuple[int S, int L, int R] sharedUniqueNodes(node subtree1, node subtree2) {
+    map[node, int] nodeCounter = ();
+    visit(subtree1) {
+        case node n: nodeCounter[unsetRec(n)]?0 += 1;
+    }
+    visit(subtree2) {
+        case node n: nodeCounter[unsetRec(n)]?0 += 1;
     }
 
-    // Go through nodes of subtree 2 and fill the three node lists appropriately
-    visit (subtree2) {
-        case node n: {
-            if (unsetRec(n) in uniqueNodes1) {
-                uniqueNodes1 -= unsetRec(n);
-                sharedNodes += unsetRec(n);
-            }
-            else {
-                uniqueNodes2 += unsetRec(n);
-            }
+    list[int] SLR = [0,0,0];
+    for (m <- nodeCounter) {
+        if (nodeCounter[m] > 1) {
+            SLR[0] += nodeCounter[m];
+        } else {
+            SLR[1] += 1;
         }
     }
 
-    real S = toReal(size(sharedNodes));
-    real L = toReal(size(uniqueNodes1));
-    real R = toReal(size(uniqueNodes2));
+    return <SLR[0], SLR[1], 0>;
 
-    return <S, L, R>;
 }
 
 
 // Calculate similarity score for 2 trees
 real similarity(node subtree1, node subtree2) {
-    tuple[real S, real L, real R] SLR = sharedUniqueNodes(subtree1, subtree2);
-
-    real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
+    tuple[int S, int L, int R] SLR = sharedUniqueNodes(subtree1, subtree2);
+    
+    real similarity = 2.0 * toReal(SLR[0]) / (2.0 * toReal(SLR[0]) + toReal(SLR[1]) + toReal(SLR[2]));
     return similarity;
 }
 
@@ -154,10 +155,10 @@ real similarity(node subtree1, node subtree2) {
 real similarity(list[node] subtrees1, list[node] subtrees2) {
     list[real] SLR = [0.0, 0.0, 0.0];
     for (i <- [0..size(subtrees1)]) {
-        tuple[real S, real L, real R] currentSLR = sharedUniqueNodes(subtrees1[i], subtrees2[i]);
-        SLR[0] += currentSLR[0];
-        SLR[1] += currentSLR[1];
-        SLR[2] += currentSLR[2];
+        tuple[int S, int L, int R] currentSLR = sharedUniqueNodes(subtrees1[i], subtrees2[i]);
+        SLR[0] += toReal(currentSLR[0]);
+        SLR[1] += toReal(currentSLR[1]);
+        SLR[2] += toReal(currentSLR[2]);
     }
 
     real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
