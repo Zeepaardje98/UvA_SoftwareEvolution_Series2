@@ -4,7 +4,7 @@ import CodeBlock from './CodeBlock';
 
 export default function CloneCard(props) {
   return (
-    <Box padding='20px'>
+    <Box component='div' my={4}>
         <Card sx={{bgcolor: 'white'}}>
             <CardContent>
                 <Typography variant='subtitle1' component='div' sx={{fontFamily: '"Fira code", "Fira Mono", monospace'}}>

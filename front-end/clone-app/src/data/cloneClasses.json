@@ -58,7 +58,7 @@
     "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java, ...",
+  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java & more ...",
   "id": 2,
   "numClones": 4,
   "cloneSize": 11
@@ -81,7 +81,7 @@
     "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java, ...",
+  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java & more ...",
   "id": 3,
   "numClones": 3,
   "cloneSize": 6

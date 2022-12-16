@@ -47,7 +47,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
                 classTitle += ", <fileName>";
             }
             if (cloneCounter == 2) {
-                classTitle += ", ...";
+                classTitle += " & more ...";
             }
             cloneCounter += 1;
         }

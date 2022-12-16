@@ -8,10 +8,10 @@ export default function Statistics() {
     <div className="statistics">
       <div className="page-title">
         <Typography variant="h3" color="primary">
-          Code Duplication Statistics
+          Clone Statistics
         </Typography>
       </div>
-      <Grid container my={2} spacing={4}>
+      <Grid container my={4} spacing={4}>
         {
           Stats.map((stat, index) => {
             return(

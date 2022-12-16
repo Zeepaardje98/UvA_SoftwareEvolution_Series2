@@ -13,13 +13,13 @@ export default function Class() {
   const cloneSizeText = "Clone size: " + cloneClass.cloneSize + " lines";
 
   return (
-    <div className="classDetails">
+    <div className="clones">
       <div className="page-title">
         <Typography variant="h3" color="primary">
           Clones
         </Typography>
       </div>
-      <Box component='div' padding='20px'>
+      <Box component='div' my={4}>
         <Card sx={{bgcolor: 'secondary.light'}}>
             <CardContent>
               <Typography variant='subtitle' component='div'>

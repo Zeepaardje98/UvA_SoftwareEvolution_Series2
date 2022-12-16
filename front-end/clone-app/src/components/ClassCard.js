@@ -6,7 +6,7 @@ export default function ClassCard(props) {
   const numClonesText = "Number of clones: " + props.numClones;
   const cloneSizeText = "Clone size: " + props.cloneSize + " lines";
   return (
-    <Box padding='20px'>
+    <Box my={4}>
         <Card sx={{bgcolor: 'secondary.main'}}>
             <CardContent>
                 <Typography variant='subtitle1' component='div' sx={{fontFamily: '"Fira code", "Fira Mono", monospace'}}>
@@ -25,7 +25,7 @@ export default function ClassCard(props) {
                 <Box component ='div' my={1}>
                     <Link to={'../class?id=' + props.id} style={{ textDecoration: 'none' }}>
                         <Button variant='contained'>
-                            {'show clones'}
+                            show clones
                         </Button>
                     </Link>
                 </Box>

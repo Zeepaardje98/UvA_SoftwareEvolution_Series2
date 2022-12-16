@@ -12,6 +12,35 @@ const theme = createTheme({
     secondary: {
       main: '#c2b0e2',
     },
+    dark: {
+      main: '#27034a'
+    }
+  },
+  typography: {
+    h2: {
+      fontSize: 70,
+    },
+    h3: {
+      fontWeight: 'bold',
+      textTransform: 'capitalize'
+    },
+    h4: {
+      fontWeight: 'bold',
+      textTransform: 'capitalize',
+      color: '#27034a'
+    },
+    subtitle1: {
+      fontWeight: 'bold',
+      fontSize: 20
+    },
+    body1: {
+      fontSize: 20
+    },
+    button: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      marginTop: 2,
+    }
   }
 });
 
