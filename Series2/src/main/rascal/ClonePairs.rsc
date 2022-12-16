@@ -177,27 +177,11 @@ public map[str, set[loc]] getCloneClasses() {
     for (seqClone <- _sequenceClones) {
         loc cloneSrc0 = combineLocations(seqClone[0]);
         loc cloneSrc1 = combineLocations(seqClone[1]);
-        if (uniqueCloneClass(clones, cloneSrc0, cloneSrc1)) {
-            str hash = hashNode(seqClone[0][0]);
-            addToCloneClass(hash, cloneSrc0, cloneSrc1);
-        }
+        str hash = hashNode(seqClone[0][0]);
+        addToCloneClass(hash, cloneSrc0, cloneSrc1);
     }
 
     return _cloneClasses;
-}
-
-public bool uniqueCloneClass(list[loc] clones, loc cloneSrc0, loc cloneSrc1) {
-    bool clone0Unique = true;
-    bool clone1Unique = true;
-    for (clone <- clones) {
-        if (isContainedIn(cloneSrc0, clone)) {
-            clone0Unique = false;
-        }
-        if (isContainedIn(clone, cloneSrc1)) {
-            clone1Unique = false;
-        }
-    }
-    return (clone0Unique || clone1Unique);
 }
 
 public void addToCloneClass(str hash, loc cloneSrc0, loc cloneSrc1) {

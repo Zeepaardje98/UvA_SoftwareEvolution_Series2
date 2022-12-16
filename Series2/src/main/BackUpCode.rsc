@@ -52,3 +52,19 @@
 //         "value": "?"
 //     )
 // ];
+
+
+
+// public bool uniqueCloneClass(list[loc] clones, loc cloneSrc0, loc cloneSrc1) {
+//     bool clone0Unique = true;
+//     bool clone1Unique = true;
+//     for (clone <- clones) {
+//         if (isContainedIn(cloneSrc0, clone)) {
+//             clone0Unique = false;
+//         }
+//         if (isContainedIn(clone, cloneSrc1)) {
+//             clone1Unique = false;
+//         }
+//     }
+//     return (clone0Unique || clone1Unique);
+// }
