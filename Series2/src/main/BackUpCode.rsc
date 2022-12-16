@@ -40,3 +40,15 @@
 //     // println(cloneSources);
 //     return clones;
 // }
+
+// list[map[str, value]] scoreStats =
+// [
+//     (
+//         "title": "duplicate lines",
+//         "value": numDuplicateLines
+//     ),
+//     (
+//         "title": "duplication score",
+//         "value": "?"
+//     )
+// ];

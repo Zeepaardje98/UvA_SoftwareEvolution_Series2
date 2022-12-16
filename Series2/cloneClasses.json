@@ -3,6 +3,13 @@
   "|java+compilationUnit:///testFiles/helloWorld3.java|(307,190,<14,4>,<19,5>)",
   "|java+compilationUnit:///testFiles/helloWorldDouble.java|(36,190,<2,4>,<7,5>)"
  ],
+ "df7d3d822964ca06764dd79c48b93f6c": [
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(751,135,<32,8>,<35,36>)",
+  "|java+compilationUnit:///testFiles/helloWorld3.java|(356,135,<15,8>,<18,36>)",
+  "|java+compilationUnit:///testFiles/helloWorld2.java|(80,135,<3,8>,<6,36>)",
+  "|java+compilationUnit:///testFiles/helloWorld2.java|(225,135,<8,8>,<11,36>)",
+  "|java+compilationUnit:///testFiles/helloWorldDouble.java|(85,135,<3,8>,<6,36>)"
+ ],
  "7c476cb36dd0f48d3ef40ac1f6116643": [
   "|java+compilationUnit:///testFiles/helloWorld3.java|(31,270,<2,4>,<12,5>)",
   "|java+compilationUnit:///testFiles/helloWorldDouble.java|(232,270,<9,4>,<19,5>)"

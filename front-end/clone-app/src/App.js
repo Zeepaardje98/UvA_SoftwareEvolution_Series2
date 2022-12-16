@@ -4,7 +4,6 @@ import NavBar from './components/NavBar'
 import Statistics from './components/pages/Statistics';
 import ClassOverview from './components/pages/ClassOverview';
 import Clones from './components/pages/Clones';
-import File from './components/pages/File';
 import './App.css';
 
 const theme = createTheme({
@@ -26,7 +25,6 @@ export default function App() {
           <Route path='statistics' element={<Statistics/>} />
           <Route path='classes' element={<ClassOverview/>} />
           <Route path='class' element={<Clones/>} />
-          <Route path='file' element={<File/>} />
         </Routes>
       </ThemeProvider>
     </div>

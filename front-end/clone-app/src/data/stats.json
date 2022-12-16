@@ -2,25 +2,37 @@
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 4,
+  "value": 16,
+  "title": "total clones"
+ },
+ {
+  "btnText": "show all clone classes",
+  "btnRoute": "/classes",
+  "value": 5,
   "title": "total clone classes"
  },
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 11,
-  "title": "total clones"
+  "value": 38,
+  "title": "total clone lines"
+ },
+ {
+  "btnText": "show all clone classes",
+  "btnRoute": "/classes",
+  "value": "?",
+  "title": "total files with clones"
  },
  {
   "btnText": "show clone class",
-  "btnRoute": "/class?id=1",
+  "btnRoute": "/class?id=2",
   "value": "11 lines",
   "title": "biggest clone"
  },
  {
   "btnText": "show clone class",
-  "btnRoute": "/class?id=2",
-  "value": "4 clones",
+  "btnRoute": "/class?id=1",
+  "value": "5 clones",
   "title": "most clones in one class"
  }
 ]

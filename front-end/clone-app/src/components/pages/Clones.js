@@ -22,7 +22,7 @@ export default function Class() {
       <Box component='div' padding='20px'>
         <Card sx={{bgcolor: 'secondary.light'}}>
             <CardContent>
-              <Typography variant='body1' component='div'>
+              <Typography variant='subtitle' component='div'>
                     <ListItemText primary={numClonesText} />
                     <ListItemText primary={cloneSizeText} />
               </Typography>

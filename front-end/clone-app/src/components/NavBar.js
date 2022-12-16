@@ -28,13 +28,6 @@ export default function NavBar() {
                             </Typography>
                         </Button>
                     </Link>
-                    <Link to={'/file'} style={{ textDecoration: 'none' }}>
-                        <Button color='inherit'>
-                            <Typography variant='h6' color='white'>
-                                Files
-                            </Typography>
-                        </Button>
-                    </Link>
                 </Stack>
             </Toolbar>
         </AppBar>

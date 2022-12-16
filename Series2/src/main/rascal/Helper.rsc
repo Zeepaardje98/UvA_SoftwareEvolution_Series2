@@ -9,6 +9,7 @@ import Node;
 import List;
 import Set;
 import String;
+import Location;
 
 // Get the ASTs of a project.
 list[Declaration] getASTs(loc projectLocation) {
@@ -23,6 +24,20 @@ void printNodes(list[node] nodes) {
         println(n.src);
     }
     return;
+}
+
+// Function that combines the locations from consecutive nodes in a clone sequence
+// into one location for the whole code block.
+loc combineLocations(list[node] nodes) {
+    list [loc] nodeSrc = [];
+
+    for (n <- nodes) {
+        nodeSrc += n.src;
+    }
+
+    loc cloneSrc = cover(nodeSrc);
+
+    return cloneSrc;
 }
 
 int mass(node root, int threshold=0) {
@@ -114,7 +129,7 @@ tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
                 sharedNodes += unsetRec(n);
             }
             else {
-                uniqueNodes2 += unsetRec(n);            
+                uniqueNodes2 += unsetRec(n);
             }
         }
     }
@@ -130,7 +145,7 @@ tuple[real S, real L, real R] sharedUniqueNodes(node subtree1, node subtree2) {
 // Calculate similarity score for 2 trees
 real similarity(node subtree1, node subtree2) {
     tuple[real S, real L, real R] SLR = sharedUniqueNodes(subtree1, subtree2);
-    
+
     real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
     return similarity;
 }
@@ -144,7 +159,7 @@ real similarity(list[node] subtrees1, list[node] subtrees2) {
         SLR[1] += currentSLR[1];
         SLR[2] += currentSLR[2];
     }
-    
+
     real similarity = 2.0 * SLR[0] / (2.0 * SLR[0] + SLR[1] + SLR[2]);
     return similarity;
 }

@@ -21,7 +21,7 @@ import lang::java::m3::AST;
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
 
-    projectLocation = |project://Series2/testFiles|;
+    // projectLocation = |project://Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST
@@ -37,13 +37,13 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
 
     // Get all sequence nodes of the AST
     // println("Getting sequences");
-    // int sequenceThreshold = 4;
-    // map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
+    int sequenceThreshold = 4;
+    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
 
     // Find the clones in the sequences of the AST
     // println("Finding sequence clones");
-    // similarityThreshold = 0.0;
-    // findSequenceClones(sequences, similarityThreshold, type2=type2);
+    similarityThreshold = 0.0;
+    findSequenceClones(sequences, similarityThreshold, type2=type2);
     // printSequenceClones();
 
     exportCloneData();

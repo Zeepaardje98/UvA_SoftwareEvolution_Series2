@@ -15,7 +15,40 @@
   "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
   "id": 0,
   "numClones": 2,
-  "cloneSize": 5
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 32,
+    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+   },
+   {
+    "fileName": "/testFiles/helloWorld3.java",
+    "startLineNumber": 15,
+    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+   },
+   {
+    "fileName": "/testFiles/helloWorld2.java",
+    "startLineNumber": 3,
+    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+   },
+   {
+    "fileName": "/testFiles/helloWorld2.java",
+    "startLineNumber": 8,
+    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+   },
+   {
+    "fileName": "/testFiles/helloWorldDouble.java",
+    "startLineNumber": 3,
+    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+   }
+  ],
+  "title": "/testFiles/helloWorldDouble.java, /testFiles/helloWorld3.java, ...",
+  "id": 1,
+  "numClones": 5,
+  "cloneSize": 4
  },
  {
   "clones": [
@@ -31,9 +64,9 @@
    }
   ],
   "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
-  "id": 1,
+  "id": 2,
   "numClones": 2,
-  "cloneSize": 10
+  "cloneSize": 11
  },
  {
   "clones": [
@@ -59,9 +92,9 @@
    }
   ],
   "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java, ...",
-  "id": 2,
+  "id": 3,
   "numClones": 4,
-  "cloneSize": 10
+  "cloneSize": 11
  },
  {
   "clones": [
@@ -82,8 +115,8 @@
    }
   ],
   "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java, ...",
-  "id": 3,
+  "id": 4,
   "numClones": 3,
-  "cloneSize": 5
+  "cloneSize": 6
  }
 ]
