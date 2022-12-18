@@ -12,6 +12,7 @@ import Location;
 import ClonePairs;
 import DataFunctions;
 
+import util::Math;
 import lang::json::IO;
 
 // Function to export all clone data that is needed for the visualization to JSON files
@@ -120,7 +121,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
 
 void exportCloneFiles(map[str, set[loc]] cloneClasses) {
     map[str, list[map[str, value]]] filesMap = ();
-    list [map[str, value]] filesData = [];
+    list[map[str, value]] filesData = [];
     int index = 0;
 
     for (hash <- cloneClasses) {
@@ -140,14 +141,48 @@ void exportCloneFiles(map[str, set[loc]] cloneClasses) {
     }
 
     for (file <- filesMap) {
+        // list[int] labels = getFileChartLabels(filesMap[file]);
         filesData += (
             "fileName": file,
             "clones": filesMap[file],
             "id": index,
             "numClones": size(filesMap[file])
+            // "labels": labels,
+            // "chartData": getFileChartData(filesMap[file], labels)
         );
         index += 1;
     }
 
     writeJSON(|cwd:///../../../../front-end/clone-app/src/data/cloneFiles.json|, filesData, indent=1);
 }
+
+// list[int] getFileChartLabels(list[map[str, value]] clones) {
+//     int startLineNumber = 0;
+//     int endLineNumber = 0;
+
+//     for (clone <- clones) {
+//         if (clone["endLineNumber"] > toInt(endLineNumber)) {
+//             endLineNumber = toInt(clone["endLineNumber"]);
+//         }
+//     }
+
+//     return [startLineNumber .. endLineNumber];
+// }
+
+// list[int] getFileChartData(list[map[str, value]] clones, list[int] labels) {
+//     list[int] chartData = [];
+//     numLabels = size(labels);
+
+//     for (i <- [0.. (numLabels - 1)]) {
+//         chartData[i] = 0;
+//     }
+
+//     for (clone <- clones) {
+//         int startLine = toInt(clone["startLineNumber"]);
+//         int endLine = toInt(clone["startLineNumer"]);
+//         for (i <- [startLine .. endLine]) {
+//             chartData[i] = 100;
+//         }
+//     }
+//     return chartData;
+// }

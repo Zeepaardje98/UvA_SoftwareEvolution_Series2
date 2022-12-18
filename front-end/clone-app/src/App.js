@@ -5,6 +5,7 @@ import Statistics from './components/pages/Statistics';
 import ClassOverview from './components/pages/ClassOverview';
 import Clones from './components/pages/Clones';
 import FileOverview from './components/pages/FileOverview';
+import File from './components/pages/File';
 import './App.css';
 
 const theme = createTheme({
@@ -56,6 +57,7 @@ export default function App() {
           <Route path='classes' element={<ClassOverview/>} />
           <Route path='class' element={<Clones/>} />
           <Route path='files' element={<FileOverview/>} />
+          <Route path='file' element={<File/>} />
         </Routes>
       </ThemeProvider>
     </div>

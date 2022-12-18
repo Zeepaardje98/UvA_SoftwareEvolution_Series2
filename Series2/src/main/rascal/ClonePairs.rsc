@@ -247,3 +247,7 @@ public void resetClones() {
 public void resetSequences() {
     _sequenceClones = [];
 }
+
+public void resetClasses() {
+    _sequenceClones = ();
+}

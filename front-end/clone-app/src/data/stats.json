@@ -2,19 +2,19 @@
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 469,
+  "value": 471,
   "title": "clones"
  },
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 172,
+  "value": 173,
   "title": "clone classes"
  },
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 1391,
+  "value": 1409,
   "title": "clone lines"
  },
  {
@@ -31,7 +31,7 @@
  },
  {
   "btnText": "show clone class",
-  "btnRoute": "/class?id=152",
+  "btnRoute": "/class?id=153",
   "value": [
    20
   ],

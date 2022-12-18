@@ -1,78 +1,2973 @@
 [
  {
-  "fileName": "/testFiles/helloWorldDouble.java",
+  "fileName": "/src/smallsql/database/ExpressionFunctionLCase.java",
   "clones": [
    {
-    "endLineNumber": 7,
-    "cloneClass": "b26bbecec4fe4303032b430e8f802019",
-    "startLineNumber": 2
-   },
-   {
-    "endLineNumber": 19,
-    "cloneClass": "7c476cb36dd0f48d3ef40ac1f6116643",
-    "startLineNumber": 9
-   },
-   {
-    "endLineNumber": 19,
-    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
-    "startLineNumber": 9
-   },
-   {
-    "endLineNumber": 48,
-    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
-    "startLineNumber": 38
-   },
-   {
-    "endLineNumber": 7,
-    "cloneClass": "4435a6bb9dc17151466032a58786b8a6",
-    "startLineNumber": 2
-   },
-   {
-    "endLineNumber": 36,
-    "cloneClass": "4435a6bb9dc17151466032a58786b8a6",
-    "startLineNumber": 31
+    "endLineNumber": 55,
+    "cloneClass": "ae6f872d40402a30111ea72f95950edf",
+    "startLineNumber": 52
    }
   ],
   "id": 0,
-  "numClones": 6
+  "numClones": 1
  },
  {
-  "fileName": "/testFiles/helloWorld3.java",
+  "fileName": "/src/smallsql/database/SSResultSet.java",
   "clones": [
    {
-    "endLineNumber": 19,
-    "cloneClass": "b26bbecec4fe4303032b430e8f802019",
-    "startLineNumber": 14
+    "endLineNumber": 413,
+    "cloneClass": "b77a6092b995c243391d0d5a98081b8f",
+    "startLineNumber": 413
    },
    {
-    "endLineNumber": 12,
-    "cloneClass": "7c476cb36dd0f48d3ef40ac1f6116643",
-    "startLineNumber": 2
-   },
-   {
-    "endLineNumber": 12,
-    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
-    "startLineNumber": 2
-   },
-   {
-    "endLineNumber": 19,
-    "cloneClass": "4435a6bb9dc17151466032a58786b8a6",
-    "startLineNumber": 14
+    "endLineNumber": 372,
+    "cloneClass": "b77a6092b995c243391d0d5a98081b8f",
+    "startLineNumber": 372
    }
   ],
   "id": 1,
-  "numClones": 4
+  "numClones": 2
  },
  {
-  "fileName": "/testFiles/helloWorld1.java",
+  "fileName": "/src/smallsql/database/ExpressionFunctionConvert.java",
   "clones": [
    {
-    "endLineNumber": 14,
-    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
-    "startLineNumber": 4
+    "endLineNumber": 146,
+    "cloneClass": "c280da652214fefa8fca526f597b06f1",
+    "startLineNumber": 142
+   },
+   {
+    "endLineNumber": 157,
+    "cloneClass": "c280da652214fefa8fca526f597b06f1",
+    "startLineNumber": 153
    }
   ],
   "id": 2,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionRound.java",
+  "clones": [
+   {
+    "endLineNumber": 60,
+    "cloneClass": "560f44261aa7aa34a63807411184d134",
+    "startLineNumber": 50
+   },
+   {
+    "endLineNumber": 66,
+    "cloneClass": "88bea8b5b257d469c72fae308afdf484",
+    "startLineNumber": 62
+   }
+  ],
+  "id": 3,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/Expressions.java",
+  "clones": [
+   {
+    "endLineNumber": 68,
+    "cloneClass": "afd5528064d0a4617ecac3132278d2c9",
+    "startLineNumber": 64
+   },
+   {
+    "endLineNumber": 81,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 79
+   },
+   {
+    "endLineNumber": 74,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 72
+   },
+   {
+    "endLineNumber": 66,
+    "cloneClass": "82413218519f4d6858dccc37f7de836b",
+    "startLineNumber": 65
+   }
+  ],
+  "id": 4,
+  "numClones": 4
+ },
+ {
+  "fileName": "/src/smallsql/database/SSCallableStatement.java",
+  "clones": [
+   {
+    "endLineNumber": 143,
+    "cloneClass": "f022ac3067af3e6ece8757b12c6d882e",
+    "startLineNumber": 135
+   },
+   {
+    "endLineNumber": 125,
+    "cloneClass": "f022ac3067af3e6ece8757b12c6d882e",
+    "startLineNumber": 117
+   }
+  ],
+  "id": 5,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+  "clones": [
+   {
+    "endLineNumber": 872,
+    "cloneClass": "2da3e5053e343a12752a8fb58dac589d",
+    "startLineNumber": 872
+   },
+   {
+    "endLineNumber": 671,
+    "cloneClass": "5bf5779fbec183f63bbeda01ba4954c2",
+    "startLineNumber": 671
+   },
+   {
+    "endLineNumber": 678,
+    "cloneClass": "b155f1af4412dd2f59b8d933e811cbc7",
+    "startLineNumber": 678
+   },
+   {
+    "endLineNumber": 665,
+    "cloneClass": "709fa2a01fc86a21b08c98a0696d6be1",
+    "startLineNumber": 665
+   },
+   {
+    "endLineNumber": 672,
+    "cloneClass": "709fa2a01fc86a21b08c98a0696d6be1",
+    "startLineNumber": 672
+   },
+   {
+    "endLineNumber": 732,
+    "cloneClass": "709fa2a01fc86a21b08c98a0696d6be1",
+    "startLineNumber": 732
+   },
+   {
+    "endLineNumber": 952,
+    "cloneClass": "709fa2a01fc86a21b08c98a0696d6be1",
+    "startLineNumber": 952
+   },
+   {
+    "endLineNumber": 951,
+    "cloneClass": "14a938c6f0050b155d7abd6d2151589d",
+    "startLineNumber": 951
+   },
+   {
+    "endLineNumber": 831,
+    "cloneClass": "d21b7bab5089de913ea84caa93aca6cf",
+    "startLineNumber": 831
+   },
+   {
+    "endLineNumber": 778,
+    "cloneClass": "a9178f72b9d88f783bc226bb2cbd9746",
+    "startLineNumber": 778
+   },
+   {
+    "endLineNumber": 789,
+    "cloneClass": "a9178f72b9d88f783bc226bb2cbd9746",
+    "startLineNumber": 789
+   },
+   {
+    "endLineNumber": 821,
+    "cloneClass": "5fb93a3105d030f7930d71db4946ac1e",
+    "startLineNumber": 821
+   },
+   {
+    "endLineNumber": 823,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 823
+   },
+   {
+    "endLineNumber": 755,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 755
+   },
+   {
+    "endLineNumber": 747,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 747
+   },
+   {
+    "endLineNumber": 791,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 791
+   },
+   {
+    "endLineNumber": 802,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 802
+   },
+   {
+    "endLineNumber": 666,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 666
+   },
+   {
+    "endLineNumber": 874,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 874
+   },
+   {
+    "endLineNumber": 673,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 673
+   },
+   {
+    "endLineNumber": 733,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 733
+   },
+   {
+    "endLineNumber": 953,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 953
+   },
+   {
+    "endLineNumber": 866,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 865
+   },
+   {
+    "endLineNumber": 780,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 780
+   },
+   {
+    "endLineNumber": 740,
+    "cloneClass": "aba5034983fea1584f5fadd5fbaf5074",
+    "startLineNumber": 740
+   },
+   {
+    "endLineNumber": 753,
+    "cloneClass": "b7a552ec69d42aba73428be9dba49d02",
+    "startLineNumber": 753
+   },
+   {
+    "endLineNumber": 664,
+    "cloneClass": "d7e6f029620338857e2448d1730a49e9",
+    "startLineNumber": 664
+   }
+  ],
+  "id": 6,
+  "numClones": 27
+ },
+ {
+  "fileName": "/src/smallsql/database/IndexDescription.java",
+  "clones": [
+   {
+    "endLineNumber": 194,
+    "cloneClass": "cb59bb92f73d6df582b4d07a896e3f47",
+    "startLineNumber": 186
+   },
+   {
+    "endLineNumber": 46,
+    "cloneClass": "869cca442759fcf85e3f8532fc10bc94",
+    "startLineNumber": 46
+   }
+  ],
+  "id": 7,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestOther.java",
+  "clones": [
+   {
+    "endLineNumber": 93,
+    "cloneClass": "544ccb84dd158a6e445b80e55f0b948b",
+    "startLineNumber": 93
+   }
+  ],
+  "id": 8,
   "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionUCase.java",
+  "clones": [
+   {
+    "endLineNumber": 55,
+    "cloneClass": "ae6f872d40402a30111ea72f95950edf",
+    "startLineNumber": 52
+   }
+  ],
+  "id": 9,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/SQLTokenizer.java",
+  "clones": [
+   {
+    "endLineNumber": 176,
+    "cloneClass": "ebc37486a7f0a8986c38df0be76c48ec",
+    "startLineNumber": 173
+   },
+   {
+    "endLineNumber": 115,
+    "cloneClass": "ebc37486a7f0a8986c38df0be76c48ec",
+    "startLineNumber": 112
+   }
+  ],
+  "id": 10,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionInsert.java",
+  "clones": [
+   {
+    "endLineNumber": 63,
+    "cloneClass": "a5bd132fa6adaeee1d81c6a427c92dad",
+    "startLineNumber": 62
+   },
+   {
+    "endLineNumber": 78,
+    "cloneClass": "a5bd132fa6adaeee1d81c6a427c92dad",
+    "startLineNumber": 77
+   }
+  ],
+  "id": 11,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+  "clones": [
+   {
+    "endLineNumber": 280,
+    "cloneClass": "2da3e5053e343a12752a8fb58dac589d",
+    "startLineNumber": 280
+   },
+   {
+    "endLineNumber": 103,
+    "cloneClass": "5bf5779fbec183f63bbeda01ba4954c2",
+    "startLineNumber": 103
+   },
+   {
+    "endLineNumber": 110,
+    "cloneClass": "b155f1af4412dd2f59b8d933e811cbc7",
+    "startLineNumber": 110
+   },
+   {
+    "endLineNumber": 296,
+    "cloneClass": "14a938c6f0050b155d7abd6d2151589d",
+    "startLineNumber": 296
+   },
+   {
+    "endLineNumber": 210,
+    "cloneClass": "d21b7bab5089de913ea84caa93aca6cf",
+    "startLineNumber": 210
+   },
+   {
+    "endLineNumber": 263,
+    "cloneClass": "a9178f72b9d88f783bc226bb2cbd9746",
+    "startLineNumber": 263
+   },
+   {
+    "endLineNumber": 234,
+    "cloneClass": "5fb93a3105d030f7930d71db4946ac1e",
+    "startLineNumber": 234
+   },
+   {
+    "endLineNumber": 182,
+    "cloneClass": "b7a552ec69d42aba73428be9dba49d02",
+    "startLineNumber": 182
+   },
+   {
+    "endLineNumber": 93,
+    "cloneClass": "d7e6f029620338857e2448d1730a49e9",
+    "startLineNumber": 93
+   }
+  ],
+  "id": 12,
+  "numClones": 9
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestStatement.java",
+  "clones": [
+   {
+    "endLineNumber": 309,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 309
+   }
+  ],
+  "id": 13,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestOperatoren.java",
+  "clones": [
+   {
+    "endLineNumber": 273,
+    "cloneClass": "7d5bed0854b9a9c7f240aaeefe87d07b",
+    "startLineNumber": 267
+   },
+   {
+    "endLineNumber": 72,
+    "cloneClass": "2c98242811c46470fbeb63c6b96eb4bb",
+    "startLineNumber": 72
+   },
+   {
+    "endLineNumber": 104,
+    "cloneClass": "c1df2b1f4299878af94dfdc9e4bc67ce",
+    "startLineNumber": 95
+   },
+   {
+    "endLineNumber": 46,
+    "cloneClass": "37dad4977b4d8f5332d31fb1024d3b96",
+    "startLineNumber": 46
+   },
+   {
+    "endLineNumber": 83,
+    "cloneClass": "4fabc373d04d60b4bb95e134f4e4d959",
+    "startLineNumber": 83
+   },
+   {
+    "endLineNumber": 141,
+    "cloneClass": "002aa178595a3531f1e944d231fe3b30",
+    "startLineNumber": 115
+   },
+   {
+    "endLineNumber": 218,
+    "cloneClass": "002aa178595a3531f1e944d231fe3b30",
+    "startLineNumber": 209
+   },
+   {
+    "endLineNumber": 227,
+    "cloneClass": "002aa178595a3531f1e944d231fe3b30",
+    "startLineNumber": 221
+   },
+   {
+    "endLineNumber": 239,
+    "cloneClass": "002aa178595a3531f1e944d231fe3b30",
+    "startLineNumber": 230
+   },
+   {
+    "endLineNumber": 248,
+    "cloneClass": "002aa178595a3531f1e944d231fe3b30",
+    "startLineNumber": 242
+   },
+   {
+    "endLineNumber": 48,
+    "cloneClass": "27e6c283654f7a4dfa55a5393a01050c",
+    "startLineNumber": 48
+   },
+   {
+    "endLineNumber": 81,
+    "cloneClass": "ec37bb1c5279fa2e88a2839f574f9b4f",
+    "startLineNumber": 81
+   },
+   {
+    "endLineNumber": 113,
+    "cloneClass": "2788c5ed6656541bac373622515feae6",
+    "startLineNumber": 113
+   },
+   {
+    "endLineNumber": 47,
+    "cloneClass": "604a702a507ef26b96fea970bd64c1de",
+    "startLineNumber": 47
+   },
+   {
+    "endLineNumber": 73,
+    "cloneClass": "f46c42351b1c81553fb1a997fc704949",
+    "startLineNumber": 73
+   },
+   {
+    "endLineNumber": 80,
+    "cloneClass": "09c9fa4aa34a895a4fb8e771f1a30d90",
+    "startLineNumber": 80
+   },
+   {
+    "endLineNumber": 79,
+    "cloneClass": "e4a85cb3c687da89e3d2cf0c0889b3c4",
+    "startLineNumber": 79
+   },
+   {
+    "endLineNumber": 279,
+    "cloneClass": "ff7678c4f5d9f72bb7b04733ef6a9f75",
+    "startLineNumber": 275
+   },
+   {
+    "endLineNumber": 77,
+    "cloneClass": "b352884232dec604a4fb2d0eba629834",
+    "startLineNumber": 77
+   },
+   {
+    "endLineNumber": 75,
+    "cloneClass": "46a37139accd5e988629e6124508f754",
+    "startLineNumber": 75
+   },
+   {
+    "endLineNumber": 82,
+    "cloneClass": "86783ee25db263b0320a7ffc0dd02c37",
+    "startLineNumber": 82
+   },
+   {
+    "endLineNumber": 74,
+    "cloneClass": "158751ff93d5fc5e0ac06df4410ad3b0",
+    "startLineNumber": 74
+   },
+   {
+    "endLineNumber": 71,
+    "cloneClass": "8fcb21b7c6f2a05cb09627ca7a7f9047",
+    "startLineNumber": 71
+   },
+   {
+    "endLineNumber": 76,
+    "cloneClass": "a95ac873562ef89986974fd84f1353c3",
+    "startLineNumber": 76
+   }
+  ],
+  "id": 14,
+  "numClones": 24
+ },
+ {
+  "fileName": "/src/smallsql/database/IndexNode.java",
+  "clones": [
+   {
+    "endLineNumber": 249,
+    "cloneClass": "0fb7df0c8b7b0dc152f36a7d38517136",
+    "startLineNumber": 249
+   },
+   {
+    "endLineNumber": 243,
+    "cloneClass": "0fb7df0c8b7b0dc152f36a7d38517136",
+    "startLineNumber": 243
+   },
+   {
+    "endLineNumber": 368,
+    "cloneClass": "ed517af44669c6558d2db9178b9f7a91",
+    "startLineNumber": 368
+   },
+   {
+    "endLineNumber": 349,
+    "cloneClass": "ed517af44669c6558d2db9178b9f7a91",
+    "startLineNumber": 349
+   }
+  ],
+  "id": 15,
+  "numClones": 4
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestDataTypes.java",
+  "clones": [
+   {
+    "endLineNumber": 77,
+    "cloneClass": "c1df2b1f4299878af94dfdc9e4bc67ce",
+    "startLineNumber": 68
+   }
+  ],
+  "id": 16,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/MutableNumeric.java",
+  "clones": [
+   {
+    "endLineNumber": 502,
+    "cloneClass": "b3e1b7e58fbf660d49083af56f3a410d",
+    "startLineNumber": 502
+   },
+   {
+    "endLineNumber": 525,
+    "cloneClass": "b3e1b7e58fbf660d49083af56f3a410d",
+    "startLineNumber": 525
+   },
+   {
+    "endLineNumber": 473,
+    "cloneClass": "b3e1b7e58fbf660d49083af56f3a410d",
+    "startLineNumber": 473
+   },
+   {
+    "endLineNumber": 549,
+    "cloneClass": "b3e1b7e58fbf660d49083af56f3a410d",
+    "startLineNumber": 549
+   },
+   {
+    "endLineNumber": 518,
+    "cloneClass": "75625807c0decf0cb6e97a5a01227441",
+    "startLineNumber": 518
+   },
+   {
+    "endLineNumber": 466,
+    "cloneClass": "75625807c0decf0cb6e97a5a01227441",
+    "startLineNumber": 466
+   },
+   {
+    "endLineNumber": 504,
+    "cloneClass": "c3cab809285c6f7c4082b420035704ee",
+    "startLineNumber": 503
+   },
+   {
+    "endLineNumber": 551,
+    "cloneClass": "c3cab809285c6f7c4082b420035704ee",
+    "startLineNumber": 550
+   },
+   {
+    "endLineNumber": 475,
+    "cloneClass": "c3cab809285c6f7c4082b420035704ee",
+    "startLineNumber": 474
+   },
+   {
+    "endLineNumber": 527,
+    "cloneClass": "c3cab809285c6f7c4082b420035704ee",
+    "startLineNumber": 526
+   },
+   {
+    "endLineNumber": 240,
+    "cloneClass": "264a46050a348041b44cdbe144980569",
+    "startLineNumber": 235
+   },
+   {
+    "endLineNumber": 172,
+    "cloneClass": "264a46050a348041b44cdbe144980569",
+    "startLineNumber": 167
+   },
+   {
+    "endLineNumber": 476,
+    "cloneClass": "f6c1d6482433d1254b04b0ed5869b032",
+    "startLineNumber": 476
+   },
+   {
+    "endLineNumber": 471,
+    "cloneClass": "f6c1d6482433d1254b04b0ed5869b032",
+    "startLineNumber": 471
+   },
+   {
+    "endLineNumber": 493,
+    "cloneClass": "4e3ac93ebd84ea83f3b123160fd8264e",
+    "startLineNumber": 493
+   },
+   {
+    "endLineNumber": 516,
+    "cloneClass": "4e3ac93ebd84ea83f3b123160fd8264e",
+    "startLineNumber": 516
+   },
+   {
+    "endLineNumber": 540,
+    "cloneClass": "4e3ac93ebd84ea83f3b123160fd8264e",
+    "startLineNumber": 540
+   },
+   {
+    "endLineNumber": 464,
+    "cloneClass": "4e3ac93ebd84ea83f3b123160fd8264e",
+    "startLineNumber": 464
+   }
+  ],
+  "id": 17,
+  "numClones": 18
+ },
+ {
+  "fileName": "/src/smallsql/database/TableView.java",
+  "clones": [
+   {
+    "endLineNumber": 113,
+    "cloneClass": "cb59bb92f73d6df582b4d07a896e3f47",
+    "startLineNumber": 105
+   },
+   {
+    "endLineNumber": 49,
+    "cloneClass": "869cca442759fcf85e3f8532fc10bc94",
+    "startLineNumber": 49
+   },
+   {
+    "endLineNumber": 50,
+    "cloneClass": "869cca442759fcf85e3f8532fc10bc94",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 18,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/database/Index.java",
+  "clones": [
+   {
+    "endLineNumber": 133,
+    "cloneClass": "3c97517a6fa95068768edcae554ab5ae",
+    "startLineNumber": 130
+   },
+   {
+    "endLineNumber": 106,
+    "cloneClass": "3c97517a6fa95068768edcae554ab5ae",
+    "startLineNumber": 103
+   },
+   {
+    "endLineNumber": 384,
+    "cloneClass": "33e9f5a5919cc0aeee35e5f4fd73134e",
+    "startLineNumber": 382
+   },
+   {
+    "endLineNumber": 409,
+    "cloneClass": "33e9f5a5919cc0aeee35e5f4fd73134e",
+    "startLineNumber": 407
+   },
+   {
+    "endLineNumber": 330,
+    "cloneClass": "407a50555cca03bc7d0f6435b47ddae3",
+    "startLineNumber": 330
+   },
+   {
+    "endLineNumber": 350,
+    "cloneClass": "407a50555cca03bc7d0f6435b47ddae3",
+    "startLineNumber": 350
+   }
+  ],
+  "id": 19,
+  "numClones": 6
+ },
+ {
+  "fileName": "/src/smallsql/database/SSPreparedStatement.java",
+  "clones": [
+   {
+    "endLineNumber": 252,
+    "cloneClass": "5028f338ba00a89a6f5acc886d820d11",
+    "startLineNumber": 249
+   }
+  ],
+  "id": 20,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/View.java",
+  "clones": [
+   {
+    "endLineNumber": 56,
+    "cloneClass": "6cfdd2ef26a4f61f7590a4c44e8289f9",
+    "startLineNumber": 56
+   }
+  ],
+  "id": 21,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/Utils.java",
+  "clones": [
+   {
+    "endLineNumber": 322,
+    "cloneClass": "0fdad427454e254245684a09fc86159f",
+    "startLineNumber": 317
+   },
+   {
+    "endLineNumber": 212,
+    "cloneClass": "475450316e41a49bb6b31277c215cac3",
+    "startLineNumber": 205
+   },
+   {
+    "endLineNumber": 156,
+    "cloneClass": "68fa7f44c18e28d191b445be05079414",
+    "startLineNumber": 154
+   },
+   {
+    "endLineNumber": 165,
+    "cloneClass": "68fa7f44c18e28d191b445be05079414",
+    "startLineNumber": 163
+   },
+   {
+    "endLineNumber": 263,
+    "cloneClass": "7d5a948d80cdb67f333b381cb6463be9",
+    "startLineNumber": 262
+   },
+   {
+    "endLineNumber": 219,
+    "cloneClass": "7d5a948d80cdb67f333b381cb6463be9",
+    "startLineNumber": 218
+   },
+   {
+    "endLineNumber": 476,
+    "cloneClass": "819900179fb773c14bbbd611c63f86d1",
+    "startLineNumber": 476
+   }
+  ],
+  "id": 22,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/database/IndexScrollStatus.java",
+  "clones": [
+   {
+    "endLineNumber": 144,
+    "cloneClass": "5a78ad49a5f0dc57ad03bc2a73e5e6ef",
+    "startLineNumber": 144
+   },
+   {
+    "endLineNumber": 115,
+    "cloneClass": "5a78ad49a5f0dc57ad03bc2a73e5e6ef",
+    "startLineNumber": 115
+   },
+   {
+    "endLineNumber": 131,
+    "cloneClass": "36b607a483380cd3d1706b52ae3551a8",
+    "startLineNumber": 120
+   },
+   {
+    "endLineNumber": 99,
+    "cloneClass": "36b607a483380cd3d1706b52ae3551a8",
+    "startLineNumber": 89
+   }
+  ],
+  "id": 23,
+  "numClones": 4
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionMinute.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "9eff5c8fa73c0d43431a8c2cb1f60fe1",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 24,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionMonth.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "9eff5c8fa73c0d43431a8c2cb1f60fe1",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 25,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/TableViewResult.java",
+  "clones": [
+   {
+    "endLineNumber": 68,
+    "cloneClass": "e3c32fd91a1127d930088aa3831e6ef6",
+    "startLineNumber": 66
+   }
+  ],
+  "id": 26,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/SSStatement.java",
+  "clones": [
+   {
+    "endLineNumber": 274,
+    "cloneClass": "5028f338ba00a89a6f5acc886d820d11",
+    "startLineNumber": 271
+   }
+  ],
+  "id": 27,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/Language/Language.java",
+  "clones": [
+   {
+    "endLineNumber": 276,
+    "cloneClass": "f8a3a0529ef9a3a4662a1e853ceae074",
+    "startLineNumber": 276
+   },
+   {
+    "endLineNumber": 275,
+    "cloneClass": "f8a3a0529ef9a3a4662a1e853ceae074",
+    "startLineNumber": 275
+   }
+  ],
+  "id": 28,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionReturnInt.java",
+  "clones": [
+   {
+    "endLineNumber": 84,
+    "cloneClass": "adb26624b03ecbb7248ceb5522707530",
+    "startLineNumber": 81
+   },
+   {
+    "endLineNumber": 78,
+    "cloneClass": "f2b91d40da9ba884fe40b7055eb6ac8d",
+    "startLineNumber": 75
+   },
+   {
+    "endLineNumber": 90,
+    "cloneClass": "b540f31adfd788476d7568000995a6a3",
+    "startLineNumber": 87
+   }
+  ],
+  "id": 29,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestScrollable.java",
+  "clones": [
+   {
+    "endLineNumber": 178,
+    "cloneClass": "942e72e7251b8d62d53c0e3a36bdd6e3",
+    "startLineNumber": 173
+   },
+   {
+    "endLineNumber": 140,
+    "cloneClass": "942e72e7251b8d62d53c0e3a36bdd6e3",
+    "startLineNumber": 135
+   },
+   {
+    "endLineNumber": 104,
+    "cloneClass": "942e72e7251b8d62d53c0e3a36bdd6e3",
+    "startLineNumber": 99
+   },
+   {
+    "endLineNumber": 72,
+    "cloneClass": "942e72e7251b8d62d53c0e3a36bdd6e3",
+    "startLineNumber": 67
+   },
+   {
+    "endLineNumber": 192,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 192
+   },
+   {
+    "endLineNumber": 53,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 53
+   },
+   {
+    "endLineNumber": 275,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 275
+   },
+   {
+    "endLineNumber": 118,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 118
+   },
+   {
+    "endLineNumber": 154,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 154
+   },
+   {
+    "endLineNumber": 86,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 86
+   }
+  ],
+  "id": 30,
+  "numClones": 10
+ },
+ {
+  "fileName": "/src/smallsql/database/DataSources.java",
+  "clones": [
+   {
+    "endLineNumber": 52,
+    "cloneClass": "afd5528064d0a4617ecac3132278d2c9",
+    "startLineNumber": 48
+   },
+   {
+    "endLineNumber": 50,
+    "cloneClass": "82413218519f4d6858dccc37f7de836b",
+    "startLineNumber": 49
+   }
+  ],
+  "id": 31,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestJoins.java",
+  "clones": [
+   {
+    "endLineNumber": 210,
+    "cloneClass": "7d5bed0854b9a9c7f240aaeefe87d07b",
+    "startLineNumber": 204
+   },
+   {
+    "endLineNumber": 74,
+    "cloneClass": "2c98242811c46470fbeb63c6b96eb4bb",
+    "startLineNumber": 74
+   },
+   {
+    "endLineNumber": 49,
+    "cloneClass": "37dad4977b4d8f5332d31fb1024d3b96",
+    "startLineNumber": 49
+   },
+   {
+    "endLineNumber": 84,
+    "cloneClass": "4fabc373d04d60b4bb95e134f4e4d959",
+    "startLineNumber": 84
+   },
+   {
+    "endLineNumber": 155,
+    "cloneClass": "002aa178595a3531f1e944d231fe3b30",
+    "startLineNumber": 129
+   },
+   {
+    "endLineNumber": 51,
+    "cloneClass": "27e6c283654f7a4dfa55a5393a01050c",
+    "startLineNumber": 51
+   },
+   {
+    "endLineNumber": 82,
+    "cloneClass": "ec37bb1c5279fa2e88a2839f574f9b4f",
+    "startLineNumber": 82
+   },
+   {
+    "endLineNumber": 119,
+    "cloneClass": "2788c5ed6656541bac373622515feae6",
+    "startLineNumber": 119
+   },
+   {
+    "endLineNumber": 50,
+    "cloneClass": "604a702a507ef26b96fea970bd64c1de",
+    "startLineNumber": 50
+   },
+   {
+    "endLineNumber": 75,
+    "cloneClass": "f46c42351b1c81553fb1a997fc704949",
+    "startLineNumber": 75
+   },
+   {
+    "endLineNumber": 81,
+    "cloneClass": "09c9fa4aa34a895a4fb8e771f1a30d90",
+    "startLineNumber": 81
+   },
+   {
+    "endLineNumber": 80,
+    "cloneClass": "e4a85cb3c687da89e3d2cf0c0889b3c4",
+    "startLineNumber": 80
+   },
+   {
+    "endLineNumber": 216,
+    "cloneClass": "ff7678c4f5d9f72bb7b04733ef6a9f75",
+    "startLineNumber": 212
+   },
+   {
+    "endLineNumber": 79,
+    "cloneClass": "b352884232dec604a4fb2d0eba629834",
+    "startLineNumber": 79
+   },
+   {
+    "endLineNumber": 77,
+    "cloneClass": "46a37139accd5e988629e6124508f754",
+    "startLineNumber": 77
+   },
+   {
+    "endLineNumber": 83,
+    "cloneClass": "86783ee25db263b0320a7ffc0dd02c37",
+    "startLineNumber": 83
+   },
+   {
+    "endLineNumber": 76,
+    "cloneClass": "158751ff93d5fc5e0ac06df4410ad3b0",
+    "startLineNumber": 76
+   },
+   {
+    "endLineNumber": 73,
+    "cloneClass": "8fcb21b7c6f2a05cb09627ca7a7f9047",
+    "startLineNumber": 73
+   },
+   {
+    "endLineNumber": 78,
+    "cloneClass": "a95ac873562ef89986974fd84f1353c3",
+    "startLineNumber": 78
+   }
+  ],
+  "id": 32,
+  "numClones": 19
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestThreads.java",
+  "clones": [
+   {
+    "endLineNumber": 164,
+    "cloneClass": "895d31a16ba6a10902afc65171ed4d65",
+    "startLineNumber": 160
+   },
+   {
+    "endLineNumber": 110,
+    "cloneClass": "895d31a16ba6a10902afc65171ed4d65",
+    "startLineNumber": 106
+   },
+   {
+    "endLineNumber": 63,
+    "cloneClass": "895d31a16ba6a10902afc65171ed4d65",
+    "startLineNumber": 59
+   }
+  ],
+  "id": 33,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/database/Table.java",
+  "clones": [
+   {
+    "endLineNumber": 394,
+    "cloneClass": "a261e9a2d7fe162236cb1d718f0fafc6",
+    "startLineNumber": 388
+   },
+   {
+    "endLineNumber": 376,
+    "cloneClass": "a261e9a2d7fe162236cb1d718f0fafc6",
+    "startLineNumber": 370
+   },
+   {
+    "endLineNumber": 397,
+    "cloneClass": "a56ac5c24c8360888f8ffc6437dedec8",
+    "startLineNumber": 397
+   },
+   {
+    "endLineNumber": 379,
+    "cloneClass": "a56ac5c24c8360888f8ffc6437dedec8",
+    "startLineNumber": 379
+   },
+   {
+    "endLineNumber": 394,
+    "cloneClass": "6809618a3f3b475755d2b879f28d0522",
+    "startLineNumber": 388
+   },
+   {
+    "endLineNumber": 376,
+    "cloneClass": "6809618a3f3b475755d2b879f28d0522",
+    "startLineNumber": 370
+   },
+   {
+    "endLineNumber": 364,
+    "cloneClass": "6809618a3f3b475755d2b879f28d0522",
+    "startLineNumber": 358
+   }
+  ],
+  "id": 34,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionArithmetic.java",
+  "clones": [
+   {
+    "endLineNumber": 432,
+    "cloneClass": "5761d041852c4e26d489ace14bf4b8d9",
+    "startLineNumber": 432
+   },
+   {
+    "endLineNumber": 449,
+    "cloneClass": "5761d041852c4e26d489ace14bf4b8d9",
+    "startLineNumber": 449
+   }
+  ],
+  "id": 35,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/MemoryStream.java",
+  "clones": [
+   {
+    "endLineNumber": 140,
+    "cloneClass": "6ea834bf4a0d88495ce855556efdc9c5",
+    "startLineNumber": 140
+   },
+   {
+    "endLineNumber": 141,
+    "cloneClass": "6ea834bf4a0d88495ce855556efdc9c5",
+    "startLineNumber": 141
+   },
+   {
+    "endLineNumber": 138,
+    "cloneClass": "6ea834bf4a0d88495ce855556efdc9c5",
+    "startLineNumber": 138
+   },
+   {
+    "endLineNumber": 139,
+    "cloneClass": "6ea834bf4a0d88495ce855556efdc9c5",
+    "startLineNumber": 139
+   },
+   {
+    "endLineNumber": 71,
+    "cloneClass": "5f31477598cfc263953d3602f024855d",
+    "startLineNumber": 71
+   },
+   {
+    "endLineNumber": 63,
+    "cloneClass": "5f31477598cfc263953d3602f024855d",
+    "startLineNumber": 63
+   },
+   {
+    "endLineNumber": 83,
+    "cloneClass": "5f31477598cfc263953d3602f024855d",
+    "startLineNumber": 83
+   },
+   {
+    "endLineNumber": 143,
+    "cloneClass": "869816229b002fb3109ac39897797949",
+    "startLineNumber": 143
+   },
+   {
+    "endLineNumber": 131,
+    "cloneClass": "869816229b002fb3109ac39897797949",
+    "startLineNumber": 131
+   },
+   {
+    "endLineNumber": 81,
+    "cloneClass": "a62269eb9f0dd4ee828c083ec43ae0df",
+    "startLineNumber": 81
+   },
+   {
+    "endLineNumber": 69,
+    "cloneClass": "a62269eb9f0dd4ee828c083ec43ae0df",
+    "startLineNumber": 69
+   },
+   {
+    "endLineNumber": 142,
+    "cloneClass": "b4fae01117ebcfecb0effbb221ca7018",
+    "startLineNumber": 142
+   },
+   {
+    "endLineNumber": 130,
+    "cloneClass": "b4fae01117ebcfecb0effbb221ca7018",
+    "startLineNumber": 130
+   },
+   {
+    "endLineNumber": 125,
+    "cloneClass": "1ce36d5308a5f9060e3df56fb00dc674",
+    "startLineNumber": 125
+   },
+   {
+    "endLineNumber": 144,
+    "cloneClass": "1ce36d5308a5f9060e3df56fb00dc674",
+    "startLineNumber": 144
+   },
+   {
+    "endLineNumber": 132,
+    "cloneClass": "1ce36d5308a5f9060e3df56fb00dc674",
+    "startLineNumber": 132
+   },
+   {
+    "endLineNumber": 70,
+    "cloneClass": "de324144ae18b0eb30ac7cec04a80fb4",
+    "startLineNumber": 70
+   },
+   {
+    "endLineNumber": 82,
+    "cloneClass": "de324144ae18b0eb30ac7cec04a80fb4",
+    "startLineNumber": 82
+   }
+  ],
+  "id": 36,
+  "numClones": 18
+ },
+ {
+  "fileName": "/src/smallsql/database/SQLParser.java",
+  "clones": [
+   {
+    "endLineNumber": 1105,
+    "cloneClass": "b79a4beaed8092dbaff2de69182e1f9a",
+    "startLineNumber": 1105
+   },
+   {
+    "endLineNumber": 675,
+    "cloneClass": "b79a4beaed8092dbaff2de69182e1f9a",
+    "startLineNumber": 675
+   },
+   {
+    "endLineNumber": 264,
+    "cloneClass": "302c5a9cd953464778646a3c6fbc1571",
+    "startLineNumber": 264
+   },
+   {
+    "endLineNumber": 1784,
+    "cloneClass": "302c5a9cd953464778646a3c6fbc1571",
+    "startLineNumber": 1784
+   },
+   {
+    "endLineNumber": 1937,
+    "cloneClass": "295ac37eed3b8f081b7f824619f98ea0",
+    "startLineNumber": 1932
+   },
+   {
+    "endLineNumber": 357,
+    "cloneClass": "295ac37eed3b8f081b7f824619f98ea0",
+    "startLineNumber": 352
+   },
+   {
+    "endLineNumber": 1870,
+    "cloneClass": "be2097a10882760f0b994091afede56c",
+    "startLineNumber": 1869
+   },
+   {
+    "endLineNumber": 1864,
+    "cloneClass": "be2097a10882760f0b994091afede56c",
+    "startLineNumber": 1863
+   },
+   {
+    "endLineNumber": 1876,
+    "cloneClass": "be2097a10882760f0b994091afede56c",
+    "startLineNumber": 1875
+   },
+   {
+    "endLineNumber": 1336,
+    "cloneClass": "a6fbfb7135ec2f01855fcd11f72026d4",
+    "startLineNumber": 1332
+   },
+   {
+    "endLineNumber": 1243,
+    "cloneClass": "a6fbfb7135ec2f01855fcd11f72026d4",
+    "startLineNumber": 1239
+   },
+   {
+    "endLineNumber": 853,
+    "cloneClass": "afadde4bce1b32a066f276ae0ddeec15",
+    "startLineNumber": 849
+   },
+   {
+    "endLineNumber": 843,
+    "cloneClass": "afadde4bce1b32a066f276ae0ddeec15",
+    "startLineNumber": 839
+   }
+  ],
+  "id": 37,
+  "numClones": 13
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+  "clones": [
+   {
+    "endLineNumber": 157,
+    "cloneClass": "adb26624b03ecbb7248ceb5522707530",
+    "startLineNumber": 154
+   },
+   {
+    "endLineNumber": 120,
+    "cloneClass": "7957215127196ba37523d4ca72f250d6",
+    "startLineNumber": 120
+   },
+   {
+    "endLineNumber": 115,
+    "cloneClass": "7957215127196ba37523d4ca72f250d6",
+    "startLineNumber": 115
+   },
+   {
+    "endLineNumber": 110,
+    "cloneClass": "7957215127196ba37523d4ca72f250d6",
+    "startLineNumber": 110
+   },
+   {
+    "endLineNumber": 151,
+    "cloneClass": "f2b91d40da9ba884fe40b7055eb6ac8d",
+    "startLineNumber": 148
+   },
+   {
+    "endLineNumber": 109,
+    "cloneClass": "70ba3017b4413cc2e0560eb3041dbd38",
+    "startLineNumber": 109
+   },
+   {
+    "endLineNumber": 119,
+    "cloneClass": "70ba3017b4413cc2e0560eb3041dbd38",
+    "startLineNumber": 119
+   },
+   {
+    "endLineNumber": 114,
+    "cloneClass": "70ba3017b4413cc2e0560eb3041dbd38",
+    "startLineNumber": 114
+   },
+   {
+    "endLineNumber": 163,
+    "cloneClass": "b540f31adfd788476d7568000995a6a3",
+    "startLineNumber": 160
+   }
+  ],
+  "id": 38,
+  "numClones": 9
+ },
+ {
+  "fileName": "/src/smallsql/database/Command.java",
+  "clones": [
+   {
+    "endLineNumber": 141,
+    "cloneClass": "58053aefa3538047bc1750ee07cff6a9",
+    "startLineNumber": 138
+   }
+  ],
+  "id": 39,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/TableResult.java",
+  "clones": [
+   {
+    "endLineNumber": 180,
+    "cloneClass": "9a483deaba43fb456bca73a419f0f9e6",
+    "startLineNumber": 180
+   },
+   {
+    "endLineNumber": 186,
+    "cloneClass": "9a483deaba43fb456bca73a419f0f9e6",
+    "startLineNumber": 186
+   }
+  ],
+  "id": 40,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestResultSet.java",
+  "clones": [
+   {
+    "endLineNumber": 107,
+    "cloneClass": "f8c7c867984090c641ffd4ed6e90f72b",
+    "startLineNumber": 85
+   },
+   {
+    "endLineNumber": 150,
+    "cloneClass": "f8c7c867984090c641ffd4ed6e90f72b",
+    "startLineNumber": 128
+   },
+   {
+    "endLineNumber": 193,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 193
+   },
+   {
+    "endLineNumber": 113,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 113
+   },
+   {
+    "endLineNumber": 68,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 68
+   },
+   {
+    "endLineNumber": 156,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 156
+   },
+   {
+    "endLineNumber": 252,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 252
+   }
+  ],
+  "id": 41,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestOrderBy.java",
+  "clones": [
+   {
+    "endLineNumber": 134,
+    "cloneClass": "beb60cf65f38889e0cc09b004e047e12",
+    "startLineNumber": 134
+   },
+   {
+    "endLineNumber": 162,
+    "cloneClass": "beb60cf65f38889e0cc09b004e047e12",
+    "startLineNumber": 162
+   },
+   {
+    "endLineNumber": 601,
+    "cloneClass": "17ebf2433d48df77eacc54b01fd7057f",
+    "startLineNumber": 597
+   },
+   {
+    "endLineNumber": 596,
+    "cloneClass": "17ebf2433d48df77eacc54b01fd7057f",
+    "startLineNumber": 592
+   },
+   {
+    "endLineNumber": 725,
+    "cloneClass": "baca03d34e2fdd65eb752cc18a924958",
+    "startLineNumber": 707
+   },
+   {
+    "endLineNumber": 756,
+    "cloneClass": "baca03d34e2fdd65eb752cc18a924958",
+    "startLineNumber": 738
+   },
+   {
+    "endLineNumber": 351,
+    "cloneClass": "b56abf4facba68c07d8c4714bd46c9fe",
+    "startLineNumber": 338
+   },
+   {
+    "endLineNumber": 250,
+    "cloneClass": "b56abf4facba68c07d8c4714bd46c9fe",
+    "startLineNumber": 235
+   },
+   {
+    "endLineNumber": 436,
+    "cloneClass": "b56abf4facba68c07d8c4714bd46c9fe",
+    "startLineNumber": 423
+   },
+   {
+    "endLineNumber": 222,
+    "cloneClass": "b56abf4facba68c07d8c4714bd46c9fe",
+    "startLineNumber": 207
+   },
+   {
+    "endLineNumber": 763,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 763
+   },
+   {
+    "endLineNumber": 701,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 701
+   },
+   {
+    "endLineNumber": 732,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 732
+   },
+   {
+    "endLineNumber": 192,
+    "cloneClass": "c71ecf1640f9f4585a56d64af29ce980",
+    "startLineNumber": 187
+   },
+   {
+    "endLineNumber": 816,
+    "cloneClass": "c71ecf1640f9f4585a56d64af29ce980",
+    "startLineNumber": 811
+   },
+   {
+    "endLineNumber": 458,
+    "cloneClass": "3a019fa12662b3f01d523443ff0f576f",
+    "startLineNumber": 455
+   },
+   {
+    "endLineNumber": 216,
+    "cloneClass": "3a019fa12662b3f01d523443ff0f576f",
+    "startLineNumber": 213
+   },
+   {
+    "endLineNumber": 244,
+    "cloneClass": "3a019fa12662b3f01d523443ff0f576f",
+    "startLineNumber": 241
+   }
+  ],
+  "id": 42,
+  "numClones": 18
+ },
+ {
+  "fileName": "/src/smallsql/database/IndexDescriptions.java",
+  "clones": [
+   {
+    "endLineNumber": 73,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 71
+   },
+   {
+    "endLineNumber": 67,
+    "cloneClass": "8788540bda5bd1b61d0e5095dba5328b",
+    "startLineNumber": 62
+   }
+  ],
+  "id": 43,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionDayOfMonth.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "9eff5c8fa73c0d43431a8c2cb1f60fe1",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 44,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/Distinct.java",
+  "clones": [
+   {
+    "endLineNumber": 67,
+    "cloneClass": "e3b93b7e39a633acc3219ab307528a46",
+    "startLineNumber": 64
+   }
+  ],
+  "id": 45,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/SmallSQLException.java",
+  "clones": [
+   {
+    "endLineNumber": 145,
+    "cloneClass": "1a4e10c32dc05e1c3b5fc6a53ddeb7fe",
+    "startLineNumber": 145
+   },
+   {
+    "endLineNumber": 182,
+    "cloneClass": "1a4e10c32dc05e1c3b5fc6a53ddeb7fe",
+    "startLineNumber": 182
+   }
+  ],
+  "id": 46,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ForeignKeys.java",
+  "clones": [
+   {
+    "endLineNumber": 66,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 64
+   },
+   {
+    "endLineNumber": 60,
+    "cloneClass": "8788540bda5bd1b61d0e5095dba5328b",
+    "startLineNumber": 56
+   }
+  ],
+  "id": 47,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/BasicTestCase.java",
+  "clones": [
+   {
+    "endLineNumber": 196,
+    "cloneClass": "0fdad427454e254245684a09fc86159f",
+    "startLineNumber": 188
+   },
+   {
+    "endLineNumber": 323,
+    "cloneClass": "c510a5890932647c93941989208b0dd3",
+    "startLineNumber": 323
+   },
+   {
+    "endLineNumber": 315,
+    "cloneClass": "c510a5890932647c93941989208b0dd3",
+    "startLineNumber": 315
+   },
+   {
+    "endLineNumber": 109,
+    "cloneClass": "475450316e41a49bb6b31277c215cac3",
+    "startLineNumber": 102
+   },
+   {
+    "endLineNumber": 101,
+    "cloneClass": "819900179fb773c14bbbd611c63f86d1",
+    "startLineNumber": 101
+   },
+   {
+    "endLineNumber": 144,
+    "cloneClass": "3e9f32891105fe4f4704cba0ca4700b4",
+    "startLineNumber": 144
+   },
+   {
+    "endLineNumber": 131,
+    "cloneClass": "3e9f32891105fe4f4704cba0ca4700b4",
+    "startLineNumber": 131
+   }
+  ],
+  "id": 48,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/database/CommandSelect.java",
+  "clones": [
+   {
+    "endLineNumber": 462,
+    "cloneClass": "0c9e5d86964879ac55bb5ef0c6282651",
+    "startLineNumber": 462
+   },
+   {
+    "endLineNumber": 418,
+    "cloneClass": "0c9e5d86964879ac55bb5ef0c6282651",
+    "startLineNumber": 418
+   },
+   {
+    "endLineNumber": 439,
+    "cloneClass": "58053aefa3538047bc1750ee07cff6a9",
+    "startLineNumber": 436
+   },
+   {
+    "endLineNumber": 481,
+    "cloneClass": "58053aefa3538047bc1750ee07cff6a9",
+    "startLineNumber": 478
+   },
+   {
+    "endLineNumber": 497,
+    "cloneClass": "58053aefa3538047bc1750ee07cff6a9",
+    "startLineNumber": 494
+   }
+  ],
+  "id": 49,
+  "numClones": 5
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionTimestampAdd.java",
+  "clones": [
+   {
+    "endLineNumber": 97,
+    "cloneClass": "70ba3017b4413cc2e0560eb3041dbd38",
+    "startLineNumber": 97
+   },
+   {
+    "endLineNumber": 92,
+    "cloneClass": "70ba3017b4413cc2e0560eb3041dbd38",
+    "startLineNumber": 92
+   },
+   {
+    "endLineNumber": 87,
+    "cloneClass": "70ba3017b4413cc2e0560eb3041dbd38",
+    "startLineNumber": 87
+   }
+  ],
+  "id": 50,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/database/Where.java",
+  "clones": [
+   {
+    "endLineNumber": 95,
+    "cloneClass": "e3b93b7e39a633acc3219ab307528a46",
+    "startLineNumber": 92
+   }
+  ],
+  "id": 51,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/Database.java",
+  "clones": [
+   {
+    "endLineNumber": 505,
+    "cloneClass": "f4b7eb1f7da579a217850e07bda43f7d",
+    "startLineNumber": 505
+   },
+   {
+    "endLineNumber": 395,
+    "cloneClass": "f4b7eb1f7da579a217850e07bda43f7d",
+    "startLineNumber": 395
+   },
+   {
+    "endLineNumber": 438,
+    "cloneClass": "f4b7eb1f7da579a217850e07bda43f7d",
+    "startLineNumber": 438
+   },
+   {
+    "endLineNumber": 542,
+    "cloneClass": "f4b7eb1f7da579a217850e07bda43f7d",
+    "startLineNumber": 542
+   },
+   {
+    "endLineNumber": 474,
+    "cloneClass": "f4b7eb1f7da579a217850e07bda43f7d",
+    "startLineNumber": 474
+   }
+  ],
+  "id": 52,
+  "numClones": 5
+ },
+ {
+  "fileName": "/src/smallsql/database/DateTime.java",
+  "clones": [
+   {
+    "endLineNumber": 485,
+    "cloneClass": "596a4fa37a073ba0a27797f43bb22169",
+    "startLineNumber": 485
+   },
+   {
+    "endLineNumber": 360,
+    "cloneClass": "596a4fa37a073ba0a27797f43bb22169",
+    "startLineNumber": 360
+   },
+   {
+    "endLineNumber": 611,
+    "cloneClass": "596a4fa37a073ba0a27797f43bb22169",
+    "startLineNumber": 611
+   },
+   {
+    "endLineNumber": 797,
+    "cloneClass": "347d31a65c6038620c184daf4edc2736",
+    "startLineNumber": 797
+   },
+   {
+    "endLineNumber": 98,
+    "cloneClass": "347d31a65c6038620c184daf4edc2736",
+    "startLineNumber": 98
+   },
+   {
+    "endLineNumber": 744,
+    "cloneClass": "483d76fe5e90840cf72b57128971581a",
+    "startLineNumber": 740
+   },
+   {
+    "endLineNumber": 679,
+    "cloneClass": "483d76fe5e90840cf72b57128971581a",
+    "startLineNumber": 675
+   }
+  ],
+  "id": 53,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/database/LongList.java",
+  "clones": [
+   {
+    "endLineNumber": 64,
+    "cloneClass": "afd5528064d0a4617ecac3132278d2c9",
+    "startLineNumber": 60
+   },
+   {
+    "endLineNumber": 70,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 68
+   },
+   {
+    "endLineNumber": 62,
+    "cloneClass": "82413218519f4d6858dccc37f7de836b",
+    "startLineNumber": 61
+   }
+  ],
+  "id": 54,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+  "clones": [
+   {
+    "endLineNumber": 71,
+    "cloneClass": "5f4cefc0597762499cbc98c1ba9b6e97",
+    "startLineNumber": 68
+   },
+   {
+    "endLineNumber": 83,
+    "cloneClass": "9856cee014f3180546708358c0221909",
+    "startLineNumber": 80
+   },
+   {
+    "endLineNumber": 77,
+    "cloneClass": "e5057078357b1d4afae9933f97c17898",
+    "startLineNumber": 74
+   },
+   {
+    "endLineNumber": 53,
+    "cloneClass": "931d08d3ffa264ac18834ecae622042c",
+    "startLineNumber": 50
+   },
+   {
+    "endLineNumber": 59,
+    "cloneClass": "6ee9268e248c571c89fca262c6782097",
+    "startLineNumber": 56
+   },
+   {
+    "endLineNumber": 65,
+    "cloneClass": "5eff1ef442af4f23de2f36978e1e1f11",
+    "startLineNumber": 62
+   },
+   {
+    "endLineNumber": 47,
+    "cloneClass": "7cf162285f2d7d5637dbed5c0fad5aaa",
+    "startLineNumber": 44
+   }
+  ],
+  "id": 55,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/database/Expression.java",
+  "clones": [
+   {
+    "endLineNumber": 77,
+    "cloneClass": "e3c32fd91a1127d930088aa3831e6ef6",
+    "startLineNumber": 75
+   }
+  ],
+  "id": 56,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/LongTreeList.java",
+  "clones": [
+   {
+    "endLineNumber": 305,
+    "cloneClass": "427d3023019aacccb5c9c40f6cd6f2f7",
+    "startLineNumber": 305
+   },
+   {
+    "endLineNumber": 233,
+    "cloneClass": "427d3023019aacccb5c9c40f6cd6f2f7",
+    "startLineNumber": 233
+   },
+   {
+    "endLineNumber": 271,
+    "cloneClass": "4b2b4d6b4aa03f81caa7fbe3442fdb73",
+    "startLineNumber": 271
+   },
+   {
+    "endLineNumber": 224,
+    "cloneClass": "4b2b4d6b4aa03f81caa7fbe3442fdb73",
+    "startLineNumber": 224
+   },
+   {
+    "endLineNumber": 341,
+    "cloneClass": "d220bd86e8bd42b50cf304b58dae9a51",
+    "startLineNumber": 331
+   },
+   {
+    "endLineNumber": 386,
+    "cloneClass": "d220bd86e8bd42b50cf304b58dae9a51",
+    "startLineNumber": 376
+   },
+   {
+    "endLineNumber": 362,
+    "cloneClass": "1997544e7fde2287d0c48e67dd7e9846",
+    "startLineNumber": 362
+   },
+   {
+    "endLineNumber": 323,
+    "cloneClass": "1997544e7fde2287d0c48e67dd7e9846",
+    "startLineNumber": 323
+   }
+  ],
+  "id": 57,
+  "numClones": 8
+ },
+ {
+  "fileName": "/src/smallsql/database/CommandInsert.java",
+  "clones": [
+   {
+    "endLineNumber": 170,
+    "cloneClass": "4fa52ec0abfac8dffb923656a21917dc",
+    "startLineNumber": 166
+   },
+   {
+    "endLineNumber": 160,
+    "cloneClass": "4fa52ec0abfac8dffb923656a21917dc",
+    "startLineNumber": 156
+   }
+  ],
+  "id": 58,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionReplace.java",
+  "clones": [
+   {
+    "endLineNumber": 51,
+    "cloneClass": "8a6ebe174622fe1f11b6887adcbb03a6",
+    "startLineNumber": 49
+   }
+  ],
+  "id": 59,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionTruncate.java",
+  "clones": [
+   {
+    "endLineNumber": 60,
+    "cloneClass": "560f44261aa7aa34a63807411184d134",
+    "startLineNumber": 50
+   },
+   {
+    "endLineNumber": 66,
+    "cloneClass": "88bea8b5b257d469c72fae308afdf484",
+    "startLineNumber": 62
+   }
+  ],
+  "id": 60,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/Strings.java",
+  "clones": [
+   {
+    "endLineNumber": 66,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 64
+   },
+   {
+    "endLineNumber": 60,
+    "cloneClass": "8788540bda5bd1b61d0e5095dba5328b",
+    "startLineNumber": 56
+   }
+  ],
+  "id": 61,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionAbs.java",
+  "clones": [
+   {
+    "endLineNumber": 108,
+    "cloneClass": "d6734644f9e13dca4f50514d3e135806",
+    "startLineNumber": 104
+   }
+  ],
+  "id": 62,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/Column.java",
+  "clones": [
+   {
+    "endLineNumber": 154,
+    "cloneClass": "5abd4d6ad90c2b30eaa4de247aa39cbe",
+    "startLineNumber": 146
+   },
+   {
+    "endLineNumber": 144,
+    "cloneClass": "5abd4d6ad90c2b30eaa4de247aa39cbe",
+    "startLineNumber": 136
+   }
+  ],
+  "id": 63,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/LongLongList.java",
+  "clones": [
+   {
+    "endLineNumber": 63,
+    "cloneClass": "82413218519f4d6858dccc37f7de836b",
+    "startLineNumber": 62
+   },
+   {
+    "endLineNumber": 57,
+    "cloneClass": "82413218519f4d6858dccc37f7de836b",
+    "startLineNumber": 56
+   }
+  ],
+  "id": 64,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionSubstring.java",
+  "clones": [
+   {
+    "endLineNumber": 61,
+    "cloneClass": "16323cde9ed1b5be8c0487acdb87fbb9",
+    "startLineNumber": 60
+   },
+   {
+    "endLineNumber": 82,
+    "cloneClass": "16323cde9ed1b5be8c0487acdb87fbb9",
+    "startLineNumber": 81
+   },
+   {
+    "endLineNumber": 51,
+    "cloneClass": "8a6ebe174622fe1f11b6887adcbb03a6",
+    "startLineNumber": 49
+   }
+  ],
+  "id": 65,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/database/StoreImpl.java",
+  "clones": [
+   {
+    "endLineNumber": 398,
+    "cloneClass": "a9de44c725e1bd7f02eb46391c1969b4",
+    "startLineNumber": 398
+   },
+   {
+    "endLineNumber": 363,
+    "cloneClass": "a9de44c725e1bd7f02eb46391c1969b4",
+    "startLineNumber": 363
+   },
+   {
+    "endLineNumber": 377,
+    "cloneClass": "a9de44c725e1bd7f02eb46391c1969b4",
+    "startLineNumber": 377
+   },
+   {
+    "endLineNumber": 1263,
+    "cloneClass": "9fa2d0d0bd786eb9f0a0dafb8f1d2ebe",
+    "startLineNumber": 1263
+   },
+   {
+    "endLineNumber": 1145,
+    "cloneClass": "9fa2d0d0bd786eb9f0a0dafb8f1d2ebe",
+    "startLineNumber": 1145
+   },
+   {
+    "endLineNumber": 640,
+    "cloneClass": "e3e9455b549cc26fadc69bd3d38f1448",
+    "startLineNumber": 640
+   },
+   {
+    "endLineNumber": 613,
+    "cloneClass": "e3e9455b549cc26fadc69bd3d38f1448",
+    "startLineNumber": 613
+   },
+   {
+    "endLineNumber": 292,
+    "cloneClass": "1972aa71ee70340322e8db87f21d3a2f",
+    "startLineNumber": 291
+   },
+   {
+    "endLineNumber": 297,
+    "cloneClass": "1972aa71ee70340322e8db87f21d3a2f",
+    "startLineNumber": 296
+   },
+   {
+    "endLineNumber": 376,
+    "cloneClass": "692e285aa773b8ced1652941d1ead94c",
+    "startLineNumber": 376
+   },
+   {
+    "endLineNumber": 397,
+    "cloneClass": "692e285aa773b8ced1652941d1ead94c",
+    "startLineNumber": 397
+   },
+   {
+    "endLineNumber": 410,
+    "cloneClass": "570046d201a7c6ec7ceabfb7b336a55b",
+    "startLineNumber": 410
+   },
+   {
+    "endLineNumber": 384,
+    "cloneClass": "570046d201a7c6ec7ceabfb7b336a55b",
+    "startLineNumber": 384
+   },
+   {
+    "endLineNumber": 383,
+    "cloneClass": "fdd3fabcaa9aa029a31848f82424a899",
+    "startLineNumber": 383
+   },
+   {
+    "endLineNumber": 409,
+    "cloneClass": "fdd3fabcaa9aa029a31848f82424a899",
+    "startLineNumber": 409
+   },
+   {
+    "endLineNumber": 375,
+    "cloneClass": "bbf7ebab8741aba323c4e27afc746f69",
+    "startLineNumber": 375
+   },
+   {
+    "endLineNumber": 396,
+    "cloneClass": "bbf7ebab8741aba323c4e27afc746f69",
+    "startLineNumber": 396
+   },
+   {
+    "endLineNumber": 1460,
+    "cloneClass": "b50638fc338e290d3ca8b1a1759d1798",
+    "startLineNumber": 1460
+   },
+   {
+    "endLineNumber": 1422,
+    "cloneClass": "b50638fc338e290d3ca8b1a1759d1798",
+    "startLineNumber": 1422
+   },
+   {
+    "endLineNumber": 1418,
+    "cloneClass": "b50638fc338e290d3ca8b1a1759d1798",
+    "startLineNumber": 1418
+   },
+   {
+    "endLineNumber": 1439,
+    "cloneClass": "b50638fc338e290d3ca8b1a1759d1798",
+    "startLineNumber": 1439
+   },
+   {
+    "endLineNumber": 1431,
+    "cloneClass": "b50638fc338e290d3ca8b1a1759d1798",
+    "startLineNumber": 1431
+   },
+   {
+    "endLineNumber": 598,
+    "cloneClass": "cee8dddce11b2b7827b609001f2327eb",
+    "startLineNumber": 598
+   },
+   {
+    "endLineNumber": 565,
+    "cloneClass": "cee8dddce11b2b7827b609001f2327eb",
+    "startLineNumber": 565
+   }
+  ],
+  "id": 66,
+  "numClones": 24
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionHour.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "9eff5c8fa73c0d43431a8c2cb1f60fe1",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 67,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionDayOfYear.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "9eff5c8fa73c0d43431a8c2cb1f60fe1",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 68,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/Money.java",
+  "clones": [
+   {
+    "endLineNumber": 71,
+    "cloneClass": "2e9e8c2ad113cf49202b6a9d3cd258de",
+    "startLineNumber": 67
+   },
+   {
+    "endLineNumber": 65,
+    "cloneClass": "2e9e8c2ad113cf49202b6a9d3cd258de",
+    "startLineNumber": 61
+   }
+  ],
+  "id": 69,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestFunctions.java",
+  "clones": [
+   {
+    "endLineNumber": 383,
+    "cloneClass": "c1df2b1f4299878af94dfdc9e4bc67ce",
+    "startLineNumber": 374
+   }
+  ],
+  "id": 70,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestLanguage.java",
+  "clones": [
+   {
+    "endLineNumber": 92,
+    "cloneClass": "d533db8049708f559002357a1a695c81",
+    "startLineNumber": 90
+   },
+   {
+    "endLineNumber": 112,
+    "cloneClass": "d533db8049708f559002357a1a695c81",
+    "startLineNumber": 110
+   },
+   {
+    "endLineNumber": 89,
+    "cloneClass": "967bd22162c75bd08562a92fac9d24ac",
+    "startLineNumber": 84
+   },
+   {
+    "endLineNumber": 109,
+    "cloneClass": "967bd22162c75bd08562a92fac9d24ac",
+    "startLineNumber": 104
+   },
+   {
+    "endLineNumber": 258,
+    "cloneClass": "1056df9a2fedc94c3115e26fa6bb5c2e",
+    "startLineNumber": 255
+   },
+   {
+    "endLineNumber": 244,
+    "cloneClass": "1056df9a2fedc94c3115e26fa6bb5c2e",
+    "startLineNumber": 241
+   }
+  ],
+  "id": 71,
+  "numClones": 6
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+  "clones": [
+   {
+    "endLineNumber": 78,
+    "cloneClass": "51271e71e00268fb044270251275df8c",
+    "startLineNumber": 78
+   },
+   {
+    "endLineNumber": 66,
+    "cloneClass": "51271e71e00268fb044270251275df8c",
+    "startLineNumber": 66
+   },
+   {
+    "endLineNumber": 48,
+    "cloneClass": "51271e71e00268fb044270251275df8c",
+    "startLineNumber": 48
+   },
+   {
+    "endLineNumber": 36,
+    "cloneClass": "51271e71e00268fb044270251275df8c",
+    "startLineNumber": 36
+   },
+   {
+    "endLineNumber": 47,
+    "cloneClass": "50f5265d66c7936da001464635f15e66",
+    "startLineNumber": 47
+   },
+   {
+    "endLineNumber": 77,
+    "cloneClass": "50f5265d66c7936da001464635f15e66",
+    "startLineNumber": 77
+   },
+   {
+    "endLineNumber": 26,
+    "cloneClass": "b2e10f0696b39e3482b6a008a5f5893e",
+    "startLineNumber": 20
+   }
+  ],
+  "id": 72,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestAlterTable.java",
+  "clones": [
+   {
+    "endLineNumber": 45,
+    "cloneClass": "b2e10f0696b39e3482b6a008a5f5893e",
+    "startLineNumber": 39
+   }
+  ],
+  "id": 73,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+  "clones": [
+   {
+    "endLineNumber": 75,
+    "cloneClass": "5f4cefc0597762499cbc98c1ba9b6e97",
+    "startLineNumber": 72
+   },
+   {
+    "endLineNumber": 87,
+    "cloneClass": "9856cee014f3180546708358c0221909",
+    "startLineNumber": 84
+   },
+   {
+    "endLineNumber": 81,
+    "cloneClass": "e5057078357b1d4afae9933f97c17898",
+    "startLineNumber": 78
+   },
+   {
+    "endLineNumber": 57,
+    "cloneClass": "931d08d3ffa264ac18834ecae622042c",
+    "startLineNumber": 54
+   },
+   {
+    "endLineNumber": 63,
+    "cloneClass": "6ee9268e248c571c89fca262c6782097",
+    "startLineNumber": 60
+   },
+   {
+    "endLineNumber": 69,
+    "cloneClass": "5eff1ef442af4f23de2f36978e1e1f11",
+    "startLineNumber": 66
+   },
+   {
+    "endLineNumber": 51,
+    "cloneClass": "7cf162285f2d7d5637dbed5c0fad5aaa",
+    "startLineNumber": 48
+   }
+  ],
+  "id": 74,
+  "numClones": 7
+ },
+ {
+  "fileName": "/src/smallsql/database/Columns.java",
+  "clones": [
+   {
+    "endLineNumber": 98,
+    "cloneClass": "fd2f24de7a5e17b778b26449184371c6",
+    "startLineNumber": 96
+   },
+   {
+    "endLineNumber": 62,
+    "cloneClass": "8788540bda5bd1b61d0e5095dba5328b",
+    "startLineNumber": 58
+   }
+  ],
+  "id": 75,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestTokenizer.java",
+  "clones": [
+   {
+    "endLineNumber": 90,
+    "cloneClass": "10b2a546de7517bdaddda5e6ea67367d",
+    "startLineNumber": 87
+   },
+   {
+    "endLineNumber": 150,
+    "cloneClass": "10b2a546de7517bdaddda5e6ea67367d",
+    "startLineNumber": 147
+   }
+  ],
+  "id": 76,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunction.java",
+  "clones": [
+   {
+    "endLineNumber": 121,
+    "cloneClass": "0d1e9cca158e622296a710144d4316e8",
+    "startLineNumber": 118
+   },
+   {
+    "endLineNumber": 109,
+    "cloneClass": "0d1e9cca158e622296a710144d4316e8",
+    "startLineNumber": 106
+   }
+  ],
+  "id": 77,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestTransactions.java",
+  "clones": [
+   {
+    "endLineNumber": 103,
+    "cloneClass": "eb4781acda062484046ada97f4c36223",
+    "startLineNumber": 98
+   },
+   {
+    "endLineNumber": 193,
+    "cloneClass": "eb4781acda062484046ada97f4c36223",
+    "startLineNumber": 188
+   },
+   {
+    "endLineNumber": 370,
+    "cloneClass": "eb4781acda062484046ada97f4c36223",
+    "startLineNumber": 365
+   },
+   {
+    "endLineNumber": 286,
+    "cloneClass": "eb4781acda062484046ada97f4c36223",
+    "startLineNumber": 281
+   },
+   {
+    "endLineNumber": 162,
+    "cloneClass": "eb4781acda062484046ada97f4c36223",
+    "startLineNumber": 157
+   },
+   {
+    "endLineNumber": 134,
+    "cloneClass": "eb4781acda062484046ada97f4c36223",
+    "startLineNumber": 129
+   },
+   {
+    "endLineNumber": 121,
+    "cloneClass": "0b563bd0c7097f78b2d6c89e72127c24",
+    "startLineNumber": 113
+   },
+   {
+    "endLineNumber": 180,
+    "cloneClass": "0b563bd0c7097f78b2d6c89e72127c24",
+    "startLineNumber": 172
+   },
+   {
+    "endLineNumber": 101,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 99
+   },
+   {
+    "endLineNumber": 226,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 224
+   },
+   {
+    "endLineNumber": 400,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 398
+   },
+   {
+    "endLineNumber": 160,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 158
+   },
+   {
+    "endLineNumber": 132,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 130
+   },
+   {
+    "endLineNumber": 368,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 366
+   },
+   {
+    "endLineNumber": 284,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 282
+   },
+   {
+    "endLineNumber": 71,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 69
+   },
+   {
+    "endLineNumber": 191,
+    "cloneClass": "c08bf0dfa44a646572cea09027bf2584",
+    "startLineNumber": 189
+   },
+   {
+    "endLineNumber": 227,
+    "cloneClass": "f062359a1b674009d45993aa50da1ed1",
+    "startLineNumber": 223
+   },
+   {
+    "endLineNumber": 401,
+    "cloneClass": "f062359a1b674009d45993aa50da1ed1",
+    "startLineNumber": 397
+   },
+   {
+    "endLineNumber": 355,
+    "cloneClass": "2cb4c411fe4d2c090196897986f093e8",
+    "startLineNumber": 354
+   },
+   {
+    "endLineNumber": 205,
+    "cloneClass": "2cb4c411fe4d2c090196897986f093e8",
+    "startLineNumber": 204
+   },
+   {
+    "endLineNumber": 423,
+    "cloneClass": "86ae9328ebb688bcb06eabbabd8804ae",
+    "startLineNumber": 419
+   },
+   {
+    "endLineNumber": 445,
+    "cloneClass": "86ae9328ebb688bcb06eabbabd8804ae",
+    "startLineNumber": 441
+   },
+   {
+    "endLineNumber": 274,
+    "cloneClass": "fcd49758d88e6606084ba67cb6e0dba5",
+    "startLineNumber": 262
+   },
+   {
+    "endLineNumber": 317,
+    "cloneClass": "fcd49758d88e6606084ba67cb6e0dba5",
+    "startLineNumber": 305
+   }
+  ],
+  "id": 78,
+  "numClones": 25
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionFloor.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "d6734644f9e13dca4f50514d3e135806",
+    "startLineNumber": 46
+   }
+  ],
+  "id": 79,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionReturnFloat.java",
+  "clones": [
+   {
+    "endLineNumber": 80,
+    "cloneClass": "d6734644f9e13dca4f50514d3e135806",
+    "startLineNumber": 76
+   }
+  ],
+  "id": 80,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/GroupResult.java",
+  "clones": [
+   {
+    "endLineNumber": 116,
+    "cloneClass": "7028e0110a43984557d3086634161ccd",
+    "startLineNumber": 111
+   },
+   {
+    "endLineNumber": 94,
+    "cloneClass": "7028e0110a43984557d3086634161ccd",
+    "startLineNumber": 89
+   }
+  ],
+  "id": 81,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/TestMoneyRounding.java",
+  "clones": [
+   {
+    "endLineNumber": 62,
+    "cloneClass": "c1df2b1f4299878af94dfdc9e4bc67ce",
+    "startLineNumber": 53
+   }
+  ],
+  "id": 82,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionValue.java",
+  "clones": [
+   {
+    "endLineNumber": 216,
+    "cloneClass": "204920fe880ecd17a29b998bd36ce3bf",
+    "startLineNumber": 211
+   },
+   {
+    "endLineNumber": 159,
+    "cloneClass": "204920fe880ecd17a29b998bd36ce3bf",
+    "startLineNumber": 154
+   }
+  ],
+  "id": 83,
+  "numClones": 2
+ },
+ {
+  "fileName": "/src/smallsql/junit/BenchTest.java",
+  "clones": [
+   {
+    "endLineNumber": 337,
+    "cloneClass": "544ccb84dd158a6e445b80e55f0b948b",
+    "startLineNumber": 337
+   },
+   {
+    "endLineNumber": 655,
+    "cloneClass": "85cc9e8a8de511a6bc20907fcefbd46c",
+    "startLineNumber": 655
+   },
+   {
+    "endLineNumber": 618,
+    "cloneClass": "85cc9e8a8de511a6bc20907fcefbd46c",
+    "startLineNumber": 618
+   },
+   {
+    "endLineNumber": 123,
+    "cloneClass": "a70bc128fbdb3e757c795984eb050719",
+    "startLineNumber": 121
+   },
+   {
+    "endLineNumber": 182,
+    "cloneClass": "a70bc128fbdb3e757c795984eb050719",
+    "startLineNumber": 180
+   },
+   {
+    "endLineNumber": 438,
+    "cloneClass": "46583ae1687fcc9f48a70596585991d2",
+    "startLineNumber": 435
+   },
+   {
+    "endLineNumber": 491,
+    "cloneClass": "46583ae1687fcc9f48a70596585991d2",
+    "startLineNumber": 488
+   },
+   {
+    "endLineNumber": 637,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 635
+   },
+   {
+    "endLineNumber": 445,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 443
+   },
+   {
+    "endLineNumber": 360,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 358
+   },
+   {
+    "endLineNumber": 152,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 150
+   },
+   {
+    "endLineNumber": 500,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 498
+   },
+   {
+    "endLineNumber": 396,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 394
+   },
+   {
+    "endLineNumber": 127,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 125
+   },
+   {
+    "endLineNumber": 239,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 237
+   },
+   {
+    "endLineNumber": 555,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 553
+   },
+   {
+    "endLineNumber": 186,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 184
+   },
+   {
+    "endLineNumber": 602,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 600
+   },
+   {
+    "endLineNumber": 678,
+    "cloneClass": "b2c2c403a4fff8711269a6fc5e87532f",
+    "startLineNumber": 676
+   },
+   {
+    "endLineNumber": 302,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 299
+   },
+   {
+    "endLineNumber": 130,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 127
+   },
+   {
+    "endLineNumber": 242,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 239
+   },
+   {
+    "endLineNumber": 558,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 555
+   },
+   {
+    "endLineNumber": 681,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 678
+   },
+   {
+    "endLineNumber": 605,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 602
+   },
+   {
+    "endLineNumber": 189,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 186
+   },
+   {
+    "endLineNumber": 448,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 445
+   },
+   {
+    "endLineNumber": 640,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 637
+   },
+   {
+    "endLineNumber": 155,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 152
+   },
+   {
+    "endLineNumber": 363,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 360
+   },
+   {
+    "endLineNumber": 503,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 500
+   },
+   {
+    "endLineNumber": 399,
+    "cloneClass": "1cef69baf0436402134a1147a5882128",
+    "startLineNumber": 396
+   },
+   {
+    "endLineNumber": 432,
+    "cloneClass": "5db641b9500b4ed5d34c206e962d56c4",
+    "startLineNumber": 415
+   },
+   {
+    "endLineNumber": 486,
+    "cloneClass": "5db641b9500b4ed5d34c206e962d56c4",
+    "startLineNumber": 469
+   },
+   {
+    "endLineNumber": 234,
+    "cloneClass": "dbfbadade87253c084b59b57218a6dd0",
+    "startLineNumber": 234
+   },
+   {
+    "endLineNumber": 216,
+    "cloneClass": "dbfbadade87253c084b59b57218a6dd0",
+    "startLineNumber": 216
+   },
+   {
+    "endLineNumber": 486,
+    "cloneClass": "57c0832ae66aa8a8ea6944f1003c6af3",
+    "startLineNumber": 476
+   },
+   {
+    "endLineNumber": 433,
+    "cloneClass": "57c0832ae66aa8a8ea6944f1003c6af3",
+    "startLineNumber": 422
+   },
+   {
+    "endLineNumber": 540,
+    "cloneClass": "57c0832ae66aa8a8ea6944f1003c6af3",
+    "startLineNumber": 530
+   },
+   {
+    "endLineNumber": 541,
+    "cloneClass": "57c0832ae66aa8a8ea6944f1003c6af3",
+    "startLineNumber": 530
+   },
+   {
+    "endLineNumber": 659,
+    "cloneClass": "0400c5cf2d75cf4f2aefc7aa16cab102",
+    "startLineNumber": 657
+   },
+   {
+    "endLineNumber": 622,
+    "cloneClass": "0400c5cf2d75cf4f2aefc7aa16cab102",
+    "startLineNumber": 620
+   },
+   {
+    "endLineNumber": 730,
+    "cloneClass": "1d46c2cec1dcbd0c4aa7f0f39a9e7119",
+    "startLineNumber": 726
+   },
+   {
+    "endLineNumber": 297,
+    "cloneClass": "1d46c2cec1dcbd0c4aa7f0f39a9e7119",
+    "startLineNumber": 292
+   },
+   {
+    "endLineNumber": 674,
+    "cloneClass": "f7220182bab9ae0cb014ea9cf21ab0db",
+    "startLineNumber": 674
+   },
+   {
+    "endLineNumber": 633,
+    "cloneClass": "f7220182bab9ae0cb014ea9cf21ab0db",
+    "startLineNumber": 633
+   },
+   {
+    "endLineNumber": 661,
+    "cloneClass": "15ea958a2f00970f39268e0f65bbaeeb",
+    "startLineNumber": 661
+   },
+   {
+    "endLineNumber": 624,
+    "cloneClass": "15ea958a2f00970f39268e0f65bbaeeb",
+    "startLineNumber": 624
+   },
+   {
+    "endLineNumber": 328,
+    "cloneClass": "a70346e55042751021eb2416680a1424",
+    "startLineNumber": 322
+   },
+   {
+    "endLineNumber": 214,
+    "cloneClass": "a70346e55042751021eb2416680a1424",
+    "startLineNumber": 208
+   },
+   {
+    "endLineNumber": 222,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 222
+   },
+   {
+    "endLineNumber": 377,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 377
+   },
+   {
+    "endLineNumber": 169,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 169
+   },
+   {
+    "endLineNumber": 256,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 256
+   },
+   {
+    "endLineNumber": 112,
+    "cloneClass": "70f45b9c94e0b73e229a6d4d2a9fccd4",
+    "startLineNumber": 112
+   },
+   {
+    "endLineNumber": 519,
+    "cloneClass": "cf08169043f687970a8b0d8c105584a7",
+    "startLineNumber": 519
+   },
+   {
+    "endLineNumber": 412,
+    "cloneClass": "cf08169043f687970a8b0d8c105584a7",
+    "startLineNumber": 412
+   }
+  ],
+  "id": 84,
+  "numClones": 57
+ },
+ {
+  "fileName": "/src/smallsql/database/ExpressionFunctionYear.java",
+  "clones": [
+   {
+    "endLineNumber": 50,
+    "cloneClass": "9eff5c8fa73c0d43431a8c2cb1f60fe1",
+    "startLineNumber": 50
+   }
+  ],
+  "id": 85,
+  "numClones": 1
+ },
+ {
+  "fileName": "/src/smallsql/database/StorePageMap.java",
+  "clones": [
+   {
+    "endLineNumber": 198,
+    "cloneClass": "3e7f0411c0cb459d7387aeaa3ef726f7",
+    "startLineNumber": 198
+   },
+   {
+    "endLineNumber": 127,
+    "cloneClass": "3e7f0411c0cb459d7387aeaa3ef726f7",
+    "startLineNumber": 127
+   },
+   {
+    "endLineNumber": 99,
+    "cloneClass": "3e7f0411c0cb459d7387aeaa3ef726f7",
+    "startLineNumber": 99
+   }
+  ],
+  "id": 86,
+  "numClones": 3
+ },
+ {
+  "fileName": "/src/smallsql/database/FileIndexNode.java",
+  "clones": [
+   {
+    "endLineNumber": 82,
+    "cloneClass": "c1c9bdd2c97aefa1449df58e3c4e2e8c",
+    "startLineNumber": 82
+   },
+   {
+    "endLineNumber": 92,
+    "cloneClass": "c1c9bdd2c97aefa1449df58e3c4e2e8c",
+    "startLineNumber": 92
+   },
+   {
+    "endLineNumber": 93,
+    "cloneClass": "6cfdd2ef26a4f61f7590a4c44e8289f9",
+    "startLineNumber": 93
+   },
+   {
+    "endLineNumber": 67,
+    "cloneClass": "044e5c966c3107d95c35e2a2f24ca91a",
+    "startLineNumber": 67
+   },
+   {
+    "endLineNumber": 83,
+    "cloneClass": "044e5c966c3107d95c35e2a2f24ca91a",
+    "startLineNumber": 83
+   }
+  ],
+  "id": 87,
+  "numClones": 5
  }
 ]
