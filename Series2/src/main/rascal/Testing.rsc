@@ -31,7 +31,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // Find the clones in the subtrees of the AST
     println("Finding atomic clones");
     real similarityThreshold = 0.8;
-    findClones(subtrees, similarityThreshold, type2=type2, print=false);
+    findClones(subtrees, similarityThreshold, type2=type2, print=true);
     println("massThreshold of <massThreshold>, type2: <type2>, n_subtrees: <size(subtrees)>, n_clones: <size(getClones())>, similarityThreshold: <similarityThreshold>");
 
 
@@ -45,7 +45,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // Find the clones in the sequences of the AST
     println("Finding sequence clones");
     similarityThreshold = 0.0;
-    findSequenceClones(sequences, similarityThreshold, type2=type2, print=false);
+    findSequenceClones(sequences, similarityThreshold, type2=type2, print=true);
 
     printClones();
     printSequenceClones();
