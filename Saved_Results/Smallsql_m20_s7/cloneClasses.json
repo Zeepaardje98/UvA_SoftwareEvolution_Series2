@@ -2,21 +2,19 @@
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 14,
-    "lines": "public static void main(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 337,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 2,
-    "lines": "public static void main(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/junit/TestOther.java",
+    "startLineNumber": 93,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY );"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/TestOther.java",
   "id": 0,
   "numClones": 2,
-<<<<<<< HEAD
-=======
   "cloneSize": 1
  },
  {
@@ -63,7 +61,6 @@
   "title": "/src/smallsql/junit/TestScrollable.java, /src/smallsql/junit/TestScrollable.java & more ...",
   "id": 2,
   "numClones": 4,
->>>>>>> 89b88c7f0a735660bf1cf96da7a11e8c02987b0d
   "cloneSize": 6
  },
  {
@@ -151,9 +148,9 @@
     "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getString().trim());\r\n\t}"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 9,
-    "lines": "public static void notMain(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 84,
+    "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getString().trim());\r\n\t}"
    }
   ],
   "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
@@ -164,11 +161,6 @@
  {
   "clones": [
    {
-<<<<<<< HEAD
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 2,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
-=======
     "fileName": "/src/smallsql/junit/TestTokenizer.java",
     "startLineNumber": 87,
     "lines": "catch (SQLException e) {\r\n\t\t\t// just to check the error, if it happens, is the expected one\r\n\t\t\tout.println(\"REGULAR: \" + e.getMessage() + '\\n');\r\n\t\t}"
@@ -190,22 +182,21 @@
     "fileName": "/src/smallsql/database/MutableNumeric.java",
     "startLineNumber": 502,
     "lines": "value.length == 2 && (value[0] > 0)"
->>>>>>> 89b88c7f0a735660bf1cf96da7a11e8c02987b0d
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 9,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 525,
+    "lines": "value.length == 2 && (value[0] > 0)"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 38,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 473,
+    "lines": "value.length == 2 && (value[0] > 0)"
    },
    {
-    "fileName": "/testFiles/helloWorld1.java",
-    "startLineNumber": 4,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 549,
+    "lines": "value.length == 2 && (value[0] > 0)"
    }
   ],
   "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java & more ...",
@@ -216,27 +207,34 @@
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 14,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 323,
+    "lines": "String message = \"Check DisplaySize: \" + expectedLen + \"!=\" + Integer.MAX_VALUE + \")\";"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 2,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
-   },
-   {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 31,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 315,
+    "lines": "String message = \"Check DisplaySize: \" + expectedLen + \"!=\" + Integer.MAX_VALUE + \")\";"
    }
   ],
-<<<<<<< HEAD
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java & more ...",
-  "id": 3,
-  "numClones": 3,
-  "cloneSize": 6
-=======
+  "title": "/src/smallsql/junit/BasicTestCase.java, /src/smallsql/junit/BasicTestCase.java",
+  "id": 10,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 518,
+    "lines": "value[0] / scaleDoubleFactor[scale] * signum"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 466,
+    "lines": "value[0] / scaleDoubleFactor[scale] * signum"
+   }
+  ],
   "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java",
   "id": 11,
   "numClones": 2,
@@ -3721,6 +3719,5 @@
   "id": 171,
   "numClones": 2,
   "cloneSize": 1
->>>>>>> 89b88c7f0a735660bf1cf96da7a11e8c02987b0d
  }
 ]
