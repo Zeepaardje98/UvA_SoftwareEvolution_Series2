@@ -33,7 +33,7 @@
   "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
   "id": 1,
   "numClones": 2,
-  "cloneSize": 11
+  "cloneSize": 10
  },
  {
   "clones": [
@@ -61,7 +61,7 @@
   "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java & more ...",
   "id": 2,
   "numClones": 4,
-  "cloneSize": 11
+  "cloneSize": 10
  },
  {
   "clones": [

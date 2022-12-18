@@ -26,29 +26,34 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST
-    // println("Getting subtrees");
+    println("Getting subtrees");
     int massThreshold = 20;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
 
     // Find the clones in the subtrees of the AST
+    println("Getting atomic clones");
     real similarityThreshold = 0.8;
     findClones(subtrees, similarityThreshold, type2=type2);
 
     // Get all sequence nodes of the AST
-    // println("Getting sequences");
+    println("Getting sequences");
     int sequenceThreshold = 7;
-    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
+    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold,
+                                                        ignoreLeaves=type2);
 
     // Find the clones in the sequences of the AST
     similarityThreshold = 0.0;
     findSequenceClones(sequences, similarityThreshold, type2=type2);
 
+    // Export the data for the clone visualization
     exportCloneData(projectLocation);
 
     return;
 }
 
-void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool print=false, bool type2=false) {
+// Function to find atomic clones
+void findClones(map[str, list[node]] subtrees, real similarityThreshold,
+                bool print=false, bool type2=false) {
     int counter = 0;
     int sizeS = size(subtrees);
 
@@ -74,7 +79,10 @@ void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool pr
     return;
 }
 
-void findSequenceClones(map[str, list[list[node]]] sequences, real similarityThreshold, bool print=false, bool type2=false) {
+// Function to find sequence clones
+void findSequenceClones(map[str, list[list[node]]] sequences,
+                        real similarityThreshold, bool print=false,
+                        bool type2=false) {
     int counter = 0;
     int sizeS = size(sequences);
 

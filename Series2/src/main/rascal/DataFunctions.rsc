@@ -9,20 +9,40 @@ import IO;
 import Set;
 import List;
 import Location;
+import String;
 
 import util::Math;
 import lang::java::m3::Core;
 import lang::java::m3::AST;
 
-// Returns the amount of unique clone lines from our detected clones,
-// by putting a tuple of path and line number in a set and calculating its size.
-// Note that blank lines are currently counted.
+import Helper;
+
+
+
+// Returns the line numbers of a clone that are not blank lines or comments
+list[int] getCodeLineNumbers(loc clone) {
+    int lineCounter = clone.begin.line;
+    list[str] cloneLines = split("\n", getContent(clone));
+    list[int] codeLineNumbers = [];
+
+    for (line <- cloneLines) {
+        if (!(isCommentLine(line) || isBlankLine(line))) {
+            codeLineNumbers += lineCounter;
+        }
+        lineCounter += 1;
+    }
+
+    return codeLineNumbers;
+}
+
+// Returns the amount of unique clone lines from all our detected clones,
+// by putting a tuple of path and line number in a set and calculating its size
 int getTotalCloneLines(map[str, set[loc]] cloneClasses) {
     set[tuple[str, int]] uniqueLines = {};
 
     for (class <- cloneClasses) {
         for (clone <- cloneClasses[class]) {
-            uniqueLines += toSet([<clone.path, line> | int line <- [clone.begin.line .. clone.end.line]]);
+            uniqueLines += toSet([<clone.path, line> | int line <- getCodeLineNumbers(clone)]);
         }
     }
 
@@ -30,8 +50,6 @@ int getTotalCloneLines(map[str, set[loc]] cloneClasses) {
 }
 
 // Returns the clone line percentage of a project.
-// Note that blank lines are currently counted for both the total project lines
-// and the total unique clone lines.
 int getCloneLinePercentage(int totalCloneLines, loc projectLocation) {
     int totalProjectLines = 0;
 
@@ -40,7 +58,11 @@ int getCloneLinePercentage(int totalCloneLines, loc projectLocation) {
 
     for (f <- projectFiles) {
         list[str] fileLines = readFileLines(f);
-        totalProjectLines += size(fileLines);
+        for (line <- fileLines) {
+            if (!(isCommentLine(line) || isBlankLine(line))) {
+                totalProjectLines += 1;
+            }
+        }
     }
 
     return toInt(toReal(totalCloneLines) / toReal(totalProjectLines) * 100);
@@ -48,15 +70,14 @@ int getCloneLinePercentage(int totalCloneLines, loc projectLocation) {
 
 // Returns the index of the class with the biggest clone, and the amount of lines
 // the clone has.
-// Note that blank lines are currently counted.
 tuple[int, int] getClassWithBiggestClone(map[str, set[loc]] cloneClasses) {
     int counter = 0;
     int index = 0;
     int mostLines = 0;
 
     for (class <- cloneClasses) {
-        loc cloneLoc = toList(cloneClasses[class])[0];
-        int numLines = cloneLoc.end.line - cloneLoc.begin.line + 1;
+        loc clone = toList(cloneClasses[class])[0];
+        int numLines = size(getCodeLineNumbers(clone));
 
         if (numLines > mostLines) {
             mostLines = numLines;

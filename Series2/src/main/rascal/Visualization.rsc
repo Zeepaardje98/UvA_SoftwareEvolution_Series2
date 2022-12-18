@@ -32,8 +32,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
             str fileName = clone.path;
             str cloneString = getContent(clone);
             int startLineNumber = clone.begin.line;
-            // + 1 because line numbers start at 1 not zero
-            cloneSize = clone.end.line - clone.begin.line + 1;
+            cloneSize = size(getCodeLineNumbers(clone));
             clones +=
             (
                 "fileName": fileName,
