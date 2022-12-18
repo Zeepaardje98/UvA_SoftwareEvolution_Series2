@@ -14,12 +14,14 @@ import DataFunctions;
 
 import lang::json::IO;
 
+// Function to export all clone data that is needed for the visualization to JSON files
 void exportCloneData(loc projectLocation) {
     map[str, set[loc]] cloneClasses = getCloneClasses();
     exportCloneClasses(cloneClasses);
     exportStatistics(cloneClasses, projectLocation);
 }
 
+// Function to export data about the clone classes to a JSON file
 void exportCloneClasses(map[str, set[loc]] cloneClasses) {
     int counter = 0;
     list[map[str, value]] classes = [];
@@ -63,6 +65,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
     writeJSON(|cwd:///../../../../front-end/clone-app/src/data/cloneClasses.json|, classes, indent=1);
 }
 
+// Function to export clone statistics to a JSON file
 void exportStatistics(map[str, set[loc]] cloneClasses, loc projectLocation) {
     int numCloneClasses = size(cloneClasses);
     int numClones = size(union(range((cloneClasses))));
