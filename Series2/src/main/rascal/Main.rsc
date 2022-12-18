@@ -23,6 +23,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
 
     // projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
+    projectLocation = |project://hsqldb-2.3.1|;
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST
@@ -31,7 +32,6 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
 
     // Find the clones in the subtrees of the AST
-    println("Getting atomic clones");
     real similarityThreshold = 0.8;
     println("Finding atomic clones");
     findClones(subtrees, similarityThreshold, type2=type2);
@@ -43,7 +43,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
                                                         ignoreLeaves=type2);
 
     // Find the clones in the sequences of the AST
-    similarityThreshold = 0.0;
+    similarityThreshold = 0.8;
     println("Finding sequence clones");
     findSequenceClones(sequences, similarityThreshold, type2=type2);
 
