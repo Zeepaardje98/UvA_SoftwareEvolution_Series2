@@ -129,7 +129,9 @@ void exportCloneFiles(map[str, set[loc]] cloneClasses) {
             map[str, value] cloneData = (
                 "cloneClass" : hash,
                 "startLineNumber": clone.begin.line,
-                "endLineNumber": clone.end.line
+                "endLineNumber": clone.end.line,
+                "fileName": clone.path,
+                "content": getContent(clone)
             );
             if (clone.path in filesMap) {
                 filesMap[clone.path] += cloneData;
@@ -146,9 +148,9 @@ void exportCloneFiles(map[str, set[loc]] cloneClasses) {
             "fileName": file,
             "clones": filesMap[file],
             "id": index,
-            "numClones": size(filesMap[file])
+            // "numClones": size(filesMap[file])
             // "labels": labels,
-            // "chartData": getFileChartData(filesMap[file], labels)
+            "chartData": getFileChartData(filesMap[file], labels)
         );
         index += 1;
     }

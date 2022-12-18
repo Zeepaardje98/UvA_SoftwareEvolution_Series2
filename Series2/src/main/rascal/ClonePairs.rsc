@@ -198,12 +198,13 @@ public map[str, set[loc]] getCloneClasses() {
 }
 
 // Function to add two clones from a clone pair to the cloneclasses hash map.
+// We filter clones with at least 5 lines.
 public void addToCloneClass(str hash, loc cloneSrc0, loc cloneSrc1) {
-    if (hash in _cloneClasses) {
+    if (hash in _cloneClasses && (cloneSrc0.end.line - cloneSrc0.begin.line >= 5)) {
         _cloneClasses[hash] += cloneSrc0;
         _cloneClasses[hash] += cloneSrc1;
     }
-    else {
+    else if (cloneSrc0.end.line - cloneSrc0.begin.line >= 5) {
         _cloneClasses[hash] = {cloneSrc0};
         _cloneClasses[hash] += cloneSrc1;
     }
@@ -249,5 +250,5 @@ public void resetSequences() {
 }
 
 public void resetClasses() {
-    _sequenceClones = ();
+    _cloneClasses = ();
 }
