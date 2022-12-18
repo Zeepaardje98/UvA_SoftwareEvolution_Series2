@@ -22,28 +22,30 @@ import lang::java::m3::AST;
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
 
-    projectLocation = |project://Series2/testFiles|;
+    // projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST
-    // println("Getting subtrees");
+    println("Getting subtrees");
     int massThreshold = 20;
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
 
     // Find the clones in the subtrees of the AST
     real similarityThreshold = 0.8;
+    println("Finding atomic clones");
     findClones(subtrees, similarityThreshold, type2=type2);
 
     // Get all sequence nodes of the AST
-    // println("Getting sequences");
+    println("Getting sequences");
     int sequenceThreshold = 7;
     map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
 
     // Find the clones in the sequences of the AST
     similarityThreshold = 0.0;
+    println("Finding sequence clones");
     findSequenceClones(sequences, similarityThreshold, type2=type2);
 
-    exportCloneData();
+    // exportCloneData();
 
     return;
 }

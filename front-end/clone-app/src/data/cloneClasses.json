@@ -2,121 +2,3809 @@
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 14,
-    "lines": "public static void main(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 337,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 2,
-    "lines": "public static void main(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/junit/TestOther.java",
+    "startLineNumber": 93,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY );"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/TestOther.java",
   "id": 0,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 305,
+    "lines": "(nextEntry == 0 && !firstNode) || nextEntry > octet"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 233,
+    "lines": "(nextEntry == 0 && !firstNode) || nextEntry > octet"
+   }
+  ],
+  "title": "/src/smallsql/database/LongTreeList.java, /src/smallsql/database/LongTreeList.java",
+  "id": 1,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 173,
+    "lines": "try{\r\n            rs.getString(\"v\");\r\n            fail(\"SQLException 'No current row' should be throw\");\r\n        }catch(SQLException ex){\r\n            assertSQLException(\"01000\", 0, ex);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 135,
+    "lines": "try{\r\n            rs.getString(\"v\");\r\n            fail(\"SQLException 'No current row' should be throw\");\r\n        }catch(SQLException ex){\r\n            assertSQLException(\"01000\", 0, ex);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 99,
+    "lines": "try{\r\n            rs.getString(\"v\");\r\n            fail(\"SQLException 'No current row' should be throw\");\r\n        }catch(SQLException ex){\r\n            assertSQLException( \"01000\", 0, ex);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 67,
+    "lines": "try{\r\n            rs.getString(\"v\");\r\n            fail(\"SQLException 'No current row' should be throw\");\r\n        }catch(SQLException ex){\r\n            assertSQLException( \"01000\", 0, ex );\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestScrollable.java, /src/smallsql/junit/TestScrollable.java, ...",
+  "id": 2,
+  "numClones": 4,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 204,
+    "lines": "private static TestValue a(String dataType, Object small, Object large){\r\n        TestValue value = new TestValue();\r\n        value.dataType  = dataType;\r\n        value.small     = small;\r\n        value.large     = large;\r\n        return value;\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 267,
+    "lines": "private static TestValue a(String dataType, Object small, Object large){\r\n        TestValue value = new TestValue();\r\n        value.dataType  = dataType;\r\n        value.small     = small;\r\n        value.large     = large;\r\n        return value;\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 3,
+  "numClones": 2,
+  "cloneSize": 7
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 485,
+    "lines": "buf.append( details.hour < 12 ? \"AM\" : \"PM\" );"
+   },
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 360,
+    "lines": "buf.append( details.hour < 12 ? \"AM\" : \"PM\" );"
+   },
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 611,
+    "lines": "buf.append( details.hour < 12 ? \"AM\" : \"PM\" );"
+   }
+  ],
+  "title": "/src/smallsql/database/DateTime.java, /src/smallsql/database/DateTime.java, ...",
+  "id": 4,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 317,
+    "lines": "static boolean string2boolean( String val){\r\n        try{\r\n            return Double.parseDouble( val ) != 0;\r\n        }catch(NumberFormatException e){/*ignore it if it not a number*/}\r\n        return \"true\".equalsIgnoreCase( val ) || \"yes\".equalsIgnoreCase( val ) || \"t\".equalsIgnoreCase( val );\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 188,
+    "lines": "/**\r\n     * Identical to the Implementation from Utils.string2boolean\r\n     */\r\n    private boolean string2boolean( String val){\r\n        try{\r\n            return Double.parseDouble( val ) != 0;\r\n        }catch(NumberFormatException e){/*ignore it if it not a number*/}\r\n        return \"true\".equalsIgnoreCase( val ) || \"yes\".equalsIgnoreCase( val ) || \"t\".equalsIgnoreCase( val );\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/database/Utils.java, /src/smallsql/junit/BasicTestCase.java",
+  "id": 5,
+  "numClones": 2,
+  "cloneSize": 9
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 68,
+    "lines": "final double getDouble() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Double.parseDouble(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 72,
+    "lines": "final double getDouble() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Double.parseDouble(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
+  "id": 6,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 80,
+    "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 84,
+    "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
+  "id": 7,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTokenizer.java",
+    "startLineNumber": 87,
+    "lines": "catch (SQLException e) {\r\n\t\t\t// just to check the error, if it happens, is the expected one\r\n\t\t\tout.println(\"REGULAR: \" + e.getMessage() + '\\n');\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTokenizer.java",
+    "startLineNumber": 147,
+    "lines": "catch (SQLException e) {\r\n\t\t\t// just to check the error, if it happens, is the expected one\r\n\t\t\tout.println(\"REGULAR: \" + e.getMessage() + '\\n');\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTokenizer.java, /src/smallsql/junit/TestTokenizer.java",
+  "id": 8,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 502,
+    "lines": "value.length == 2 && (value[0] > 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 525,
+    "lines": "value.length == 2 && (value[0] > 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 473,
+    "lines": "value.length == 2 && (value[0] > 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 549,
+    "lines": "value.length == 2 && (value[0] > 0)"
+   }
+  ],
+  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java, ...",
+  "id": 9,
+  "numClones": 4,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 323,
+    "lines": "String message = \"Check DisplaySize: \" + expectedLen + \"!=\" + Integer.MAX_VALUE + \")\";"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 315,
+    "lines": "String message = \"Check DisplaySize: \" + expectedLen + \"!=\" + Integer.MAX_VALUE + \")\";"
+   }
+  ],
+  "title": "/src/smallsql/junit/BasicTestCase.java, /src/smallsql/junit/BasicTestCase.java",
+  "id": 10,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 518,
+    "lines": "value[0] / scaleDoubleFactor[scale] * signum"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 466,
+    "lines": "value[0] / scaleDoubleFactor[scale] * signum"
+   }
+  ],
+  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java",
+  "id": 11,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 72,
+    "lines": "a(\"time\"              , new Time(9, 1,1),       new Time(9, 2,2))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 74,
+    "lines": "a(\"time\"              , new Time(9, 1,1),       new Time(9, 2,2))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 12,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1105,
+    "lines": "int length = last.offset + last.length - offset;"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 675,
+    "lines": "int length = last.offset + last.length - offset;"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java",
+  "id": 13,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 98,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 188,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 365,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 281,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 157,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 129,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java, ...",
+  "id": 14,
+  "numClones": 6,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 398,
+    "lines": "page[ offset++ ] = (byte)(value >> 8);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 363,
+    "lines": "page[ offset++ ] = (byte)(value >> 8);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 377,
+    "lines": "page[ offset++ ] = (byte)(value >> 8);"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java, ...",
+  "id": 15,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 655,
+    "lines": "java.io.FileOutputStream fos = new java.io.FileOutputStream(tableName+\".bin\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 618,
+    "lines": "java.io.FileOutputStream fos = new java.io.FileOutputStream(tableName+\".bin\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 16,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/TableResult.java",
+    "startLineNumber": 180,
+    "lines": "store = ((StorePageLink)insertStorePages.get( (int)(filePos & 0x3FFFFFFFFFFFFFFFL) )).getStore( table, con, lock);"
+   },
+   {
+    "fileName": "/src/smallsql/database/TableResult.java",
+    "startLineNumber": 186,
+    "lines": "store = ((StorePageLink)insertStorePages.get( (int)(filePos & 0x3FFFFFFFFFFFFFFFL) )).getStore( table, con, lock);"
+   }
+  ],
+  "title": "/src/smallsql/database/TableResult.java, /src/smallsql/database/TableResult.java",
+  "id": 17,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/TableView.java",
+    "startLineNumber": 105,
+    "lines": "catch(Throwable e){\r\n\t\t\tif(raFile != null)\r\n\t\t\t\ttry{\r\n\t\t\t\t\traFile.close();\r\n\t\t\t\t}catch(Exception e2){\r\n\t\t\t\t\tDriverManager.println(e2.toString());\r\n\t\t\t\t}\r\n\t\t\tthrow SmallSQLException.createFromException(e);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexDescription.java",
+    "startLineNumber": 186,
+    "lines": "catch(Throwable e){\r\n            if(raFile != null)\r\n                try{\r\n                    raFile.close();\r\n                }catch(Exception e2){\r\n                    DriverManager.println(e2.toString());\r\n                }\r\n            throw SmallSQLException.createFromException(e);\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/database/TableView.java, /src/smallsql/database/IndexDescription.java",
+  "id": 18,
+  "numClones": 2,
+  "cloneSize": 9
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionSubstring.java",
+    "startLineNumber": 60,
+    "lines": "if(length < 0) \r\n\t\t\tthrow SmallSQLException.create(Language.SUBSTR_INVALID_LEN, new Integer(length));"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionSubstring.java",
+    "startLineNumber": 81,
+    "lines": "if(length < 0) \r\n\t\t\tthrow SmallSQLException.create(Language.SUBSTR_INVALID_LEN, new Integer(length));"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionSubstring.java, /src/smallsql/database/ExpressionFunctionSubstring.java",
+  "id": 19,
+  "numClones": 2,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 78,
+    "lines": "final long getMoney() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Money.parseMoney(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 74,
+    "lines": "final long getMoney() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Money.parseMoney(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnString.java, /src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+  "id": 20,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 78,
+    "lines": "rs = con.getMetaData().getIndexInfo( null, null, table, false, false );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 66,
+    "lines": "rs = con.getMetaData().getIndexInfo( null, null, table, false, false );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 48,
+    "lines": "rs = con.getMetaData().getIndexInfo( null, null, table, false, false );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 36,
+    "lines": "rs = con.getMetaData().getIndexInfo( null, null, table, false, false );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestAlterTable2.java, /src/smallsql/junit/TestAlterTable2.java, ...",
+  "id": 21,
+  "numClones": 4,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/CommandSelect.java",
+    "startLineNumber": 462,
+    "lines": "src != null && (!(src instanceof ExpressionValue) || !((ExpressionValue)src).isEmpty())"
+   },
+   {
+    "fileName": "/src/smallsql/database/CommandSelect.java",
+    "startLineNumber": 418,
+    "lines": "src != null && (!(src instanceof ExpressionValue) || !((ExpressionValue)src).isEmpty())"
+   }
+  ],
+  "title": "/src/smallsql/database/CommandSelect.java, /src/smallsql/database/CommandSelect.java",
+  "id": 22,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLTokenizer.java",
+    "startLineNumber": 173,
+    "lines": "if(!wasWhiteSpace){\r\n                                   tokens.add( new SQLToken( value, tokenStart, i) );\r\n                                   value = 0;\r\n                                }"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLTokenizer.java",
+    "startLineNumber": 112,
+    "lines": "if(!wasWhiteSpace){\r\n\t                                tokens.add( new SQLToken( value, tokenStart, i) );\r\n\t                                value = 0;\r\n\t                            }"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLTokenizer.java, /src/smallsql/database/SQLTokenizer.java",
+  "id": 23,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 121,
+    "lines": "if (count != rowCount)\r\n                System.out.println( \"  Failed: Only \" + count + \" rows were inserted.\");\r\n            else System.out.println( \"  Test time: \" + time + \" ms\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 180,
+    "lines": "if (count != rowCount)\r\n                 System.out.println( \"  Failed: Only \" + count + \" rows were inserted.\");\r\n            else System.out.println( \"  Test time: \" + time + \" ms\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 24,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 280,
+    "lines": "{\"TABLE_CAT\", \"TABLE_SCHEM\", \"TABLE_NAME\", \"NON_UNIQUE\", \"INDEX_QUALIFIER\", \"INDEX_NAME\", \"TYPE\", \"ORDINAL_POSITION\", \"COLUMN_NAME\", \"ASC_OR_DESC\", \"CARDINALITY\", \"PAGES\", \"FILTER_CONDITION\"}"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 872,
+    "lines": "{\"TABLE_CAT\", \"TABLE_SCHEM\", \"TABLE_NAME\", \"NON_UNIQUE\", \"INDEX_QUALIFIER\", \"INDEX_NAME\", \"TYPE\", \"ORDINAL_POSITION\", \"COLUMN_NAME\", \"ASC_OR_DESC\", \"CARDINALITY\", \"PAGES\", \"FILTER_CONDITION\"}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestDBMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java",
+  "id": 25,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 264,
+    "lines": "token != null && token.value == SQLTokenizer.POINT"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1784,
+    "lines": "token != null && token.value == SQLTokenizer.POINT"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java",
+  "id": 26,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestDataTypes.java",
+    "startLineNumber": 68,
+    "lines": "public void tearDown(){\r\n        try{\r\n            Connection con = AllTests.getConnection();\r\n            Statement st = con.createStatement();\r\n            st.execute(\"drop table \" + table);\r\n            st.close();\r\n        }catch(Throwable e){\r\n            //e.printStackTrace();\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestFunctions.java",
+    "startLineNumber": 374,
+    "lines": "public void tearDown(){\r\n        try{\r\n            Connection con = AllTests.getConnection();\r\n            Statement st = con.createStatement();\r\n            st.execute(\"drop table \" + table);\r\n            st.close();\r\n        }catch(Throwable e){\r\n            //e.printStackTrace();\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestMoneyRounding.java",
+    "startLineNumber": 53,
+    "lines": "public void tearDown(){\r\n        try{\r\n            Connection con = AllTests.getConnection();\r\n            Statement st = con.createStatement();\r\n            st.execute(\"drop table \" + table);\r\n            st.close();\r\n        }catch(Throwable e){\r\n            //e.printStackTrace();\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 95,
+    "lines": "public void tearDown(){\r\n        try{\r\n            Connection con = AllTests.getConnection();\r\n            Statement st = con.createStatement();\r\n            st.execute(\"drop table \" + table);\r\n            st.close();\r\n        }catch(Throwable e){\r\n            //e.printStackTrace();\r\n        }\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestDataTypes.java, /src/smallsql/junit/TestFunctions.java, ...",
+  "id": 27,
+  "numClones": 4,
+  "cloneSize": 10
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/Series2/testFiles/helloWorldDouble.java",
+    "startLineNumber": 2,
+    "lines": "public static void main(String[] args) {\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n        System.out.println(testString);\r\n        System.out.println(testInt);\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorld3.java",
+    "startLineNumber": 14,
+    "lines": "public static void main(String[] args) {\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n        System.out.println(testString);\r\n        System.out.println(testInt);\r\n    }"
+   }
+  ],
+  "title": "/Series2/testFiles/helloWorldDouble.java, /Series2/testFiles/helloWorld3.java",
+  "id": 28,
   "numClones": 2,
   "cloneSize": 6
  },
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 32,
-    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 49,
+    "lines": "a(\"tinyint\"           , new Byte( (byte)3),     new Byte( (byte)4))"
    },
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 15,
-    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
-   },
-   {
-    "fileName": "/testFiles/helloWorld2.java",
-    "startLineNumber": 3,
-    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
-   },
-   {
-    "fileName": "/testFiles/helloWorld2.java",
-    "startLineNumber": 8,
-    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
-   },
-   {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 3,
-    "lines": "Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);"
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 46,
+    "lines": "a(\"tinyint\"           , new Byte( (byte)3),     new Byte( (byte)4))"
    }
   ],
-  "title": "/testFiles/helloWorldDouble.java, /testFiles/helloWorld3.java, ...",
-  "id": 1,
-  "numClones": 5,
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 29,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/DataSources.java",
+    "startLineNumber": 48,
+    "lines": "{\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongList.java",
+    "startLineNumber": 60,
+    "lines": "{\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Expressions.java",
+    "startLineNumber": 64,
+    "lines": "{\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/DataSources.java, /src/smallsql/database/LongList.java, ...",
+  "id": 30,
+  "numClones": 3,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 84,
+    "lines": "a(\"image\"             , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 83,
+    "lines": "a(\"image\"             , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 31,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 129,
+    "lines": "pr.setObject( 1, testValue.small);\r\n            pr.setObject( 2, testValue.large);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.small);\r\n            pr.setObject( 2, testValue.small);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.large);\r\n            pr.setObject( 2, testValue.large);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.large);\r\n            pr.setObject( 2, testValue.small);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, null);\r\n            pr.setObject( 2, testValue.small);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.small);\r\n            pr.setObject( 2, null);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, null);\r\n            pr.setObject( 2, null);\r\n            pr.execute();"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 115,
+    "lines": "pr.setObject( 1, testValue.small);\r\n            pr.setObject( 2, testValue.large);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.small);\r\n            pr.setObject( 2, testValue.small);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.large);\r\n            pr.setObject( 2, testValue.large);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.large);\r\n            pr.setObject( 2, testValue.small);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, null);\r\n            pr.setObject( 2, testValue.small);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, testValue.small);\r\n            pr.setObject( 2, null);\r\n            pr.execute();\r\n\r\n            pr.setObject( 1, null);\r\n            pr.setObject( 2, null);\r\n            pr.execute();"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 209,
+    "lines": "pr.setObject( 1, testValue.small);\r\n        pr.setObject( 2, testValue.large);\r\n        rs = pr.executeQuery();\r\n        assertTrue( \"To few rows\", rs.next() );\r\n        assertTrue( \"To few rows\", rs.next() );\r\n        assertTrue( \"To few rows\", rs.next() );\r\n        assertTrue( \"To few rows\", rs.next() );\r\n        assertTrue( \"To few rows\", rs.next() );\r\n        assertFalse( \"To many rows\", rs.next() );\r\n\t\tpr.close();"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 221,
+    "lines": "pr.setObject( 1, testValue.small);\r\n\t\tpr.setObject( 2, testValue.large);\r\n\t\trs = pr.executeQuery();\r\n\t\tassertTrue( \"To few rows\", rs.next() );\r\n\t\tassertTrue( \"To few rows\", rs.next() );\r\n\t\tassertFalse( \"To many rows\", rs.next() );\r\n\t\tpr.close();"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 230,
+    "lines": "pr.setObject( 1, testValue.small);\r\n\t\tpr.setObject( 2, testValue.large);\r\n\t\trs = pr.executeQuery();\r\n\t\tassertTrue( \"To few rows\", rs.next() );\r\n\t\tassertTrue( \"To few rows\", rs.next() );\r\n\t\tassertTrue( \"To few rows\", rs.next() );\r\n        assertTrue( \"To few rows\", rs.next() );\r\n\t\tassertTrue( \"To few rows\", rs.next() );\r\n\t\tassertFalse( \"To many rows\", rs.next() );\r\n\t\tpr.close();"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 242,
+    "lines": "pr.setObject( 1, testValue.small);\r\n\t\tpr.setObject( 2, testValue.large);\r\n\t\trs = pr.executeQuery();\r\n\t\tassertTrue( \"To few rows\", rs.next());\r\n\t\tassertTrue( \"To few rows\", rs.next());\r\n\t\tassertFalse( \"To many rows\", rs.next() );\r\n\t\tpr.close();"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java, ...",
+  "id": 32,
+  "numClones": 6,
+  "cloneSize": 7
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 435,
+    "lines": "if (updateCount != 1){\r\n                    System.out.println( \"  Failed: Update count should be 1 but it is \" + updateCount + \".\");\r\n                    return;\r\n                }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 488,
+    "lines": "if (updateCount != 1){\r\n                    System.out.println( \"  Failed: Update count should be 1 but it is \" + updateCount + \".\");\r\n                    return;\r\n                }"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 33,
+  "numClones": 2,
   "cloneSize": 4
  },
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 2,
-    "lines": "public static void notMain(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 140,
+    "lines": "((long)(puffer[ offset++ ] & 0xFF))"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 9,
-    "lines": "public static void notMain(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 141,
+    "lines": "((long)(puffer[ offset++ ] & 0xFF))"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 138,
+    "lines": "((long)(puffer[ offset++ ] & 0xFF))"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 139,
+    "lines": "((long)(puffer[ offset++ ] & 0xFF))"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
-  "id": 2,
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java, ...",
+  "id": 34,
+  "numClones": 4,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 48,
+    "lines": "a(\"smallint\"          , new Short( (short)3),   new Short( (short)4))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 51,
+    "lines": "a(\"smallint\"          , new Short( (short)3),   new Short( (short)4))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 35,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnInt.java",
+    "startLineNumber": 81,
+    "lines": "Object getObject() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn Utils.getInteger(getInt());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 154,
+    "lines": "Object getObject() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn Utils.getInteger(getInt());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnInt.java, /src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+  "id": 36,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 671,
+    "lines": "String[] colNames = {\"PROCEDURE_CAT\", \"PROCEDURE_SCHEM\", \"PROCEDURE_NAME\", \"COLUMN_NAME\", \"COLUMN_TYPE\", \"DATA_TYPE\", \"TYPE_NAME\", \"PRECISION\", \"LENGTH\", \"SCALE\", \"RADIX\", \"NULLABLE\", \"REMARKS\" };"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 103,
+    "lines": "String[] colNames = {\"PROCEDURE_CAT\", \"PROCEDURE_SCHEM\", \"PROCEDURE_NAME\", \"COLUMN_NAME\", \"COLUMN_TYPE\", \"DATA_TYPE\", \"TYPE_NAME\", \"PRECISION\", \"LENGTH\", \"SCALE\", \"RADIX\", \"NULLABLE\", \"REMARKS\" };"
+   }
+  ],
+  "title": "/src/smallsql/database/SSDatabaseMetaData.java, /src/smallsql/junit/TestDBMetaData.java",
+  "id": 37,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 113,
+    "lines": "con.createStatement().execute(\"Create Table transactions (i int identity, v varchar(20))\");\r\n\t\t\tassertRowCount( 0, \"Select * from transactions\");\r\n\r\n\t\t\tcon.createStatement().execute(\"Insert Into transactions(v) Values('qwert')\");\r\n\t\t\tassertRowCount( 1, \"Select * from transactions\");\r\n\r\n\t\t\tcon.setAutoCommit(false);\r\n\t\t\tcon.createStatement().execute(\"Insert Into transactions(v) Select v From transactions\");\r\n\t\t\tassertRowCount( 2, \"Select * from transactions\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 172,
+    "lines": "con.createStatement().execute(\"Create Table transactions (i int identity, v varchar(20))\");\r\n\t\t\tassertRowCount( 0, \"Select * from transactions\");\r\n\r\n\t\t\tcon.createStatement().execute(\"Insert Into transactions(v) Values('qwert')\");\r\n\t\t\tassertRowCount( 1, \"Select * from transactions\");\r\n\r\n\t\t\tcon.setAutoCommit(false);\r\n\t\t\tcon.createStatement().execute(\"Insert Into transactions(v) Select v From transactions\");\r\n\t\t\tassertRowCount( 2, \"Select * from transactions\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java",
+  "id": 38,
+  "numClones": 2,
+  "cloneSize": 9
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Language/Language.java",
+    "startLineNumber": 276,
+    "lines": "new HashMap((int)(MESSAGES.length / 0.7))"
+   },
+   {
+    "fileName": "/src/smallsql/database/Language/Language.java",
+    "startLineNumber": 275,
+    "lines": "new HashMap((int)(MESSAGES.length / 0.7))"
+   }
+  ],
+  "title": "/src/smallsql/database/Language/Language.java, /src/smallsql/database/Language/Language.java",
+  "id": 39,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 71,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 8);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 63,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 8);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 83,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 8);"
+   }
+  ],
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java, ...",
+  "id": 40,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/IndexScrollStatus.java",
+    "startLineNumber": 144,
+    "lines": "nodeStack.push( new IndexNodeScrollStatus(node, status.asc, scroll, level) );"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexScrollStatus.java",
+    "startLineNumber": 115,
+    "lines": "nodeStack.push( new IndexNodeScrollStatus(node, status.asc, scroll, level) );"
+   }
+  ],
+  "title": "/src/smallsql/database/IndexScrollStatus.java, /src/smallsql/database/IndexScrollStatus.java",
+  "id": 41,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1932,
+    "lines": "try{\r\n            int maxRows = Integer.parseInt(token.getName(sql));\r\n            selCmd.setMaxRows(maxRows);\r\n        }catch(NumberFormatException e){\r\n            throw createSyntaxError(token, Language.STXADD_NOT_NUMBER, token.getName(sql));\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 352,
+    "lines": "try{\r\n\t\t\t\t\t\tint maxRows = Integer.parseInt(token.getName(sql));\r\n\t\t\t\t\t\tselCmd.setMaxRows(maxRows);\r\n\t\t\t\t\t}catch(NumberFormatException e){\r\n\t\t\t\t\t\tthrow createSyntaxError(token, Language.STXADD_NOT_NUMBER, token.getName(sql));\r\n\t\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java",
+  "id": 42,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1263,
+    "lines": "throw SmallSQLException.create(Language.VALUE_CANT_CONVERT, new Object[] { SQLTokenizer.getKeyWord(dataType), \"NUMERIC\" });"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1145,
+    "lines": "throw SmallSQLException.create(Language.VALUE_CANT_CONVERT, new Object[] { SQLTokenizer.getKeyWord(dataType), \"NUMERIC\" });"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 43,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 635,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 443,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 358,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 150,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 498,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 394,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\" + e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 125,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 237,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 553,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 184,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 600,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 676,
+    "lines": "catch(Exception e){\r\n            System.out.println(\"  Failed:\"+e);\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java, ...",
+  "id": 44,
+  "numClones": 12,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSPreparedStatement.java",
+    "startLineNumber": 249,
+    "lines": "if(failed == null){\r\n\t\t\t\t\tfailed = new BatchUpdateException(ex.getMessage(), ex.getSQLState(), ex.getErrorCode(), result);\r\n\t\t\t\t\tfailed.initCause(ex);\r\n\t\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSStatement.java",
+    "startLineNumber": 271,
+    "lines": "if(failed == null){\r\n                    failed = new BatchUpdateException(ex.getMessage(), ex.getSQLState(), ex.getErrorCode(), result);\r\n                    failed.initCause(ex);\r\n                }"
+   }
+  ],
+  "title": "/src/smallsql/database/SSPreparedStatement.java, /src/smallsql/database/SSStatement.java",
+  "id": 45,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 678,
+    "lines": "String[] colNames = {\"TABLE_CAT\",\"TABLE_SCHEM\",\"TABLE_NAME\",\"TABLE_TYPE\",\"REMARKS\",\"TYPE_CAT\",\"TYPE_SCHEM\",\"TYPE_NAME\",\"SELF_REFERENCING_COL_NAME\",\"REF_GENERATION\"};"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 110,
+    "lines": "String[] colNames = {\"TABLE_CAT\",\"TABLE_SCHEM\",\"TABLE_NAME\",\"TABLE_TYPE\",\"REMARKS\",\"TYPE_CAT\",\"TYPE_SCHEM\",\"TYPE_NAME\",\"SELF_REFERENCING_COL_NAME\",\"REF_GENERATION\"};"
+   }
+  ],
+  "title": "/src/smallsql/database/SSDatabaseMetaData.java, /src/smallsql/junit/TestDBMetaData.java",
+  "id": 46,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 81,
+    "lines": "a(\"longvarbinary\"     , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 82,
+    "lines": "a(\"longvarbinary\"     , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 47,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 299,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 127,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 239,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 555,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 678,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 602,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 186,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 445,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 637,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 152,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 360,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 500,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 396,
+    "lines": "{\r\n            System.out.println();\r\n            System.out.println(\"===================================================================\");\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java, ...",
+  "id": 48,
+  "numClones": 13,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 134,
+    "lines": "assertTrue( oldValue + \"<\" + newValue, oldValue.compareTo( newValue ) < 0 );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 162,
+    "lines": "assertTrue( oldValue + \"<\" + newValue, oldValue.compareTo( newValue ) < 0 );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOrderBy.java, /src/smallsql/junit/TestOrderBy.java",
+  "id": 49,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTruncate.java",
+    "startLineNumber": 50,
+    "lines": "if(places > 0){\r\n\t\t\tfor(int i=0; i<places; i++){\r\n\t\t\t\tfactor *= 10;\r\n\t\t\t}\r\n\t\t\tvalue *= factor;\r\n\t\t}else{\r\n\t\t\tfor(int i=0; i>places; i--){\r\n\t\t\t\tfactor *= 10;\r\n\t\t\t}\r\n\t\t\tvalue /= factor;\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionRound.java",
+    "startLineNumber": 50,
+    "lines": "if(places > 0){\r\n\t\t\tfor(int i=0; i<places; i++){\r\n\t\t\t\tfactor *= 10;\r\n\t\t\t}\r\n\t\t\tvalue *= factor;\r\n\t\t}else{\r\n\t\t\tfor(int i=0; i>places; i--){\r\n\t\t\t\tfactor *= 10;\r\n\t\t\t}\r\n\t\t\tvalue /= factor;\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionTruncate.java, /src/smallsql/database/ExpressionFunctionRound.java",
+  "id": 50,
   "numClones": 2,
   "cloneSize": 11
  },
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 2,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 597,
+    "lines": "{\r\n\t\t\toldValue = rs.getBoolean(\"b\");\r\n\t\t\tassertFalse(rs.wasNull());\r\n\t\t\tcount++;\r\n\t\t}"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 9,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
-   },
-   {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 38,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
-   },
-   {
-    "fileName": "/testFiles/helloWorld1.java",
-    "startLineNumber": 4,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 592,
+    "lines": "{\r\n\t\t\toldValue = rs.getBoolean(\"b\");\r\n\t\t\tassertFalse(rs.wasNull());\r\n\t\t\tcount++;\r\n\t\t}"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java, ...",
-  "id": 3,
+  "title": "/src/smallsql/junit/TestOrderBy.java, /src/smallsql/junit/TestOrderBy.java",
+  "id": 51,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 205,
+    "lines": "static String bytes2hex( byte[] bytes ){\r\n        StringBuffer buf = new StringBuffer(bytes.length << 1);\r\n        for(int i=0; i<bytes.length; i++){\r\n            buf.append( digits[ (bytes[i] >> 4) & 0x0F ] );\r\n            buf.append( digits[ (bytes[i]     ) & 0x0F ] );\r\n        }\r\n        return buf.toString();\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 102,
+    "lines": "private static String bytes2hex( byte[] bytes ){\r\n\t\tStringBuffer buf = new StringBuffer(bytes.length << 1);\r\n\t\tfor(int i=0; i<bytes.length; i++){\r\n\t\t\tbuf.append( digits[ (bytes[i] >> 4) & 0x0F ] );\r\n\t\t\tbuf.append( digits[ (bytes[i]     ) & 0x0F ] );\r\n\t\t}\r\n\t\treturn buf.toString();\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/Utils.java, /src/smallsql/junit/BasicTestCase.java",
+  "id": 52,
+  "numClones": 2,
+  "cloneSize": 8
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionInsert.java",
+    "startLineNumber": 62,
+    "lines": "if(length < 0) \r\n            throw SmallSQLException.create(Language.INSERT_INVALID_LEN, new Integer(length));"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionInsert.java",
+    "startLineNumber": 77,
+    "lines": "if(length < 0) \r\n            throw SmallSQLException.create(Language.INSERT_INVALID_LEN, new Integer(length));"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionInsert.java, /src/smallsql/database/ExpressionFunctionInsert.java",
+  "id": 53,
+  "numClones": 2,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 47,
+    "lines": "assertRSMetaData( rs, new String[]{\"a\", \"b\"},  new int[]{Types.VARCHAR, Types.VARCHAR} );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 77,
+    "lines": "assertRSMetaData( rs, new String[]{\"a\", \"b\"},  new int[]{Types.VARCHAR, Types.VARCHAR} );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestAlterTable2.java, /src/smallsql/junit/TestAlterTable2.java",
+  "id": 54,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 665,
+    "lines": "Object[][] data   = new Object[0][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 672,
+    "lines": "Object[][] data   = new Object[0][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 732,
+    "lines": "Object[][] data   = new Object[0][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 952,
+    "lines": "Object[][] data   = new Object[0][];"
+   }
+  ],
+  "title": "/src/smallsql/database/SSDatabaseMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java, ...",
+  "id": 55,
+  "numClones": 4,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 296,
+    "lines": "String[] colNames = {\"TYPE_CAT\", \"TYPE_SCHEM\", \"TYPE_NAME\", \"CLASS_NAME\", \"DATA_TYPE\", \"REMARKS\"};"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 951,
+    "lines": "String[] colNames = {\"TYPE_CAT\", \"TYPE_SCHEM\", \"TYPE_NAME\", \"CLASS_NAME\", \"DATA_TYPE\", \"REMARKS\"};"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestDBMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java",
+  "id": 56,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 640,
+    "lines": "offset += column.initAutoIncrement(storePage.raFile, filePos+offset);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 613,
+    "lines": "offset += column.initAutoIncrement(storePage.raFile, filePos+offset);"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 57,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 113,
+    "lines": "PreparedStatement pr = con.prepareStatement(\"INSERT into \" + table + \"(a,b) Values(?,?)\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 119,
+    "lines": "PreparedStatement pr = con.prepareStatement(\"INSERT into \" + table + \"(a,b) Values(?,?)\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 58,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 120,
+    "lines": "DateTime.Details details1 = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 115,
+    "lines": "DateTime.Details details1 = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 110,
+    "lines": "DateTime.Details details1 = new DateTime.Details(param1.getLong());"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java, /src/smallsql/database/ExpressionFunctionTimestampDiff.java, ...",
+  "id": 59,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 291,
+    "lines": "// we need to create a new page and change the old page to a UPDATE_POINTER\r\n\t\t\t\t((TableStorePage)newData.storePage).lockType = TableView.LOCK_INSERT;"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 296,
+    "lines": "// we need to create a new page and delete the old page\r\n\t\t\t\t((TableStorePage)newData.storePage).lockType = TableView.LOCK_INSERT;"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 60,
+  "numClones": 2,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/FileIndexNode.java",
+    "startLineNumber": 82,
+    "lines": "StorePage storePage = new StorePage( null, -1, file, offset);"
+   },
+   {
+    "fileName": "/src/smallsql/database/FileIndexNode.java",
+    "startLineNumber": 92,
+    "lines": "StorePage storePage = new StorePage( null, -1, file, offset);"
+   }
+  ],
+  "title": "/src/smallsql/database/FileIndexNode.java, /src/smallsql/database/FileIndexNode.java",
+  "id": 61,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 99,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 224,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 398,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 158,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 130,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 366,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 282,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 69,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 189,
+    "lines": "try{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java, ...",
+  "id": 62,
+  "numClones": 9,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReplace.java",
+    "startLineNumber": 49,
+    "lines": "final boolean isNull() throws Exception {\r\n\t\treturn param1.isNull() || param2.isNull() || param3.isNull();\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionSubstring.java",
+    "startLineNumber": 49,
+    "lines": "final boolean isNull() throws Exception {\r\n\t\treturn param1.isNull() || param2.isNull() || param3.isNull();\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReplace.java, /src/smallsql/database/ExpressionFunctionSubstring.java",
+  "id": 63,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTruncate.java",
+    "startLineNumber": 62,
+    "lines": "if(places > 0){\r\n\t\t\tvalue /= factor;\r\n\t\t}else{\r\n\t\t\tvalue *= factor;\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionRound.java",
+    "startLineNumber": 62,
+    "lines": "if(places > 0){\r\n\t\t\tvalue /= factor;\r\n\t\t}else{\r\n\t\t\tvalue *= factor;\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionTruncate.java, /src/smallsql/database/ExpressionFunctionRound.java",
+  "id": 64,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 50,
+    "lines": "a(\"byte\"              , new Byte( (byte)3),     new Byte( (byte)4))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 47,
+    "lines": "a(\"byte\"              , new Byte( (byte)3),     new Byte( (byte)4))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 65,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 503,
+    "lines": "// simple Long Value\r\n                long temp = (((long)value[0]) << 32) | (value[1] & 0xFFFFFFFFL);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 550,
+    "lines": "// simple Long Value\r\n                long temp = (((long)value[0]) << 32) | (value[1] & 0xFFFFFFFFL);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 474,
+    "lines": "// simple Long Value\r\n                long temp = (((long)value[0]) << 32) | (value[1] & 0xFFFFFFFFL);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 526,
+    "lines": "// simple Long Value\r\n                long temp = (((long)value[0]) << 32) | (value[1] & 0xFFFFFFFFL);"
+   }
+  ],
+  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java, ...",
+  "id": 66,
+  "numClones": 4,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Index.java",
+    "startLineNumber": 130,
+    "lines": "if(i + 1 == count)\r\n                return page.getValue();\r\n            else\r\n                page = (IndexNode)page.getValue();"
+   },
+   {
+    "fileName": "/src/smallsql/database/Index.java",
+    "startLineNumber": 103,
+    "lines": "if(i + 1 == count)\r\n                return page.getValue();\r\n            else\r\n                page = (IndexNode)page.getValue();"
+   }
+  ],
+  "title": "/src/smallsql/database/Index.java, /src/smallsql/database/Index.java",
+  "id": 67,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/GroupResult.java",
+    "startLineNumber": 111,
+    "lines": "{\r\n\t\t\tint idx = internalExpressions.indexOf(expr);\r\n\t\t\tif(idx >= 0) return idx;\r\n\t\t\tinternalExpressions.add(expr);\r\n\t\t\treturn internalExpressions.size()-1;\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/GroupResult.java",
+    "startLineNumber": 89,
+    "lines": "{\r\n\t\t\tint idx = internalExpressions.indexOf(expr);\r\n\t\t\tif(idx >= 0) return idx;\r\n\t\t\tinternalExpressions.add(expr);\r\n\t\t\treturn internalExpressions.size()-1;\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/GroupResult.java, /src/smallsql/database/GroupResult.java",
+  "id": 68,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 831,
+    "lines": "String[] colNames = {\t\t\"TYPE_NAME\", \t\t\t\t\"DATA_TYPE\", \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"PRECISION\", \t\"LITERAL_PREFIX\", \"LITERAL_SUFFIX\", \t\t\"CREATE_PARAMS\", \"NULLABLE\", \t \"CASE_SENSITIVE\", \"SEARCHABLE\", \"UNSIGNED_ATTRIBUTE\", \"FIXED_PREC_SCALE\", \"AUTO_INCREMENT\", \"LOCAL_TYPE_NAME\", \"MINIMUM_SCALE\", \"MAXIMUM_SCALE\", \"SQL_DATA_TYPE\", \"SQL_DATETIME_SUB\", \"NUM_PREC_RADIX\"};"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 210,
+    "lines": "String[] colNames = {\"TYPE_NAME\", \"DATA_TYPE\", \"PRECISION\", \"LITERAL_PREFIX\", \"LITERAL_SUFFIX\", \"CREATE_PARAMS\", \"NULLABLE\", \"CASE_SENSITIVE\", \"SEARCHABLE\", \"UNSIGNED_ATTRIBUTE\", \"FIXED_PREC_SCALE\", \"AUTO_INCREMENT\", \"LOCAL_TYPE_NAME\", \"MINIMUM_SCALE\", \"MAXIMUM_SCALE\", \"SQL_DATA_TYPE\", \"SQL_DATETIME_SUB\", \"NUM_PREC_RADIX\"};"
+   }
+  ],
+  "title": "/src/smallsql/database/SSDatabaseMetaData.java, /src/smallsql/junit/TestDBMetaData.java",
+  "id": 69,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 54,
+    "lines": "final int getInt() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Integer.parseInt(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 50,
+    "lines": "final int getInt() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Integer.parseInt(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnString.java, /src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+  "id": 70,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 143,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 16)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 131,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 16)"
+   }
+  ],
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java",
+  "id": 71,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionYear.java",
+    "startLineNumber": 50,
+    "lines": "DateTime.Details details = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionDayOfMonth.java",
+    "startLineNumber": 50,
+    "lines": "DateTime.Details details = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionHour.java",
+    "startLineNumber": 50,
+    "lines": "DateTime.Details details = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionDayOfYear.java",
+    "startLineNumber": 50,
+    "lines": "DateTime.Details details = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionMonth.java",
+    "startLineNumber": 50,
+    "lines": "DateTime.Details details = new DateTime.Details(param1.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionMinute.java",
+    "startLineNumber": 50,
+    "lines": "DateTime.Details details = new DateTime.Details(param1.getLong());"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionYear.java, /src/smallsql/database/ExpressionFunctionDayOfMonth.java, ...",
+  "id": 72,
+  "numClones": 6,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1869,
+    "lines": "if(token.value == SQLTokenizer.OUTER)\r\n                \t\ttoken = nextToken(MISSING_JOIN);"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1863,
+    "lines": "if(token.value == SQLTokenizer.OUTER)\r\n                \t\ttoken = nextToken(MISSING_JOIN);"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1875,
+    "lines": "if(token.value == SQLTokenizer.OUTER)\r\n\t\t\t\t\t\ttoken = nextToken(MISSING_JOIN);"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java, ...",
+  "id": 73,
+  "numClones": 3,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/View.java",
+    "startLineNumber": 56,
+    "lines": "StoreImpl store = StoreImpl.createStore( null, storePage, SQLTokenizer.SELECT, offset);"
+   },
+   {
+    "fileName": "/src/smallsql/database/FileIndexNode.java",
+    "startLineNumber": 93,
+    "lines": "StoreImpl store = StoreImpl.createStore( null, storePage, SQLTokenizer.SELECT, offset);"
+   }
+  ],
+  "title": "/src/smallsql/database/View.java, /src/smallsql/database/FileIndexNode.java",
+  "id": 74,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable.java",
+    "startLineNumber": 39,
+    "lines": "public void tearDown(){\r\n        try {\r\n            dropTable( AllTests.getConnection(), table );\r\n        } catch (SQLException ex) {\r\n            ex.printStackTrace();\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestAlterTable2.java",
+    "startLineNumber": 20,
+    "lines": "public void tearDown(){\r\n        try {\r\n            dropTable( AllTests.getConnection(), table );\r\n        } catch (SQLException ex) {\r\n            ex.printStackTrace();\r\n        }\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestAlterTable.java, /src/smallsql/junit/TestAlterTable2.java",
+  "id": 75,
+  "numClones": 2,
+  "cloneSize": 7
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1332,
+    "lines": "if(token2 != null && token2.value == SQLTokenizer.POINT){\r\n                                    expr.setNameAfterTableAlias( nextIdentifier() );\r\n                                }else{\r\n                                    previousToken();\r\n                                }"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 1239,
+    "lines": "if(token2 != null && token2.value == SQLTokenizer.POINT){\r\n                            expr.setNameAfterTableAlias( nextIdentifier() );\r\n                        }else{\r\n                            previousToken();\r\n                        }"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java",
+  "id": 76,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 271,
+    "lines": "int octet = (int)(value >> shift) & 0xFFFF;"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 224,
+    "lines": "int octet = (int)(value >> shift) & 0xFFFF;"
+   }
+  ],
+  "title": "/src/smallsql/database/LongTreeList.java, /src/smallsql/database/LongTreeList.java",
+  "id": 77,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionValue.java",
+    "startLineNumber": 211,
+    "lines": "{\r\n\t\t\t\t\tif(expr.isNull())\r\n\t\t\t\t\t\tdataType = expr.getDataType();\r\n\t\t\t\t\telse\r\n\t\t\t\t\t\tinitValue( expr );\r\n\t\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionValue.java",
+    "startLineNumber": 154,
+    "lines": "{\r\n\t\t\t\t\tif(expr.isNull())\r\n\t\t\t\t\t\tdataType = expr.getDataType();\r\n\t\t\t\t\telse\r\n\t\t\t\t\t\tinitValue( expr );\r\n\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionValue.java, /src/smallsql/database/ExpressionValue.java",
+  "id": 78,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 223,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 397,
+    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java",
+  "id": 79,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 376,
+    "lines": "page[ offset++ ] = (byte)(value >> 16);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 397,
+    "lines": "page[ offset++ ] = (byte)(value >> 16);"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 80,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 73,
+    "lines": "a(\"timestamp\"         , new Timestamp(99, 1,1,0,0,0,0),      new Timestamp(99, 2,2,0,0,0,0))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 75,
+    "lines": "a(\"timestamp\"         , new Timestamp(99, 1,1,0,0,0,0),      new Timestamp(99, 2,2,0,0,0,0))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 81,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/Series2/testFiles/helloWorldDouble.java",
+    "startLineNumber": 9,
+    "lines": "public static void notMain(String[] args) {\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n\r\n        if (testString == \"a\") {\r\n            System.out.println(testString);\r\n        }\r\n        else {\r\n            System.out.println(testInt);\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorld3.java",
+    "startLineNumber": 2,
+    "lines": "public static void notMain(String[] args) {\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n\r\n        if (testString == \"a\") {\r\n            System.out.println(testString);\r\n        }\r\n        else {\r\n            System.out.println(testInt);\r\n        }\r\n    }"
+   }
+  ],
+  "title": "/Series2/testFiles/helloWorldDouble.java, /Series2/testFiles/helloWorld3.java",
+  "id": 82,
+  "numClones": 2,
+  "cloneSize": 11
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 80,
+    "lines": "a(\"long raw\"          , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 81,
+    "lines": "a(\"long raw\"          , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 83,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionArithmetic.java",
+    "startLineNumber": 432,
+    "lines": "getDataType(right.getDataType(), SQLTokenizer.INT) == SQLTokenizer.INT"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionArithmetic.java",
+    "startLineNumber": 449,
+    "lines": "getDataType(right.getDataType(), SQLTokenizer.INT) == SQLTokenizer.INT"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionArithmetic.java, /src/smallsql/database/ExpressionArithmetic.java",
+  "id": 84,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 56,
+    "lines": "final long getLong() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Long.parseLong(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 60,
+    "lines": "final long getLong() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Long.parseLong(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
+  "id": 85,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 410,
+    "lines": "((page[ offset++ ] & 0xFF) << 8)"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 384,
+    "lines": "((page[ offset++ ] & 0xFF) << 8)"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 86,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/CommandInsert.java",
+    "startLineNumber": 166,
+    "lines": "{\r\n                            keyColumnNames.add(column.getName());\r\n                            keys.add(valueExpress.getObject());\r\n                            break;\r\n                        }"
+   },
+   {
+    "fileName": "/src/smallsql/database/CommandInsert.java",
+    "startLineNumber": 156,
+    "lines": "{\r\n                            keyColumnNames.add(column.getName());\r\n                            keys.add(valueExpress.getObject());\r\n                            break;\r\n                        }"
+   }
+  ],
+  "title": "/src/smallsql/database/CommandInsert.java, /src/smallsql/database/CommandInsert.java",
+  "id": 87,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 81,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 24);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 69,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 24);"
+   }
+  ],
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java",
+  "id": 88,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 235,
+    "lines": "if(num.scale < scale){\r\n\t\t\tnum.setScale(scale);\r\n\t\t}else\r\n\t\tif(num.scale > scale){\r\n\t\t\tsetScale(num.scale);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 167,
+    "lines": "if(num.scale < scale){\r\n\t\t\tnum.setScale(scale);\r\n\t\t}else\r\n\t\tif(num.scale > scale){\r\n\t\t\tsetScale(num.scale);\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java",
+  "id": 89,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 797,
+    "lines": "(year%100 != 0 || year%400 == 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 98,
+    "lines": "(year%100 != 0 || year%400 == 0)"
+   }
+  ],
+  "title": "/src/smallsql/database/DateTime.java, /src/smallsql/database/DateTime.java",
+  "id": 90,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Expressions.java",
+    "startLineNumber": 79,
+    "lines": "if(size >= data.length ){\r\n\t\t\tresize(size << 1);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ForeignKeys.java",
+    "startLineNumber": 64,
+    "lines": "if(size >= data.length ){\r\n\t\t\tresize(size << 1);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongList.java",
+    "startLineNumber": 68,
+    "lines": "if(size >= data.length ){\r\n\t\t\tresize(size << 1);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Strings.java",
+    "startLineNumber": 64,
+    "lines": "if(size >= data.length ){\r\n\t\t\tresize(size << 1);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexDescriptions.java",
+    "startLineNumber": 71,
+    "lines": "if(size >= data.length ){\r\n\t\t\tresize(size << 1);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Columns.java",
+    "startLineNumber": 96,
+    "lines": "if(size >= data.length){\r\n            resize(size << 1);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/database/Expressions.java",
+    "startLineNumber": 72,
+    "lines": "if(size >= data.length ){\r\n\t\t\tresize(size << 1);\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/Expressions.java, /src/smallsql/database/ForeignKeys.java, ...",
+  "id": 91,
+  "numClones": 7,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 383,
+    "lines": "((page[ offset++ ] & 0xFF) << 16)"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 409,
+    "lines": "((page[ offset++ ] & 0xFF) << 16)"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 92,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 148,
+    "lines": "MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getInt());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnInt.java",
+    "startLineNumber": 75,
+    "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getInt());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java, /src/smallsql/database/ExpressionFunctionReturnInt.java",
+  "id": 93,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 415,
+    "lines": "pr.setBytes (  1, byteArray );\r\n\t            pr.setString(  2 , \"Test\" );\r\n\t            pr.setDate  (  3 , new Date( System.currentTimeMillis() ) );\r\n\t            pr.setFloat (  4, (float)1234.56789 );\r\n\t            pr.setFloat (  5 , (float)9876.54321 );\r\n\t            pr.setBytes (  6, largeByteArray );\r\n\t            pr.setInt   (  7 , i );\r\n\t            pr.setDouble(  8 , 23.45 );\r\n\t            pr.setDouble(  9 , 567.45 );\r\n\t            pr.setFloat (  10 , (float)78.89 );\r\n\t            pr.setTime  (  11, new Time( System.currentTimeMillis() ) );\r\n\t            pr.setShort (  12, (short)23456 );\r\n\t            pr.setFloat (  13, (float)34.56 );\r\n\t            pr.setString(  14, \"sysname (30) NULL\" );\r\n\t            pr.setString(  15 , \"text NULL\" );\r\n\t            pr.setByte  (  16, (byte)28 );\r\n\t            pr.setBytes (  17, byteArray );\r\n\t            pr.setString(  18, \"varchar (255) NULL\" );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 469,
+    "lines": "pr.setBytes (  1, byteArray );\r\n\t            pr.setString(  2 , \"Test\" );\r\n\t            pr.setDate  (  3 , new Date( System.currentTimeMillis() ) );\r\n\t            pr.setFloat (  4, (float)1234.56789 );\r\n\t            pr.setFloat (  5 , (float)9876.54321 );\r\n\t            pr.setBytes (  6, largeByteArray );\r\n\t            pr.setInt   (  7 , i );\r\n\t            pr.setDouble(  8 , 23.45 );\r\n\t            pr.setDouble(  9 , 567.45 );\r\n\t            pr.setFloat (  10 , (float)78.89 );\r\n\t            pr.setTime  (  11, new Time( System.currentTimeMillis() ) );\r\n\t            pr.setShort (  12, (short)23456 );\r\n\t            pr.setFloat (  13, (float)34.56 );\r\n\t            pr.setString(  14, \"sysname (30) NULL\" );\r\n\t            pr.setString(  15 , \"text NULL\" );\r\n\t            pr.setByte  (  16, (byte)28 );\r\n\t            pr.setBytes (  17, byteArray );\r\n\t            pr.setString(  18, \"varchar (255) NULL\" );"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 94,
+  "numClones": 2,
+  "cloneSize": 18
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestLanguage.java",
+    "startLineNumber": 90,
+    "lines": "catch (SQLException e) {\r\n\t\t\tassertMessage(e, \"La tabella/vista '\" + TABLE_NAME + \"' è già esistente.\");\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestLanguage.java",
+    "startLineNumber": 110,
+    "lines": "catch(SQLException e) {\r\n\t\t\t\tassertMessage(e, \"La tabella/vista '\" + TABLE_NAME + \"' è già esistente.\");\r\n\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestLanguage.java, /src/smallsql/junit/TestLanguage.java",
+  "id": 95,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 80,
+    "lines": "a(\"raw(100)\"          , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 79,
+    "lines": "a(\"raw(100)\"          , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 96,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSResultSet.java",
+    "startLineNumber": 413,
+    "lines": "if(st.rsType == ResultSet.TYPE_FORWARD_ONLY) throw SmallSQLException.create(Language.RSET_FWDONLY);"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSResultSet.java",
+    "startLineNumber": 372,
+    "lines": "if(st.rsType == ResultSet.TYPE_FORWARD_ONLY) throw SmallSQLException.create(Language.RSET_FWDONLY);"
+   }
+  ],
+  "title": "/src/smallsql/database/SSResultSet.java, /src/smallsql/database/SSResultSet.java",
+  "id": 97,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 154,
+    "lines": "for(int i=0; i<length; i++){\r\n            result = (result << 8) | (bytes[i] & 0xFF);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 163,
+    "lines": "for(int i=0; i<length; i++){\r\n            result = (result << 8) | (bytes[i] & 0xFF);\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/database/Utils.java, /src/smallsql/database/Utils.java",
+  "id": 98,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 354,
+    "lines": "ResultSet rs = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)\r\n\t\t\t\t\t\t\t\t.executeQuery(\"Select * from transactions Where 1=0\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 204,
+    "lines": "ResultSet rs = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)\r\n\t\t\t\t\t\t\t\t.executeQuery(\"Select * from transactions Where 1=0\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java",
+  "id": 99,
+  "numClones": 2,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/Series2/testFiles/helloWorldDouble.java",
+    "startLineNumber": 38,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n\r\n        if (testString == \"a\") {\r\n            System.out.println(testString);\r\n        }\r\n        else {\r\n            System.out.println(testInt);\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorld1.java",
+    "startLineNumber": 4,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n\r\n        if (testString == \"a\") {\r\n            System.out.println(testString);\r\n        }\r\n        else {\r\n            System.out.println(testInt);\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorldDouble.java",
+    "startLineNumber": 9,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n\r\n        if (testString == \"a\") {\r\n            System.out.println(testString);\r\n        }\r\n        else {\r\n            System.out.println(testInt);\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorld3.java",
+    "startLineNumber": 2,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n\r\n        if (testString == \"a\") {\r\n            System.out.println(testString);\r\n        }\r\n        else {\r\n            System.out.println(testInt);\r\n        }\r\n    }"
+   }
+  ],
+  "title": "/Series2/testFiles/helloWorldDouble.java, /Series2/testFiles/helloWorld1.java, ...",
+  "id": 100,
   "numClones": 4,
   "cloneSize": 11
  },
  {
   "clones": [
    {
-    "fileName": "/testFiles/helloWorld3.java",
-    "startLineNumber": 14,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 388,
+    "lines": "if(serializeConnections.size() > 0){\r\n                        Iterator values = locks.values().iterator();\r\n                        while(values.hasNext()){\r\n                            TableStorePage lock = (TableStorePage)values.next();\r\n                            if(lock.con != con) return null;\r\n                        }\r\n                    }"
    },
    {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 2,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
-   },
-   {
-    "fileName": "/testFiles/helloWorldDouble.java",
-    "startLineNumber": 31,
-    "lines": "{\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n        System.out.println(testString);\n        System.out.println(testInt);\n    }"
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 370,
+    "lines": "if(serializeConnections.size() > 0){\r\n\t\t\t\t\t\t\tIterator values = locks.values().iterator();\r\n\t\t\t\t\t\t\twhile(values.hasNext()){\r\n\t\t\t\t\t\t\t\tTableStorePage lock = (TableStorePage)values.next();\r\n\t\t\t\t\t\t\t\tif(lock.con != con) return null;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}"
    }
   ],
-  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java, ...",
-  "id": 4,
+  "title": "/src/smallsql/database/Table.java, /src/smallsql/database/Table.java",
+  "id": 101,
+  "numClones": 2,
+  "cloneSize": 7
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 212,
+    "lines": "private static class TestValue{\r\n        String dataType;\r\n        Object small;\r\n        Object large;\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 275,
+    "lines": "private static class TestValue{\r\n        String dataType;\r\n        Object small;\r\n        Object large;\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 102,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestLanguage.java",
+    "startLineNumber": 84,
+    "lines": "{\r\n\t\t\trecreateTestTab(stat);\r\n\t\t\t\r\n\t\t\tstat.execute(\"CREATE TABLE \" + TABLE_NAME + \" (id_test INT)\");\r\n\t\t\tfail();\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestLanguage.java",
+    "startLineNumber": 104,
+    "lines": "{\r\n\t\t\t\trecreateTestTab(stat);\r\n\t\r\n\t\t\t\tstat.execute(\"CREATE TABLE \" + TABLE_NAME + \" (id_test INT)\");\r\n\t\t\t\tfail();\r\n\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestLanguage.java, /src/smallsql/junit/TestLanguage.java",
+  "id": 103,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 142,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 24)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 130,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 24)"
+   }
+  ],
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java",
+  "id": 104,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionFloor.java",
+    "startLineNumber": 46,
+    "lines": "String getString() throws Exception{\r\n        Object obj = getObject();\r\n        if(obj == null) return null;\r\n        return obj.toString();\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionAbs.java",
+    "startLineNumber": 104,
+    "lines": "String getString() throws Exception{\r\n        Object obj = getObject();\r\n        if(obj == null) return null;\r\n        return obj.toString();\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnFloat.java",
+    "startLineNumber": 76,
+    "lines": "final String getString() throws Exception{\r\n        Object obj = getObject();\r\n        if(obj == null) return null;\r\n        return obj.toString();\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionFloor.java, /src/smallsql/database/ExpressionFunctionAbs.java, ...",
+  "id": 105,
+  "numClones": 3,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 66,
+    "lines": "final float getFloat() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Float.parseFloat(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 62,
+    "lines": "final float getFloat() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Float.parseFloat(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnString.java, /src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+  "id": 106,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 77,
+    "lines": "a(\"varbinary(100)\"    , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 79,
+    "lines": "a(\"varbinary(100)\"    , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 107,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StorePageMap.java",
+    "startLineNumber": 198,
+    "lines": "int i = (int)(key % table.length);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StorePageMap.java",
+    "startLineNumber": 127,
+    "lines": "int i = (int)(key % table.length);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StorePageMap.java",
+    "startLineNumber": 99,
+    "lines": "int i = (int)(key % table.length);"
+   }
+  ],
+  "title": "/src/smallsql/database/StorePageMap.java, /src/smallsql/database/StorePageMap.java, ...",
+  "id": 108,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSCallableStatement.java",
+    "startLineNumber": 135,
+    "lines": "{\r\n        try{\r\n            Expression expr = getValue(i);\r\n            wasNull = expr.isNull();\r\n            return expr.getLong();\r\n        }catch(Exception e){\r\n            throw SmallSQLException.createFromException( e );\r\n        }\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSCallableStatement.java",
+    "startLineNumber": 117,
+    "lines": "{\r\n        try{\r\n            Expression expr = getValue(i);\r\n            wasNull = expr.isNull();\r\n            return expr.getLong();\r\n        }catch(Exception e){\r\n            throw SmallSQLException.createFromException( e );\r\n        }\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/database/SSCallableStatement.java, /src/smallsql/database/SSCallableStatement.java",
+  "id": 109,
+  "numClones": 2,
+  "cloneSize": 9
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 85,
+    "lines": "assertEquals(\"getRow\", 1, rs.getRow() );\r\n        assertTrue(\"isLast\", rs.isLast() );\r\n        assertFalse(\"next\", rs.next() );\r\n        assertFalse(\"isBeforeFirst\", rs.isBeforeFirst() );\r\n        assertTrue(\"isAfterLast\", rs.isAfterLast() );\r\n        assertEquals(\"getRow\", 0, rs.getRow() );\r\n        \r\n        assertTrue(\"first\", rs.first() );\r\n        assertEquals(\"getRow\", 1, rs.getRow() );\r\n        \r\n        assertFalse(\"previous\", rs.previous() );\r\n        assertEquals(\"getRow\", 0, rs.getRow() );\r\n        assertTrue(\"isBeforeFirst\", rs.isBeforeFirst() );\r\n        assertFalse(\"isAfterLast\", rs.isAfterLast() );\r\n        \r\n        assertTrue(\"last\", rs.last() );\r\n        assertEquals(\"getRow\", 1, rs.getRow() );\r\n        assertTrue(\"isLast\", rs.isLast() );\r\n        \r\n        rs.afterLast();\r\n        assertFalse(\"isBeforeFirst\", rs.isBeforeFirst() );\r\n        assertTrue(\"isAfterLast\", rs.isAfterLast() );\r\n        assertEquals(\"getRow\", 0, rs.getRow() );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 128,
+    "lines": "assertEquals(\"getRow\", 1, rs.getRow() );\r\n        assertTrue(\"isLast\", rs.isLast() );\r\n        assertFalse(\"next\", rs.next() );\r\n        assertFalse(\"isBeforeFirst\", rs.isBeforeFirst() );\r\n        assertTrue(\"isAfterLast\", rs.isAfterLast() );\r\n        assertEquals(\"getRow\", 0, rs.getRow() );\r\n        \r\n        assertTrue(\"first\", rs.first() );\r\n        assertEquals(\"getRow\", 1, rs.getRow() );\r\n        \r\n        assertFalse(\"previous\", rs.previous() );\r\n        assertEquals(\"getRow\", 0, rs.getRow() );\r\n        assertTrue(\"isBeforeFirst\", rs.isBeforeFirst() );\r\n        assertFalse(\"isAfterLast\", rs.isAfterLast() );\r\n        \r\n        assertTrue(\"last\", rs.last() );\r\n        assertEquals(\"getRow\", 1, rs.getRow() );\r\n        assertTrue(\"isLast\", rs.isLast() );\r\n        \r\n        rs.afterLast();\r\n        assertFalse(\"isBeforeFirst\", rs.isBeforeFirst() );\r\n        assertTrue(\"isAfterLast\", rs.isAfterLast() );\r\n        assertEquals(\"getRow\", 0, rs.getRow() );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestResultSet.java, /src/smallsql/junit/TestResultSet.java",
+  "id": 110,
+  "numClones": 2,
+  "cloneSize": 23
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 375,
+    "lines": "page[ offset++ ] = (byte)(value >> 24);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 396,
+    "lines": "page[ offset++ ] = (byte)(value >> 24);"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 111,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 234,
+    "lines": "System.out.println( \"  Failed: Only \" + (rowCount-count) + \" rows were deleted.\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 216,
+    "lines": "System.out.println( \"  Failed: Only \" + (rowCount-count) + \" rows were deleted.\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 112,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 476,
+    "lines": "pr.setDouble(  8 , 23.45 );\r\n\t            pr.setDouble(  9 , 567.45 );\r\n\t            pr.setFloat (  10 , (float)78.89 );\r\n\t            pr.setTime  (  11, new Time( System.currentTimeMillis() ) );\r\n\t            pr.setShort (  12, (short)23456 );\r\n\t            pr.setFloat (  13, (float)34.56 );\r\n\t            pr.setString(  14, \"sysname (30) NULL\" );\r\n\t            pr.setString(  15 , \"text NULL\" );\r\n\t            pr.setByte  (  16, (byte)28 );\r\n\t            pr.setBytes (  17, byteArray );\r\n\t            pr.setString(  18, \"varchar (255) NULL\" );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 422,
+    "lines": "pr.setDouble(  8 , 23.45 );\r\n\t            pr.setDouble(  9 , 567.45 );\r\n\t            pr.setFloat (  10 , (float)78.89 );\r\n\t            pr.setTime  (  11, new Time( System.currentTimeMillis() ) );\r\n\t            pr.setShort (  12, (short)23456 );\r\n\t            pr.setFloat (  13, (float)34.56 );\r\n\t            pr.setString(  14, \"sysname (30) NULL\" );\r\n\t            pr.setString(  15 , \"text NULL\" );\r\n\t            pr.setByte  (  16, (byte)28 );\r\n\t            pr.setBytes (  17, byteArray );\r\n\t            pr.setString(  18, \"varchar (255) NULL\" );\r\n\t            pr.setInt   (  19 , i );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 530,
+    "lines": "pr.setDouble(  8 , 23.45 );\r\n\t                pr.setDouble(  9 , 567.45 );\r\n\t                pr.setFloat (  10 , (float)78.89 );\r\n\t                pr.setTime  (  11, new Time( System.currentTimeMillis() ) );\r\n\t                pr.setShort (  12, (short)23456 );\r\n\t                pr.setFloat (  13, (float)34.56 );\r\n\t                pr.setString(  14, \"sysname (30) NULL\" );\r\n\t                pr.setString(  15 , \"text NULL\" );\r\n\t                pr.setByte  (  16, (byte)28 );\r\n\t                pr.setBytes (  17, byteArray );\r\n\t                pr.setString(  18, \"varchar (255) NULL\" );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 530,
+    "lines": "pr.setDouble(  8 , 23.45 );\r\n\t                pr.setDouble(  9 , 567.45 );\r\n\t                pr.setFloat (  10 , (float)78.89 );\r\n\t                pr.setTime  (  11, new Time( System.currentTimeMillis() ) );\r\n\t                pr.setShort (  12, (short)23456 );\r\n\t                pr.setFloat (  13, (float)34.56 );\r\n\t                pr.setString(  14, \"sysname (30) NULL\" );\r\n\t                pr.setString(  15 , \"text NULL\" );\r\n\t                pr.setByte  (  16, (byte)28 );\r\n\t                pr.setBytes (  17, byteArray );\r\n\t                pr.setString(  18, \"varchar (255) NULL\" );\r\n\t                pr.setInt   (  19 , i );"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java, ...",
+  "id": 113,
+  "numClones": 4,
+  "cloneSize": 12
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/TableView.java",
+    "startLineNumber": 49,
+    "lines": "'S' << 24 | 'Q' << 16 | 'L' << 8"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexDescription.java",
+    "startLineNumber": 46,
+    "lines": "'S' << 24 | 'Q' << 16 | 'L' << 8"
+   },
+   {
+    "fileName": "/src/smallsql/database/TableView.java",
+    "startLineNumber": 50,
+    "lines": "'S' << 24 | 'Q' << 16 | 'L' << 8"
+   }
+  ],
+  "title": "/src/smallsql/database/TableView.java, /src/smallsql/database/IndexDescription.java, ...",
+  "id": 114,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Columns.java",
+    "startLineNumber": 58,
+    "lines": "{\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Column index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ForeignKeys.java",
+    "startLineNumber": 56,
+    "lines": "{\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Column index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Strings.java",
+    "startLineNumber": 56,
+    "lines": "{\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Column index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexDescriptions.java",
+    "startLineNumber": 62,
+    "lines": "{\r\n\t\t// SAVER: use SmallSQLException\r\n\t\tif (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Column index: \"+idx+\", Size: \"+size);\r\n\t\treturn data[idx];\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/Columns.java, /src/smallsql/database/ForeignKeys.java, ...",
+  "id": 115,
+  "numClones": 4,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 397,
+    "lines": "TableStorePage lock = new TableStorePage(con, this, LOCK_TAB, page);"
+   },
+   {
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 379,
+    "lines": "TableStorePage lock = new TableStorePage(con, this, LOCK_TAB, page);"
+   }
+  ],
+  "title": "/src/smallsql/database/Table.java, /src/smallsql/database/Table.java",
+  "id": 116,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 77,
+    "lines": "a(\"smalldatetime\"     , new Timestamp(99, 1,1,0,0,0,0),      new Timestamp(99, 2,2,0,0,0,0))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 75,
+    "lines": "a(\"smalldatetime\"     , new Timestamp(99, 1,1,0,0,0,0),      new Timestamp(99, 2,2,0,0,0,0))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 117,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 778,
+    "lines": "String[] colNames = {\"SCOPE\", \"COLUMN_NAME\", \"DATA_TYPE\", \"TYPE_NAME\", \"COLUMN_SIZE\", \"BUFFER_LENGTH\", \"DECIMAL_DIGITS\", \"PSEUDO_COLUMN\"};"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 789,
+    "lines": "String[] colNames = {\"SCOPE\", \"COLUMN_NAME\", \"DATA_TYPE\", \"TYPE_NAME\", \"COLUMN_SIZE\", \"BUFFER_LENGTH\", \"DECIMAL_DIGITS\", \"PSEUDO_COLUMN\"};"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 263,
+    "lines": "String[] colNames = {\"SCOPE\", \"COLUMN_NAME\", \"DATA_TYPE\", \"TYPE_NAME\", \"COLUMN_SIZE\", \"BUFFER_LENGTH\", \"DECIMAL_DIGITS\", \"PSEUDO_COLUMN\"};"
+   }
+  ],
+  "title": "/src/smallsql/database/SSDatabaseMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java, ...",
+  "id": 118,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Money.java",
+    "startLineNumber": 67,
+    "lines": "{\r\n        Money money = new Money();\r\n        money.value = value;\r\n        return money;\r\n    }"
+   },
+   {
+    "fileName": "/src/smallsql/database/Money.java",
+    "startLineNumber": 61,
+    "lines": "{\r\n        Money money = new Money();\r\n        money.value = value;\r\n        return money;\r\n    }"
+   }
+  ],
+  "title": "/src/smallsql/database/Money.java, /src/smallsql/database/Money.java",
+  "id": 119,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Distinct.java",
+    "startLineNumber": 64,
+    "lines": "final void beforeFirst() throws Exception {\r\n\t\trowSource.beforeFirst();\r\n\t\trow = 0;\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Where.java",
+    "startLineNumber": 92,
+    "lines": "final void beforeFirst() throws Exception {\r\n\t\trowSource.beforeFirst();\r\n\t\trow = 0;\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/Distinct.java, /src/smallsql/database/Where.java",
+  "id": 120,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 234,
+    "lines": "String[] colNames = {\"PKTABLE_CAT\", \"PKTABLE_SCHEM\", \"PKTABLE_NAME\", \"PKCOLUMN_NAME\", \"FKTABLE_CAT\", \"FKTABLE_SCHEM\", \"FKTABLE_NAME\", \"FKCOLUMN_NAME\", \"KEY_SEQ\", \"UPDATE_RULE\", \"DELETE_RULE\", \"FK_NAME\", \"PK_NAME\", \"DEFERRABILITY\"};"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 821,
+    "lines": "String[] colNames = {\"PKTABLE_CAT\", \"PKTABLE_SCHEM\", \"PKTABLE_NAME\", \"PKCOLUMN_NAME\", \"FKTABLE_CAT\", \"FKTABLE_SCHEM\", \"FKTABLE_NAME\", \"FKCOLUMN_NAME\", \"KEY_SEQ\", \"UPDATE_RULE\", \"DELETE_RULE\", \"FK_NAME\", \"PK_NAME\", \"DEFERRABILITY\"};"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestDBMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java",
+  "id": 121,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/CommandSelect.java",
+    "startLineNumber": 436,
+    "lines": "catch(Throwable e){\r\n\t\t\tcon.rollback(savepoint);\r\n\t\t\tthrow SmallSQLException.createFromException(e);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Command.java",
+    "startLineNumber": 138,
+    "lines": "catch(Throwable e){\r\n            con.rollback(savepoint);\r\n            throw SmallSQLException.createFromException(e);\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/database/CommandSelect.java",
+    "startLineNumber": 478,
+    "lines": "catch(Throwable e){\r\n\t\t\tcon.rollback(savepoint);\r\n\t\t\tthrow SmallSQLException.createFromException(e);\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/CommandSelect.java",
+    "startLineNumber": 494,
+    "lines": "catch(Throwable e){\r\n\t\t\tcon.rollback(savepoint);\r\n\t\t\tthrow SmallSQLException.createFromException(e);\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/CommandSelect.java, /src/smallsql/database/Command.java, ...",
+  "id": 122,
+  "numClones": 4,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 657,
+    "lines": "for(int i=0; i<rowCount; i++){\r\n                fos.write(bytes);\r\n            }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 620,
+    "lines": "for(int i=0; i<rowCount; i++){\r\n                fos.write(bytes);\r\n            }"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 123,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestThreads.java",
+    "startLineNumber": 160,
+    "lines": "// wait until all threads are finish\r\n            for(int i = 0; i < threadList.size(); i++){\r\n                Thread thread = (Thread)threadList.get(i);\r\n                thread.join(5000);\r\n            }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestThreads.java",
+    "startLineNumber": 106,
+    "lines": "// wait until all threads are finish\r\n            for(int i = 0; i < threadList.size(); i++){\r\n                Thread thread = (Thread)threadList.get(i);\r\n                thread.join(5000);\r\n            }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestThreads.java",
+    "startLineNumber": 59,
+    "lines": "// wait until all threads are finish\r\n        for(int i = 0; i < threadList.size(); i++){\r\n            Thread thread = (Thread)threadList.get(i);\r\n            thread.join(5000);\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestThreads.java, /src/smallsql/junit/TestThreads.java, ...",
+  "id": 124,
+  "numClones": 3,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionLCase.java",
+    "startLineNumber": 52,
+    "lines": "final byte[] getBytes() throws Exception{\r\n        if(isNull()) return null;\r\n        return getString().getBytes();\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionUCase.java",
+    "startLineNumber": 52,
+    "lines": "final byte[] getBytes() throws Exception{\r\n        if(isNull()) return null;\r\n        return getString().getBytes();\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionLCase.java, /src/smallsql/database/ExpressionFunctionUCase.java",
+  "id": 125,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Index.java",
+    "startLineNumber": 382,
+    "lines": "// the first digit include 0-null; 1-empty; 2 another value\r\n\t\t\tchar digit = (i<0) ? (length == 0 ? (char)1 : 2)\r\n\t\t\t\t\t\t\t  : (key[i]);"
+   },
+   {
+    "fileName": "/src/smallsql/database/Index.java",
+    "startLineNumber": 407,
+    "lines": "// the first digit include 0-null; 1-empty; 2 another value\r\n\t\t\tchar digit = (i<0) ? (length == 0 ? (char)1 : 2)\r\n\t\t\t\t\t\t\t  : (key[i]);"
+   }
+  ],
+  "title": "/src/smallsql/database/Index.java, /src/smallsql/database/Index.java",
+  "id": 126,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 707,
+    "lines": "//jetzt irgendwo in die Mitte scrollen\r\n\t\trs.next();\r\n\t\trs.next();\r\n\t\trs.previous(); //dann soll der Zeiger nicht am Ende des bereits gefetchten stehen\r\n\t\t\r\n\t\trs.last();\r\n\t\tcount = 0;\r\n\t\twhile(rs.previous()) count++;\t\t\r\n\t\tassertEquals( valueCount, count );\r\n\r\n\t\trs.beforeFirst();\r\n\t\tcount = -1;\r\n\t\twhile(rs.next()) count++;\t\t\r\n\t\tassertEquals( valueCount, count );\r\n\r\n\t\trs.beforeFirst();\r\n\t\tcount = -1;\r\n\t\twhile(rs.next()) count++;\t\t\r\n\t\tassertEquals( valueCount, count );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 738,
+    "lines": "//jetzt irgendwo in die Mitte scrollen\r\n\t\trs.next();\r\n\t\trs.next();\r\n\t\trs.previous(); //dann soll der Zeiger nicht am Ende des bereits gefetchten stehen\r\n\t\t\r\n\t\trs.last();\r\n\t\tcount = 0;\r\n\t\twhile(rs.previous()) count++;\t\t\r\n\t\tassertEquals( valueCount, count );\r\n\r\n\t\trs.beforeFirst();\r\n\t\tcount = -1;\r\n\t\twhile(rs.next()) count++;\t\t\r\n\t\tassertEquals( valueCount, count );\r\n\r\n\t\trs.beforeFirst();\r\n\t\tcount = -1;\r\n\t\twhile(rs.next()) count++;\t\t\r\n\t\tassertEquals( valueCount, count );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOrderBy.java, /src/smallsql/junit/TestOrderBy.java",
+  "id": 127,
+  "numClones": 2,
+  "cloneSize": 19
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1460,
+    "lines": "System.arraycopy( page, valueOffset, bytes, 0, bytes.length);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1422,
+    "lines": "System.arraycopy( page, valueOffset, bytes, 0, bytes.length);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1418,
+    "lines": "System.arraycopy( page, valueOffset, bytes, 0, bytes.length);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1439,
+    "lines": "System.arraycopy( page, valueOffset, bytes, 0, bytes.length);"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 1431,
+    "lines": "System.arraycopy( page, valueOffset, bytes, 0, bytes.length);"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java, ...",
+  "id": 128,
+  "numClones": 5,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestLanguage.java",
+    "startLineNumber": 255,
+    "lines": "for (Iterator itr = diff.iterator(); itr.hasNext(); ) {\r\n                    msgBuf.append(itr.next());\r\n                    if (itr.hasNext()) msgBuf.append(',');\r\n                }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestLanguage.java",
+    "startLineNumber": 241,
+    "lines": "for (Iterator itr = diff.iterator(); itr.hasNext(); ) {\r\n\t\t\t\t\tmsgBuf.append(itr.next());\r\n\t\t\t\t\tif (itr.hasNext()) msgBuf.append(',');\r\n\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestLanguage.java, /src/smallsql/junit/TestLanguage.java",
+  "id": 129,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/LongLongList.java",
+    "startLineNumber": 62,
+    "lines": "if (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongList.java",
+    "startLineNumber": 61,
+    "lines": "if (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);"
+   },
+   {
+    "fileName": "/src/smallsql/database/DataSources.java",
+    "startLineNumber": 49,
+    "lines": "if (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);"
+   },
+   {
+    "fileName": "/src/smallsql/database/Expressions.java",
+    "startLineNumber": 65,
+    "lines": "if (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongLongList.java",
+    "startLineNumber": 56,
+    "lines": "if (idx >= size)\r\n\t\t\tthrow new IndexOutOfBoundsException(\"Index: \"+idx+\", Size: \"+size);"
+   }
+  ],
+  "title": "/src/smallsql/database/LongLongList.java, /src/smallsql/database/LongList.java, ...",
+  "id": 130,
+  "numClones": 5,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/IndexNode.java",
+    "startLineNumber": 249,
+    "lines": "value = (unique) ? (Object)new Long(rowOffset) : new LongTreeList(rowOffset);"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexNode.java",
+    "startLineNumber": 243,
+    "lines": "value = (unique) ? (Object)new Long(rowOffset) : new LongTreeList(rowOffset);"
+   }
+  ],
+  "title": "/src/smallsql/database/IndexNode.java, /src/smallsql/database/IndexNode.java",
+  "id": 131,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 726,
+    "lines": "{\r\n            Statement st = con.createStatement();\r\n            st.execute(\"DELETE FROM \" + tableName);\r\n            st.close();\r\n        }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 292,
+    "lines": "{\r\n                // reset for the next test\r\n                Statement st = con.createStatement();\r\n                st.execute(\"DELETE FROM \" + tableName);\r\n                st.close();\r\n            }"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 132,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/FileIndexNode.java",
+    "startLineNumber": 67,
+    "lines": "StoreImpl store = StoreImpl.createStore( null, storePage, SQLTokenizer.INSERT, fileOffset);"
+   },
+   {
+    "fileName": "/src/smallsql/database/FileIndexNode.java",
+    "startLineNumber": 83,
+    "lines": "StoreImpl store = StoreImpl.createStore( null, storePage, SQLTokenizer.INSERT, fileOffset);"
+   }
+  ],
+  "title": "/src/smallsql/database/FileIndexNode.java, /src/smallsql/database/FileIndexNode.java",
+  "id": 133,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 674,
+    "lines": "java.io.File file = new java.io.File(tableName+\".bin\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 633,
+    "lines": "java.io.File file = new java.io.File(tableName+\".bin\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 134,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 476,
+    "lines": "return Utils.double2long(temp / scaleDoubleFactor[scale] * signum);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 471,
+    "lines": "return Utils.double2long(temp / scaleDoubleFactor[scale] * signum);"
+   }
+  ],
+  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java",
+  "id": 135,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 125,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 8)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 144,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 8)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 132,
+    "lines": "((puffer[ offset++ ] & 0xFF) << 8)"
+   }
+  ],
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java, ...",
+  "id": 136,
+  "numClones": 3,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunction.java",
+    "startLineNumber": 118,
+    "lines": "Object[] params = {\r\n    \t\t\tSQLTokenizer.getKeyWord(dataType),\r\n    \t\t\tSQLTokenizer.getKeyWord(getFunction())\r\n    \t};"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunction.java",
+    "startLineNumber": 106,
+    "lines": "Object[] params = {\r\n\t\t\t\tSQLTokenizer.getKeyWord(dataType),\r\n\t\t\t\tSQLTokenizer.getKeyWord(getFunction())\r\n\t\t};"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunction.java, /src/smallsql/database/ExpressionFunction.java",
+  "id": 137,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 82,
+    "lines": "a(\"blob\"              , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 83,
+    "lines": "a(\"blob\"              , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 138,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 109,
+    "lines": "DateTime.Details details2 = new DateTime.Details(param2.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampAdd.java",
+    "startLineNumber": 97,
+    "lines": "DateTime.Details details2 = new DateTime.Details(param2.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampAdd.java",
+    "startLineNumber": 92,
+    "lines": "DateTime.Details details2 = new DateTime.Details(param2.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 119,
+    "lines": "DateTime.Details details2 = new DateTime.Details(param2.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampAdd.java",
+    "startLineNumber": 87,
+    "lines": "DateTime.Details details2 = new DateTime.Details(param2.getLong());"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 114,
+    "lines": "DateTime.Details details2 = new DateTime.Details(param2.getLong());"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java, /src/smallsql/database/ExpressionFunctionTimestampAdd.java, ...",
+  "id": 139,
+  "numClones": 6,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 388,
+    "lines": "{\r\n                        Iterator values = locks.values().iterator();\r\n                        while(values.hasNext()){\r\n                            TableStorePage lock = (TableStorePage)values.next();\r\n                            if(lock.con != con) return null;\r\n                        }\r\n                    }"
+   },
+   {
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 370,
+    "lines": "{\r\n\t\t\t\t\t\t\tIterator values = locks.values().iterator();\r\n\t\t\t\t\t\t\twhile(values.hasNext()){\r\n\t\t\t\t\t\t\t\tTableStorePage lock = (TableStorePage)values.next();\r\n\t\t\t\t\t\t\t\tif(lock.con != con) return null;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/Table.java",
+    "startLineNumber": 358,
+    "lines": "{\r\n\t\t\t\t\t\t\tIterator values = locks.values().iterator();\r\n\t\t\t\t\t\t\twhile(values.hasNext()){\r\n\t\t\t\t\t\t\t\tTableStorePage lock = (TableStorePage)values.next();\r\n\t\t\t\t\t\t\t\tif(lock.con != con) return null;\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/Table.java, /src/smallsql/database/Table.java, ...",
+  "id": 140,
+  "numClones": 3,
+  "cloneSize": 7
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionConvert.java",
+    "startLineNumber": 142,
+    "lines": "{\r\n\t\t\t\t\tbyte[] buffer = new byte[length];\r\n\t\t\t\t\tSystem.arraycopy(bytes, 0, buffer, 0, Math.min(bytes.length,length) );\r\n\t\t\t\t\treturn buffer;\r\n\t\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionConvert.java",
+    "startLineNumber": 153,
+    "lines": "{\r\n\t\t\t\t\tbyte[] buffer = new byte[length];\r\n\t\t\t\t\tSystem.arraycopy(bytes, 0, buffer, 0, Math.min(bytes.length,length) );\r\n\t\t\t\t\treturn buffer;\r\n\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionConvert.java, /src/smallsql/database/ExpressionFunctionConvert.java",
+  "id": 141,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 661,
+    "lines": "java.io.FileInputStream fis = new java.io.FileInputStream(tableName+\".bin\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 624,
+    "lines": "java.io.FileInputStream fis = new java.io.FileInputStream(tableName+\".bin\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 142,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 823,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 755,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 747,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 791,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 802,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 666,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 874,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 673,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 733,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 953,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 865,
+    "lines": "//TODO add more data types to the list\r\n\t\treturn new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 780,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 740,
+    "lines": "return new SSResultSet( st, Utils.createMemoryCommandSelect( con, colNames, data));"
+   }
+  ],
+  "title": "/src/smallsql/database/SSDatabaseMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java, ...",
+  "id": 143,
+  "numClones": 13,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 262,
+    "lines": "(byte)((hexDigit2int( hex[ offset++ ] ) << 4)\r\n                                | hexDigit2int( hex[ offset++ ] ))"
+   },
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 218,
+    "lines": "(byte)((hexDigit2int( hex[ offset++ ] ) << 4)\r\n                                | hexDigit2int( hex[ offset++ ] ))"
+   }
+  ],
+  "title": "/src/smallsql/database/Utils.java, /src/smallsql/database/Utils.java",
+  "id": 144,
+  "numClones": 2,
+  "cloneSize": 2
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 182,
+    "lines": "String[] colNames = {\"TABLE_CAT\", \"TABLE_SCHEM\", \"TABLE_NAME\", \"COLUMN_NAME\", \"DATA_TYPE\", \"TYPE_NAME\", \"COLUMN_SIZE\", \"BUFFER_LENGTH\", \"DECIMAL_DIGITS\", \"NUM_PREC_RADIX\", \"NULLABLE\", \"REMARKS\", \"COLUMN_DEF\", \"SQL_DATA_TYPE\", \"SQL_DATETIME_SUB\", \"CHAR_OCTET_LENGTH\", \"ORDINAL_POSITION\", \"IS_NULLABLE\"};"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 753,
+    "lines": "String[] colNames = {\"TABLE_CAT\", \"TABLE_SCHEM\", \"TABLE_NAME\", \"COLUMN_NAME\", \"DATA_TYPE\", \"TYPE_NAME\", \"COLUMN_SIZE\", \"BUFFER_LENGTH\", \"DECIMAL_DIGITS\", \"NUM_PREC_RADIX\", \"NULLABLE\", \"REMARKS\", \"COLUMN_DEF\", \"SQL_DATA_TYPE\", \"SQL_DATETIME_SUB\", \"CHAR_OCTET_LENGTH\", \"ORDINAL_POSITION\", \"IS_NULLABLE\"};"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestDBMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java",
+  "id": 145,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/IndexScrollStatus.java",
+    "startLineNumber": 120,
+    "lines": "if(status.nodeValue != null){\r\n\t\t\t\t\t\tif(status.nodeValue instanceof IndexNode){\r\n\t\t\t\t\t\t\tlevel++;\r\n\t\t\t\t\t\t\tnodeStack.push(\r\n\t\t\t\t\t\t\t\tnew IndexNodeScrollStatus( \t(IndexNode)status.nodeValue, \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(expressions.get(level).getAlias() != SQLTokenizer.DESC_STR), \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tscroll, level));\r\n\t\t\t\t\t\t\tcontinue;\r\n\t\t\t\t\t\t}else\r\n\t\t\t\t\t\t\treturn getReturnValue(status.nodeValue);\r\n\t\t\t\t\t}\r\n\t\t\t\t\t//There is no RowOffset in this node"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexScrollStatus.java",
+    "startLineNumber": 89,
+    "lines": "if(status.nodeValue != null){\r\n\t\t\t\t\t\tif(status.nodeValue instanceof IndexNode){\r\n\t\t\t\t\t\t\tlevel++;\r\n\t\t\t\t\t\t\tnodeStack.push(\r\n\t\t\t\t\t\t\t\tnew IndexNodeScrollStatus( \t(IndexNode)status.nodeValue, \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t(expressions.get(level).getAlias() != SQLTokenizer.DESC_STR), \r\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tscroll, level));\r\n\t\t\t\t\t\t\tcontinue;\r\n\t\t\t\t\t\t}else\r\n\t\t\t\t\t\t\treturn getReturnValue(status.nodeValue);\r\n\t\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/IndexScrollStatus.java, /src/smallsql/database/IndexScrollStatus.java",
+  "id": 146,
+  "numClones": 2,
+  "cloneSize": 11
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 419,
+    "lines": "{\r\n\t\t    dropTable(con1, \"transactions\");\r\n\t\t\tcon1.setAutoCommit(true);\r\n\t\t\tcon2.close();\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 441,
+    "lines": "{\r\n            dropTable(con1, \"transactions\");\r\n\t\t\tcon1.setAutoCommit(true);\r\n\t\t\tcon2.close();\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java",
+  "id": 147,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 338,
+    "lines": "assertTrue( rs.next() );\r\n\t\t\r\n\t\toldValue = (Integer)rs.getObject(\"i\");\r\n\t\tassertNull(oldValue);\r\n\t\tassertTrue( rs.next() );\r\n\t\toldValue = (Integer)rs.getObject(\"i\");\r\n\t\t\r\n\t\tint count = 1;\r\n\t\twhile(rs.next()){\r\n\t\t\tassertTrue( oldValue.compareTo( (Integer)rs.getObject(\"i\") ) < 0 );\r\n\t\t\toldValue = (Integer)rs.getObject(\"i\");\r\n\t\t\tcount++;\r\n\t\t}\r\n\t\tassertEquals( valueCount, count );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 235,
+    "lines": "assertTrue( rs.next() );\r\n\t\toldValue = rs.getString(\"v\");\r\n\t\t\r\n\t\tint count = 1;\r\n\t\twhile(oldValue != null && rs.next()){\r\n\t\t\tString newValue = rs.getString(\"v\");\r\n\t\t\tif(newValue != null){\r\n\t\t\t\tassertTrue( oldValue.compareTo( newValue ) > 0 );\r\n\t\t\t\tcount++;\r\n\t\t\t}\r\n\t\t\toldValue = newValue;\r\n\t\t}\r\n\t\tassertNull(oldValue);\r\n\t\tassertFalse( rs.next() );\r\n\r\n\t\tassertEquals( valueCount, count );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 423,
+    "lines": "assertTrue( rs.next() );\r\n\t\t\r\n\t\toldValue = (Integer)rs.getObject(\"i\");\r\n\t\tassertNull(oldValue);\r\n\t\tassertTrue( rs.next() );\r\n\t\toldValue = (Integer)rs.getObject(\"i\");\r\n\t\t\r\n\t\tint count = 1;\r\n\t\twhile(rs.next()){\r\n\t\t\tassertTrue( oldValue.compareTo( (Integer)rs.getObject(\"i\") ) < 0 );\r\n\t\t\toldValue = (Integer)rs.getObject(\"i\");\r\n\t\t\tcount++;\r\n\t\t}\r\n\t\tassertEquals( valueCount, count );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 207,
+    "lines": "assertTrue( rs.next() );\r\n\t\toldValue = rs.getString(\"v\");\r\n\t\t\r\n\t\tint count = 1;\r\n\t\twhile(oldValue != null && rs.next()){\r\n\t\t\tString newValue = rs.getString(\"v\");\r\n\t\t\tif(newValue != null){\r\n\t\t\t\tassertTrue( oldValue.compareTo( newValue ) > 0 );\r\n\t\t\t\tcount++;\r\n\t\t\t}\r\n\t\t\toldValue = newValue;\r\n\t\t}\r\n\t\tassertNull(oldValue);\r\n\t\tassertFalse( rs.next() );\r\n\r\n\t\tassertEquals( valueCount, count );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOrderBy.java, /src/smallsql/junit/TestOrderBy.java, ...",
+  "id": 148,
+  "numClones": 4,
+  "cloneSize": 16
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 740,
+    "lines": "if(t<0){\r\n\t\t\t    //Time before 1970 and not a full day\r\n\t\t\t\tt += 86400000;\r\n\t\t\t\td--;\r\n\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/DateTime.java",
+    "startLineNumber": 675,
+    "lines": "if(t<0){\r\n            //Time before 1970 and not a full day\r\n            t += 86400000;\r\n            d--;\r\n        }"
+   }
+  ],
+  "title": "/src/smallsql/database/DateTime.java, /src/smallsql/database/DateTime.java",
+  "id": 149,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 322,
+    "lines": "// There are not the correct count of rows.\r\n                if (count == 0){\r\n                    createTestDataWithClassicInsert( con );\r\n                    rs = st1.executeQuery( \"SELECT count(*) FROM \" + tableName);\r\n                    rs.next();\r\n                    count = rs.getInt(1);\r\n                }"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 208,
+    "lines": "// There are not the correct count of rows.\r\n                if (count == 0){\r\n                    createTestDataWithClassicInsert( con );\r\n                    rs = st1.executeQuery( \"SELECT count(*) FROM \" + tableName);\r\n                    rs.next();\r\n                    count = rs.getInt(1);\r\n                }"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 150,
+  "numClones": 2,
+  "cloneSize": 7
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 76,
+    "lines": "a(\"datetime\"          , new Timestamp(99, 1,1,0,0,0,0),      new Timestamp(99, 2,2,0,0,0,0))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 74,
+    "lines": "a(\"datetime\"          , new Timestamp(99, 1,1,0,0,0,0),      new Timestamp(99, 2,2,0,0,0,0))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 151,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Utils.java",
+    "startLineNumber": 476,
+    "lines": "final static char[] digits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 101,
+    "lines": "private final static char[] digits = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};"
+   }
+  ],
+  "title": "/src/smallsql/database/Utils.java, /src/smallsql/junit/BasicTestCase.java",
+  "id": 152,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 598,
+    "lines": "StoreImpl store = table.getLobStore( ((TableStorePage)storePage).con, lobFilePos, SQLTokenizer.SELECT );"
+   },
+   {
+    "fileName": "/src/smallsql/database/StoreImpl.java",
+    "startLineNumber": 565,
+    "lines": "StoreImpl store = table.getLobStore( ((TableStorePage)storePage).con, lobFilePos, SQLTokenizer.SELECT );"
+   }
+  ],
+  "title": "/src/smallsql/database/StoreImpl.java, /src/smallsql/database/StoreImpl.java",
+  "id": 153,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 493,
+    "lines": "value.length == 1 && (value[0] > 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 516,
+    "lines": "value.length == 1 && (value[0] > 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 540,
+    "lines": "value.length == 1 && (value[0] > 0)"
+   },
+   {
+    "fileName": "/src/smallsql/database/MutableNumeric.java",
+    "startLineNumber": 464,
+    "lines": "value.length == 1 && (value[0] > 0)"
+   }
+  ],
+  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java, ...",
+  "id": 154,
+  "numClones": 4,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 192,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestStatement.java",
+    "startLineNumber": 309,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 222,
+    "lines": "Statement st = con.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 53,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 763,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 275,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 193,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 113,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 701,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 68,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 732,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 156,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestResultSet.java",
+    "startLineNumber": 252,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 377,
+    "lines": "Statement st = con.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 169,
+    "lines": "Statement st = con.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 118,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 154,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestScrollable.java",
+    "startLineNumber": 86,
+    "lines": "Statement st = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 256,
+    "lines": "Statement st = con.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 112,
+    "lines": "Statement st = con.createStatement( ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE );"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestScrollable.java, /src/smallsql/junit/TestStatement.java, ...",
+  "id": 155,
+  "numClones": 20,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Database.java",
+    "startLineNumber": 505,
+    "lines": "Object[][] result = new Object[rows.size()][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/Database.java",
+    "startLineNumber": 395,
+    "lines": "Object[][] result = new Object[rows.size()][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/Database.java",
+    "startLineNumber": 438,
+    "lines": "Object[][] result = new Object[rows.size()][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/Database.java",
+    "startLineNumber": 542,
+    "lines": "Object[][] result = new Object[rows.size()][];"
+   },
+   {
+    "fileName": "/src/smallsql/database/Database.java",
+    "startLineNumber": 474,
+    "lines": "Object[][] result = new Object[rows.size()][];"
+   }
+  ],
+  "title": "/src/smallsql/database/Database.java, /src/smallsql/database/Database.java, ...",
+  "id": 156,
+  "numClones": 5,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 262,
+    "lines": "assertEquals( 1, con.createStatement().executeUpdate(\"Update transactions set v='qwert1'\") );\r\n\t\t\tassertEqualsRsValue(\"qwert1\", \"Select * from transactions\");\r\n\t\t\tassertEqualsRsValue(new Integer(1), \"Select count(*) from transactions\");\r\n\t\t\t\r\n            assertEquals( 1, con.createStatement().executeUpdate(\"Update transactions set v='qwert2'\") );\r\n            assertEqualsRsValue(\"qwert2\", \"Select * from transactions\");\r\n            assertEqualsRsValue(new Integer(1), \"Select count(*) from transactions\");\r\n            \r\n\t\t\tSavepoint savepoint = con.setSavepoint();\r\n\t\t\t\r\n\t\t\tassertEquals( 1, con.createStatement().executeUpdate(\"Update transactions set v='qwert 3'\") );\r\n\t\t\tassertEqualsRsValue(\"qwert 3\", \"Select * from transactions\");\r\n\t\t\tassertEqualsRsValue(new Integer(1), \"Select count(*) from transactions\");"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestTransactions.java",
+    "startLineNumber": 305,
+    "lines": "assertEquals(1, con.createStatement().executeUpdate(\"Update transactions set v='qwert1'\"));\r\n            assertEqualsRsValue(\"qwert1\", \"Select * from transactions\");\r\n            assertEqualsRsValue(new Integer(1), \"Select count(*) from transactions\");\r\n\r\n            assertEquals(1, con.createStatement().executeUpdate(\"Update transactions set v='qwert2'\"));\r\n            assertEqualsRsValue(\"qwert2\", \"Select * from transactions\");\r\n            assertEqualsRsValue(new Integer(1), \"Select count(*) from transactions\");\r\n\r\n            Savepoint savepoint = con.setSavepoint();\r\n\r\n            assertEquals(1, con.createStatement().executeUpdate(\"Update transactions set v='qwert 3'\"));\r\n            assertEqualsRsValue(\"qwert 3\", \"Select * from transactions\");\r\n            assertEqualsRsValue(new Integer(1), \"Select count(*) from transactions\");"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java",
+  "id": 157,
+  "numClones": 2,
+  "cloneSize": 13
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 331,
+    "lines": "//there are more entries in this node\r\n\t\t\t\tresult |= (((long)nextEntry) << shift);\r\n\t\t\t\tif(listEnum.stack>=3){\r\n\t\t\t\t\tlistEnum.offsetStack[listEnum.stack] = offset;\r\n\t\t\t\t\treturn result;\r\n\t\t\t\t}\r\n\t\t\t\tlistEnum.offsetStack[listEnum.stack] = offset+pointerSize;\r\n\t\t\t\toffset = getPointer();\r\n\t\t\t\tshift -= 16;\r\n\t\t\t\tlistEnum.stack++;\r\n\t\t\t\tlistEnum.resultStack[listEnum.stack] = result;"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 376,
+    "lines": "// there are more entries in this node\r\n\t\t\t\tresult |= (((long)nextEntry) << shift);\r\n\t\t\t\tif(listEnum.stack>=3){\r\n\t\t\t\t\tlistEnum.offsetStack[listEnum.stack] = offset;\r\n\t\t\t\t\treturn result;\r\n\t\t\t\t}\r\n\t\t\t\tlistEnum.offsetStack[listEnum.stack] = offset+pointerSize;\r\n\t\t\t\toffset = getPointer();\r\n\t\t\t\tshift -= 16;\r\n\t\t\t\tlistEnum.stack++;\r\n\t\t\t\tlistEnum.resultStack[listEnum.stack] = result;"
+   }
+  ],
+  "title": "/src/smallsql/database/LongTreeList.java, /src/smallsql/database/LongTreeList.java",
+  "id": 158,
+  "numClones": 2,
+  "cloneSize": 11
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 144,
+    "lines": "for(; k>= 0; k--) if(tmp[k] != 0) break;"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BasicTestCase.java",
+    "startLineNumber": 131,
+    "lines": "for(; k>= 0; k--) if(tmp[k] != 0) break;"
+   }
+  ],
+  "title": "/src/smallsql/junit/BasicTestCase.java, /src/smallsql/junit/BasicTestCase.java",
+  "id": 159,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestDBMetaData.java",
+    "startLineNumber": 93,
+    "lines": "String[] colNames = {\"PROCEDURE_CAT\", \"PROCEDURE_SCHEM\", \"PROCEDURE_NAME\", \"\", \"\", \"\", \"REMARKS\", \"PROCEDURE_TYPE\"};"
+   },
+   {
+    "fileName": "/src/smallsql/database/SSDatabaseMetaData.java",
+    "startLineNumber": 664,
+    "lines": "String[] colNames = {\"PROCEDURE_CAT\", \"PROCEDURE_SCHEM\", \"PROCEDURE_NAME\", \"\", \"\", \"\", \"REMARKS\", \"PROCEDURE_TYPE\"};"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestDBMetaData.java, /src/smallsql/database/SSDatabaseMetaData.java",
+  "id": 160,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/Series2/testFiles/helloWorldDouble.java",
+    "startLineNumber": 2,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n        System.out.println(testString);\r\n        System.out.println(testInt);\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorldDouble.java",
+    "startLineNumber": 31,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n        System.out.println(testString);\r\n        System.out.println(testInt);\r\n    }"
+   },
+   {
+    "fileName": "/Series2/testFiles/helloWorld3.java",
+    "startLineNumber": 14,
+    "lines": "{\r\n        Str testString = \"Hello, World!\";\r\n        Int testInt = 1;\r\n        System.out.println(testString);\r\n        System.out.println(testInt);\r\n    }"
+   }
+  ],
+  "title": "/Series2/testFiles/helloWorldDouble.java, /Series2/testFiles/helloWorldDouble.java, ...",
+  "id": 161,
   "numClones": 3,
   "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SmallSQLException.java",
+    "startLineNumber": 145,
+    "lines": "String message = translateMsg(messageCode, new Object[] { param0 });"
+   },
+   {
+    "fileName": "/src/smallsql/database/SmallSQLException.java",
+    "startLineNumber": 182,
+    "lines": "String message = translateMsg(messageCode, new Object[] { param0 });"
+   }
+  ],
+  "title": "/src/smallsql/database/SmallSQLException.java, /src/smallsql/database/SmallSQLException.java",
+  "id": 162,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 519,
+    "lines": "PreparedStatement pr = con.prepareStatement( \"UPDATE \" + tableName + \" SET bi=?,c=?,d=?,de=?,f=?,im=?,i=?,m=?,n=?,r=?,sd=?,si=?,sm=?,sy=?,t=?,ti=?,vb=?,vc=? WHERE i=?\" );"
+   },
+   {
+    "fileName": "/src/smallsql/junit/BenchTest.java",
+    "startLineNumber": 412,
+    "lines": "PreparedStatement pr = con.prepareStatement( \"UPDATE \" + tableName + \" SET bi=?,c=?,d=?,de=?,f=?,im=?,i=?,m=?,n=?,r=?,sd=?,si=?,sm=?,sy=?,t=?,ti=?,vb=?,vc=? WHERE i=?\" );"
+   }
+  ],
+  "title": "/src/smallsql/junit/BenchTest.java, /src/smallsql/junit/BenchTest.java",
+  "id": 163,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 73,
+    "lines": "a(\"date\"              , new Date(99, 1,1),      new Date(99, 2,2))"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 71,
+    "lines": "a(\"date\"              , new Date(99, 1,1),      new Date(99, 2,2))"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
+  "id": 164,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
+    "startLineNumber": 44,
+    "lines": "final boolean getBoolean() throws Exception {\r\n\t\tif(isNull()) return false;\r\n\t\treturn Utils.string2boolean(getString().trim());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
+    "startLineNumber": 48,
+    "lines": "final boolean getBoolean() throws Exception {\r\n\t\tif(isNull()) return false;\r\n\t\treturn Utils.string2boolean(getString().trim());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
+  "id": 165,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Index.java",
+    "startLineNumber": 330,
+    "lines": "char digit = (char)(key >> (i<<4));"
+   },
+   {
+    "fileName": "/src/smallsql/database/Index.java",
+    "startLineNumber": 350,
+    "lines": "char digit = (char)(key >> (i<<4));"
+   }
+  ],
+  "title": "/src/smallsql/database/Index.java, /src/smallsql/database/Index.java",
+  "id": 166,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java",
+    "startLineNumber": 160,
+    "lines": "String getString() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn String.valueOf(getInt());\r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/ExpressionFunctionReturnInt.java",
+    "startLineNumber": 87,
+    "lines": "final String getString() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn String.valueOf(getInt());\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/ExpressionFunctionTimestampDiff.java, /src/smallsql/database/ExpressionFunctionReturnInt.java",
+  "id": 167,
+  "numClones": 2,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 187,
+    "lines": "while(rs.next()){\r\n\t\t\tString newValue = rs.getString(\"v\");\r\n\t\t\tassertTrue( oldValue.compareTo( newValue ) < 0 );\r\n\t\t\toldValue = newValue;\r\n\t\t\tcount++;\r\n\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 811,
+    "lines": "while(rs.next()){\r\n\t\t\tString newValue = rs.getString(\"v\");\r\n\t\t\tassertTrue( oldValue.compareTo( newValue ) < 0 );\r\n\t\t\toldValue = newValue;\r\n\t\t\tcount++;\r\n\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOrderBy.java, /src/smallsql/junit/TestOrderBy.java",
+  "id": 168,
+  "numClones": 2,
+  "cloneSize": 6
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 849,
+    "lines": "try{\r\n\t\t\t\t\t\t\tvalue = Integer.parseInt(token.getName(sql) );\r\n\t\t\t\t\t\t}catch(Exception e){\r\n\t\t\t\t\t\t\tthrow createSyntaxError(token, MISSING_NUMBERVALUE );\r\n\t\t\t\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/SQLParser.java",
+    "startLineNumber": 839,
+    "lines": "try{\r\n\t\t\t\t\t\tvalue = Integer.parseInt(token.getName(sql) );\r\n\t\t\t\t\t}catch(Exception e){\r\n\t\t\t\t\t\tthrow createSyntaxError(token, MISSING_NUMBERVALUE );\r\n\t\t\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java",
+  "id": 169,
+  "numClones": 2,
+  "cloneSize": 5
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 455,
+    "lines": "if(newValue != null){\r\n\t\t\t\tassertTrue( oldValue.compareTo( newValue ) > 0 );\r\n\t\t\t\tcount++;\r\n\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 213,
+    "lines": "if(newValue != null){\r\n\t\t\t\tassertTrue( oldValue.compareTo( newValue ) > 0 );\r\n\t\t\t\tcount++;\r\n\t\t\t}"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestOrderBy.java",
+    "startLineNumber": 241,
+    "lines": "if(newValue != null){\r\n\t\t\t\tassertTrue( oldValue.compareTo( newValue ) > 0 );\r\n\t\t\t\tcount++;\r\n\t\t\t}"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOrderBy.java, /src/smallsql/junit/TestOrderBy.java, ...",
+  "id": 170,
+  "numClones": 3,
+  "cloneSize": 4
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 70,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 16);"
+   },
+   {
+    "fileName": "/src/smallsql/database/MemoryStream.java",
+    "startLineNumber": 82,
+    "lines": "puffer[ offset++ ] = (byte)(value >> 16);"
+   }
+  ],
+  "title": "/src/smallsql/database/MemoryStream.java, /src/smallsql/database/MemoryStream.java",
+  "id": 171,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/junit/TestOperatoren.java",
+    "startLineNumber": 76,
+    "lines": "a(\"binary(100)\"       , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   },
+   {
+    "fileName": "/src/smallsql/junit/TestJoins.java",
+    "startLineNumber": 78,
+    "lines": "a(\"binary(100)\"       , new byte[]{12, 45, 1},  new byte[]{12, 45, 2, 56, 89})"
+   }
+  ],
+  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
+  "id": 172,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/Expression.java",
+    "startLineNumber": 75,
+    "lines": "final void setAlias(String alias){ \r\n\t\tthis.alias = alias; \r\n\t}"
+   },
+   {
+    "fileName": "/src/smallsql/database/TableViewResult.java",
+    "startLineNumber": 66,
+    "lines": "void setAlias( String alias ){\r\n\t\tthis.alias = alias;\r\n\t}"
+   }
+  ],
+  "title": "/src/smallsql/database/Expression.java, /src/smallsql/database/TableViewResult.java",
+  "id": 173,
+  "numClones": 2,
+  "cloneSize": 3
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/IndexNode.java",
+    "startLineNumber": 368,
+    "lines": "int mid = start + (end - start)/2;"
+   },
+   {
+    "fileName": "/src/smallsql/database/IndexNode.java",
+    "startLineNumber": 349,
+    "lines": "int mid = start + (end - start)/2;"
+   }
+  ],
+  "title": "/src/smallsql/database/IndexNode.java, /src/smallsql/database/IndexNode.java",
+  "id": 174,
+  "numClones": 2,
+  "cloneSize": 1
+ },
+ {
+  "clones": [
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 362,
+    "lines": "int shift = (3-listEnum.stack) << 4;"
+   },
+   {
+    "fileName": "/src/smallsql/database/LongTreeList.java",
+    "startLineNumber": 323,
+    "lines": "int shift = (3-listEnum.stack) << 4;"
+   }
+  ],
+  "title": "/src/smallsql/database/LongTreeList.java, /src/smallsql/database/LongTreeList.java",
+  "id": 175,
+  "numClones": 2,
+  "cloneSize": 1
  }
 ]

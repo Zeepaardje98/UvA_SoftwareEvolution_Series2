@@ -122,24 +122,25 @@ list[node] directChildren2(node root) {
 //       function.
 tuple[int S, int L, int R] sharedUniqueNodes(node subtree1, node subtree2) {
     map[node, int] nodeCounter = ();
+    int shared = 0;
+    int unique = 0;
+
     visit(subtree1) {
         case node n: nodeCounter[unsetRec(n)]?0 += 1;
     }
     visit(subtree2) {
-        case node n: nodeCounter[unsetRec(n)]?0 += 1;
-    }
-
-    list[int] SLR = [0,0,0];
-    for (m <- nodeCounter) {
-        if (nodeCounter[m] > 1) {
-            SLR[0] += nodeCounter[m];
-        } else {
-            SLR[1] += 1;
+        case node n: {
+            int a = nodeCounter[unsetRec(n)]?0;
+            if (a > 0) {
+                shared += 2;
+                nodeCounter[unsetRec(n)] -= 1;
+            } else {
+                unique += 1;
+            }
         }
     }
 
-    return <SLR[0], SLR[1], 0>;
-
+    return <shared, unique, 0>;
 }
 
 
