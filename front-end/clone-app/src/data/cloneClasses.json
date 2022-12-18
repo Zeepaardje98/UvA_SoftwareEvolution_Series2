@@ -66,86 +66,9 @@
  {
   "clones": [
    {
-    "fileName": "/src/smallsql/junit/TestJoins.java",
-    "startLineNumber": 204,
-    "lines": "private static TestValue a(String dataType, Object small, Object large){\r\n        TestValue value = new TestValue();\r\n        value.dataType  = dataType;\r\n        value.small     = small;\r\n        value.large     = large;\r\n        return value;\r\n    }"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestOperatoren.java",
-    "startLineNumber": 267,
-    "lines": "private static TestValue a(String dataType, Object small, Object large){\r\n        TestValue value = new TestValue();\r\n        value.dataType  = dataType;\r\n        value.small     = small;\r\n        value.large     = large;\r\n        return value;\r\n    }"
-   }
-  ],
-  "title": "/src/smallsql/junit/TestJoins.java, /src/smallsql/junit/TestOperatoren.java",
-  "id": 3,
-  "numClones": 2,
-  "cloneSize": 7
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/database/DateTime.java",
-    "startLineNumber": 485,
-    "lines": "buf.append( details.hour < 12 ? \"AM\" : \"PM\" );"
-   },
-   {
-    "fileName": "/src/smallsql/database/DateTime.java",
-    "startLineNumber": 360,
-    "lines": "buf.append( details.hour < 12 ? \"AM\" : \"PM\" );"
-   },
-   {
-    "fileName": "/src/smallsql/database/DateTime.java",
-    "startLineNumber": 611,
-    "lines": "buf.append( details.hour < 12 ? \"AM\" : \"PM\" );"
-   }
-  ],
-  "title": "/src/smallsql/database/DateTime.java, /src/smallsql/database/DateTime.java, ...",
-  "id": 4,
-  "numClones": 3,
-  "cloneSize": 1
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/database/Utils.java",
-    "startLineNumber": 317,
-    "lines": "static boolean string2boolean( String val){\r\n        try{\r\n            return Double.parseDouble( val ) != 0;\r\n        }catch(NumberFormatException e){/*ignore it if it not a number*/}\r\n        return \"true\".equalsIgnoreCase( val ) || \"yes\".equalsIgnoreCase( val ) || \"t\".equalsIgnoreCase( val );\r\n    }"
-   },
-   {
-    "fileName": "/src/smallsql/junit/BasicTestCase.java",
-    "startLineNumber": 188,
-    "lines": "/**\r\n     * Identical to the Implementation from Utils.string2boolean\r\n     */\r\n    private boolean string2boolean( String val){\r\n        try{\r\n            return Double.parseDouble( val ) != 0;\r\n        }catch(NumberFormatException e){/*ignore it if it not a number*/}\r\n        return \"true\".equalsIgnoreCase( val ) || \"yes\".equalsIgnoreCase( val ) || \"t\".equalsIgnoreCase( val );\r\n    }"
-   }
-  ],
-  "title": "/src/smallsql/database/Utils.java, /src/smallsql/junit/BasicTestCase.java",
-  "id": 5,
-  "numClones": 2,
-  "cloneSize": 9
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
-    "startLineNumber": 68,
-    "lines": "final double getDouble() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Double.parseDouble(getString().trim());\r\n\t}"
-   },
-   {
-    "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
-    "startLineNumber": 72,
-    "lines": "final double getDouble() throws Exception {\r\n\t\tif(isNull()) return 0;\r\n\t\treturn Double.parseDouble(getString().trim());\r\n\t}"
-   }
-  ],
-  "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
-  "id": 6,
-  "numClones": 2,
-  "cloneSize": 4
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java",
-    "startLineNumber": 80,
-    "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getString().trim());\r\n\t}"
+    "fileName": "/testFiles/helloWorld3.java",
+    "startLineNumber": 2,
+    "lines": "public static void notMain(String[] args) {\n        Str testString = \"Hello, World!\";\n        Int testInt = 1;\n\n        if (testString == \"a\") {\n            System.out.println(testString);\n        }\n        else {\n            System.out.println(testInt);\n        }\n    }"
    },
    {
     "fileName": "/src/smallsql/database/ExpressionFunctionReturnString.java",
@@ -153,10 +76,10 @@
     "lines": "final MutableNumeric getNumeric() throws Exception {\r\n\t\tif(isNull()) return null;\r\n\t\treturn new MutableNumeric(getString().trim());\r\n\t}"
    }
   ],
-  "title": "/src/smallsql/database/ExpressionFunctionReturnP1StringAndBinary.java, /src/smallsql/database/ExpressionFunctionReturnString.java",
-  "id": 7,
+  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java",
+  "id": 1,
   "numClones": 2,
-  "cloneSize": 4
+  "cloneSize": 10
  },
  {
   "clones": [
@@ -199,10 +122,10 @@
     "lines": "value.length == 2 && (value[0] > 0)"
    }
   ],
-  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java, ...",
-  "id": 9,
+  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java & more ...",
+  "id": 2,
   "numClones": 4,
-  "cloneSize": 1
+  "cloneSize": 10
  },
  {
   "clones": [
@@ -235,83 +158,10 @@
     "lines": "value[0] / scaleDoubleFactor[scale] * signum"
    }
   ],
-  "title": "/src/smallsql/database/MutableNumeric.java, /src/smallsql/database/MutableNumeric.java",
-  "id": 11,
-  "numClones": 2,
-  "cloneSize": 1
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/junit/TestOperatoren.java",
-    "startLineNumber": 72,
-    "lines": "a(\"time\"              , new Time(9, 1,1),       new Time(9, 2,2))"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestJoins.java",
-    "startLineNumber": 74,
-    "lines": "a(\"time\"              , new Time(9, 1,1),       new Time(9, 2,2))"
-   }
-  ],
-  "title": "/src/smallsql/junit/TestOperatoren.java, /src/smallsql/junit/TestJoins.java",
-  "id": 12,
-  "numClones": 2,
-  "cloneSize": 1
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/database/SQLParser.java",
-    "startLineNumber": 1105,
-    "lines": "int length = last.offset + last.length - offset;"
-   },
-   {
-    "fileName": "/src/smallsql/database/SQLParser.java",
-    "startLineNumber": 675,
-    "lines": "int length = last.offset + last.length - offset;"
-   }
-  ],
-  "title": "/src/smallsql/database/SQLParser.java, /src/smallsql/database/SQLParser.java",
-  "id": 13,
-  "numClones": 2,
-  "cloneSize": 1
- },
- {
-  "clones": [
-   {
-    "fileName": "/src/smallsql/junit/TestTransactions.java",
-    "startLineNumber": 98,
-    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestTransactions.java",
-    "startLineNumber": 188,
-    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestTransactions.java",
-    "startLineNumber": 365,
-    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestTransactions.java",
-    "startLineNumber": 281,
-    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestTransactions.java",
-    "startLineNumber": 157,
-    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
-   },
-   {
-    "fileName": "/src/smallsql/junit/TestTransactions.java",
-    "startLineNumber": 129,
-    "lines": "{\r\n\t\t\ttry{\r\n\t\t\t\tcon.createStatement().execute(\"Drop Table transactions\");\r\n\t\t\t}catch(Throwable e){e.printStackTrace();}\r\n\t\t\tcon.setAutoCommit(true);\r\n\t\t}"
-   }
-  ],
-  "title": "/src/smallsql/junit/TestTransactions.java, /src/smallsql/junit/TestTransactions.java, ...",
-  "id": 14,
-  "numClones": 6,
+  "title": "/testFiles/helloWorld3.java, /testFiles/helloWorldDouble.java & more ...",
+  "id": 3,
+  "numClones": 3,
+
   "cloneSize": 6
  },
  {

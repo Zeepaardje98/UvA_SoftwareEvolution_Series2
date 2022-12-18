@@ -5,7 +5,7 @@ import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
 
-const hightlightWithLineNumbers = (startLineNumber, input, language) =>
+const highlightWithLineNumbers = (startLineNumber, input, language) =>
   highlight(input, language)
     .split("\n")
     .map((line, i) => `<span class='editorLineNumber'>${startLineNumber + i + 1} </span>${line}`)
@@ -15,7 +15,7 @@ export default function CodeBlock(props) {
   return (
     <Editor
       value={props.code}
-      highlight={code => hightlightWithLineNumbers(props.startLineNumber, code, languages.js)}
+      highlight={code => highlightWithLineNumbers(props.startLineNumber, code, languages.js)}
       padding={10}
       textareaId="codeArea"
       className="editor"

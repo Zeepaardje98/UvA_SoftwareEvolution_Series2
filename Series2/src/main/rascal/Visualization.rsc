@@ -14,13 +14,14 @@ import DataFunctions;
 
 import lang::json::IO;
 
-void exportCloneData() {
+// Function to export all clone data that is needed for the visualization to JSON files
+void exportCloneData(loc projectLocation) {
     map[str, set[loc]] cloneClasses = getCloneClasses();
-    exportStatistics(cloneClasses);
     exportCloneClasses(cloneClasses);
-    writeJSON(|project://Series2/cloneClasses.json|, cloneClasses, indent=1);
+    exportStatistics(cloneClasses, projectLocation);
 }
 
+// Function to export data about the clone classes to a JSON file
 void exportCloneClasses(map[str, set[loc]] cloneClasses) {
     int counter = 0;
     list[map[str, value]] classes = [];
@@ -33,8 +34,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
             str fileName = clone.path;
             str cloneString = getContent(clone);
             int startLineNumber = clone.begin.line;
-            // + 1 because line numbers start at 1 not zero
-            cloneSize = clone.end.line - clone.begin.line + 1;
+            cloneSize = size(getCodeLineNumbers(clone));
             clones +=
             (
                 "fileName": fileName,
@@ -48,7 +48,7 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
                 classTitle += ", <fileName>";
             }
             if (cloneCounter == 2) {
-                classTitle += ", ...";
+                classTitle += " & more ...";
             }
             cloneCounter += 1;
         }
@@ -65,12 +65,14 @@ void exportCloneClasses(map[str, set[loc]] cloneClasses) {
     writeJSON(|cwd:///../../../../front-end/clone-app/src/data/cloneClasses.json|, classes, indent=1);
 }
 
-void exportStatistics(map[str, set[loc]] cloneClasses) {
+// Function to export clone statistics to a JSON file
+void exportStatistics(map[str, set[loc]] cloneClasses, loc projectLocation) {
     int numCloneClasses = size(cloneClasses);
     int numClones = size(union(range((cloneClasses))));
     tuple[int, int] biggestCloneClass = getClassWithBiggestClone(cloneClasses);
     tuple[int, int] mostClonesClass = getClassWithMostClones(cloneClasses);
     int totalCloneLines = getTotalCloneLines(cloneClasses);
+    int cloneLinePercentage = getCloneLinePercentage(totalCloneLines, projectLocation);
 
     list[map[str, value]] cloneStats =
     [
@@ -94,7 +96,7 @@ void exportStatistics(map[str, set[loc]] cloneClasses) {
         ),
         (
             "title": "clone line percentage",
-            "value": "?%",
+            "value": "<cloneLinePercentage>%",
             "btnRoute": "/classes",
             "btnText": "show all clone classes"
         ),

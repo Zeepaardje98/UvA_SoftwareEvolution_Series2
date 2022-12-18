@@ -10,21 +10,25 @@ export default function Class() {
   const cloneClass = CloneClasses[id];
   const clones = cloneClass.clones;
   const numClonesText = "Number of clones: " + cloneClass.numClones;
-  const cloneSizeText = "Clone size: " + cloneClass.cloneSize + " lines";
+  const cloneSizeText = "Clone size: " + cloneClass.cloneSize + " lines*";
 
   return (
-    <div className="classDetails">
+    <div className="clones">
       <div className="page-title">
         <Typography variant="h3" color="primary">
           Clones
         </Typography>
       </div>
-      <Box component='div' padding='20px'>
+      <Box component='div' my={4}>
         <Card sx={{bgcolor: 'secondary.light'}}>
             <CardContent>
               <Typography variant='subtitle' component='div'>
                     <ListItemText primary={numClonesText} />
                     <ListItemText primary={cloneSizeText} />
+              </Typography>
+              <Typography variant='body2'>
+                <br></br>
+                * Excl. blank lines and comment lines
               </Typography>
             </CardContent>
         </Card>

@@ -1,3 +1,9 @@
+/*
+ * This file contains the functions that relate to adding clones to our
+ * clone pairs, sequence clones and clone class data structures.
+ * Subsumption is implemented in these functions.
+ */
+
 module ClonePairs
 
 import List;
@@ -14,7 +20,10 @@ private list[tuple[node, node]] _clonePairs = [];
 private list[tuple[list[node], list[node]]] _sequenceClones = [];
 private map[str, set[loc]] _cloneClasses = ();
 
-
+// Function to add a new clone pair to the list of clone pairs.
+// Checks if the new clone pair is a subset of an existing one, in which cloneClasses
+// it is not added. Also checks if there an existing pair a subset of the new
+// pair, in which case the existing pair is removed before the new one is added.
 public void addClone(tuple[node, node] newPair, bool print=false) {
     if (print) {
         println("\n AddClone: <newPair[0].src> <newPair[1].src>");
@@ -68,6 +77,9 @@ public void addClone(tuple[node, node] newPair, bool print=false) {
     return;
 }
 
+// Function to add sequence clones to our list of clone pairs. Also implements
+// subsumption in a similar way as is the case in addClone().
+// This function includes some optional print functionality for debugging purposes.
 public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=false) {
     if (print) {
         println("\n AddSequenceClone:");
@@ -125,7 +137,6 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
     // Check the atomic pairs.
     for (oldPair <- _clonePairs) {
         // Check if the new pair already exists as atomic pair(normal and flipped) (only for sequence length 1)
-        // TODO
 
         // Ignore the new sequence pair if it is a subset of an already existing atomic pair
         if ((isSubset([oldPair[0]], newPair[0]) && isSubset([oldPair[1]], newPair[1])) || (isSubset([oldPair[0]], newPair[1]) && isSubset([oldPair[1]], newPair[0]))) {
@@ -163,6 +174,8 @@ public void addSequenceClone(tuple[list[node], list[node]] newPair, bool print=f
     return;
 }
 
+// Function to format the clones from our clone pairs and clone sequences
+// lists into clone classes.
 public map[str, set[loc]] getCloneClasses() {
     list[loc] clones = [];
     for (clonePair <- _clonePairs) {
@@ -184,6 +197,7 @@ public map[str, set[loc]] getCloneClasses() {
     return _cloneClasses;
 }
 
+// Function to add two clones from a clone pair to the cloneclasses hash map.
 public void addToCloneClass(str hash, loc cloneSrc0, loc cloneSrc1) {
     if (hash in _cloneClasses) {
         _cloneClasses[hash] += cloneSrc0;
@@ -195,6 +209,7 @@ public void addToCloneClass(str hash, loc cloneSrc0, loc cloneSrc1) {
     }
 }
 
+// Function to print the detected clone pairs.
 public void printClones() {
     println("--- PRINTING CLONEPAIRS ---");
     for (clonePair <- _clonePairs) {
@@ -204,6 +219,7 @@ public void printClones() {
     return;
 }
 
+// Function to print the detected sequence clones.
 public void printSequenceClones() {
     println("--- PRINTING SEQUENCE CLONES ---");
     for (seqClone <- _sequenceClones) {

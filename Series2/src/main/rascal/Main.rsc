@@ -31,6 +31,7 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     map[str, list[node]] subtrees = getSubtrees(ASTs, massThreshold, ignoreLeaves=type2);
 
     // Find the clones in the subtrees of the AST
+    println("Getting atomic clones");
     real similarityThreshold = 0.8;
     println("Finding atomic clones");
     findClones(subtrees, similarityThreshold, type2=type2);
@@ -38,19 +39,23 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     // Get all sequence nodes of the AST
     println("Getting sequences");
     int sequenceThreshold = 7;
-    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold, ignoreLeaves=type2);
+    map[str, list[list[node]]] sequences = getSequences(ASTs, sequenceThreshold,
+                                                        ignoreLeaves=type2);
 
     // Find the clones in the sequences of the AST
     similarityThreshold = 0.0;
     println("Finding sequence clones");
     findSequenceClones(sequences, similarityThreshold, type2=type2);
 
-    // exportCloneData();
+    // Export the data for the clone visualization
+    exportCloneData(projectLocation);
 
     return;
 }
 
-void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool print=false, bool type2=false) {
+// Function to find atomic clones
+void findClones(map[str, list[node]] subtrees, real similarityThreshold,
+                bool print=false, bool type2=false) {
     int counter = 0;
     int sizeS = size(subtrees);
 
@@ -76,7 +81,10 @@ void findClones(map[str, list[node]] subtrees, real similarityThreshold, bool pr
     return;
 }
 
-void findSequenceClones(map[str, list[list[node]]] sequences, real similarityThreshold, bool print=false, bool type2=false) {
+// Function to find sequence clones
+void findSequenceClones(map[str, list[list[node]]] sequences,
+                        real similarityThreshold, bool print=false,
+                        bool type2=false) {
     int counter = 0;
     int sizeS = size(sequences);
 
