@@ -1,0 +1,78 @@
+[
+ {
+  "fileName": "/testFiles/helloWorldDouble.java",
+  "clones": [
+   {
+    "endLineNumber": 7,
+    "cloneClass": "b26bbecec4fe4303032b430e8f802019",
+    "startLineNumber": 2
+   },
+   {
+    "endLineNumber": 19,
+    "cloneClass": "7c476cb36dd0f48d3ef40ac1f6116643",
+    "startLineNumber": 9
+   },
+   {
+    "endLineNumber": 19,
+    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
+    "startLineNumber": 9
+   },
+   {
+    "endLineNumber": 48,
+    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
+    "startLineNumber": 38
+   },
+   {
+    "endLineNumber": 7,
+    "cloneClass": "4435a6bb9dc17151466032a58786b8a6",
+    "startLineNumber": 2
+   },
+   {
+    "endLineNumber": 36,
+    "cloneClass": "4435a6bb9dc17151466032a58786b8a6",
+    "startLineNumber": 31
+   }
+  ],
+  "id": 0,
+  "numClones": 6
+ },
+ {
+  "fileName": "/testFiles/helloWorld3.java",
+  "clones": [
+   {
+    "endLineNumber": 19,
+    "cloneClass": "b26bbecec4fe4303032b430e8f802019",
+    "startLineNumber": 14
+   },
+   {
+    "endLineNumber": 12,
+    "cloneClass": "7c476cb36dd0f48d3ef40ac1f6116643",
+    "startLineNumber": 2
+   },
+   {
+    "endLineNumber": 12,
+    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
+    "startLineNumber": 2
+   },
+   {
+    "endLineNumber": 19,
+    "cloneClass": "4435a6bb9dc17151466032a58786b8a6",
+    "startLineNumber": 14
+   }
+  ],
+  "id": 1,
+  "numClones": 4
+ },
+ {
+  "fileName": "/testFiles/helloWorld1.java",
+  "clones": [
+   {
+    "endLineNumber": 14,
+    "cloneClass": "ea9792ca0334eee9e7055d5e136c0ff5",
+    "startLineNumber": 4
+   }
+  ],
+  "id": 2,
+  "numClones": 1
+ }
+]
