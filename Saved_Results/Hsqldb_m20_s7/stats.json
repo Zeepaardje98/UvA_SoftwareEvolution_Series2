@@ -2,38 +2,38 @@
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 83,
+  "value": 4915,
   "title": "clones"
  },
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 32,
+  "value": 1781,
   "title": "clone classes"
  },
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": 682,
+  "value": 19079,
   "title": "clone lines"
  },
  {
   "btnText": "show all clone classes",
   "btnRoute": "/classes",
-  "value": "2%",
+  "value": "11%",
   "title": "clone line percentage"
  },
  {
   "btnText": "show clone class",
-  "btnRoute": "/class?id=3",
-  "value": 21,
+  "btnRoute": "/class?id=1442",
+  "value": 67,
   "title": "biggest clone (lines)"
  },
  {
   "btnText": "show clone class",
-  "btnRoute": "/class?id=0",
+  "btnRoute": "/class?id=236",
   "value": [
-   6
+   42
   ],
   "title": "biggest class (members)"
  }
