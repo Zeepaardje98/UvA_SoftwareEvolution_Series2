@@ -21,9 +21,10 @@ import lang::java::m3::AST;
 
 void main(loc projectLocation = |project://smallsql0.21_src|) {
     bool type2 = false;
+    resetClones();
+    resetSequences();
+    resetClasses();
 
-    // projectLocation = |project://Series2_Gitrepo/Series2/testFiles|;
-    projectLocation = |project://hsqldb-2.3.1|;
     list[Declaration] ASTs = getASTs(projectLocation);
 
     // Get hashed subtrees of the AST

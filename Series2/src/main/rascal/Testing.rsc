@@ -34,9 +34,6 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
     findClones(subtrees, similarityThreshold, type2=type2, print=true);
     println("massThreshold of <massThreshold>, type2: <type2>, n_subtrees: <size(subtrees)>, n_clones: <size(getClones())>, similarityThreshold: <similarityThreshold>");
 
-
-    
-
     // Get all sequence nodes of the AST
     println("Getting sequences");
     int sequenceThreshold = 10;
@@ -49,8 +46,6 @@ void main(loc projectLocation = |project://smallsql0.21_src|) {
 
     printClones();
     printSequenceClones();
-
-
 
     // exportCloneData();
 
